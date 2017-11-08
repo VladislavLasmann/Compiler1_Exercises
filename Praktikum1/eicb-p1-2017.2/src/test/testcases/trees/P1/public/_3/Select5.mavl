@@ -1,0 +1,3 @@
+function void main (){
+    val int c = (a<d? a>d : i )? a : d;
+}

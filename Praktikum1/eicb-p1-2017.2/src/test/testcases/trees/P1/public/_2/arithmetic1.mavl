@@ -1,0 +1,3 @@
+function void main(){
+	val bool foo = i * 5 + k < 42;
+}

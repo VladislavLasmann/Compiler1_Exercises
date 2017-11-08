@@ -1,0 +1,42 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="floatType"/>
+          <name>exp</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="pow">
+            <srcLine>2</srcLine>
+            <srcColumn>17</srcColumn>
+            <leftOp class="floatVal">
+              <srcLine>2</srcLine>
+              <srcColumn>17</srcColumn>
+              <val>3.141</val>
+            </leftOp>
+            <rightOp class="floatVal">
+              <srcLine>2</srcLine>
+              <srcColumn>25</srcColumn>
+              <val>42.0</val>
+            </rightOp>
+          </value>
+        </valDef>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>exp1.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

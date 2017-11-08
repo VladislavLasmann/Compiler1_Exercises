@@ -1,0 +1,8 @@
+function void main() {
+	val matrix<float>[2][2] M = [[2.5, 3.1], [2.0, -1.2]];
+	var float sum;
+	sum = 0.0;
+	foreach(val float i : M # M) {
+		sum = sum + i;
+	}
+}

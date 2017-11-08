@@ -1,0 +1,69 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="intType"/>
+          <name>bar</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="subtraction">
+            <srcLine>2</srcLine>
+            <srcColumn>15</srcColumn>
+            <leftOp class="multiplication">
+              <srcLine>2</srcLine>
+              <srcColumn>15</srcColumn>
+              <leftOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>15</srcColumn>
+                <val>5</val>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>19</srcColumn>
+                <val>6</val>
+              </rightOp>
+            </leftOp>
+            <rightOp class="multiplication">
+              <srcLine>2</srcLine>
+              <srcColumn>23</srcColumn>
+              <leftOp class="multiplication">
+                <srcLine>2</srcLine>
+                <srcColumn>23</srcColumn>
+                <leftOp class="intVal">
+                  <srcLine>2</srcLine>
+                  <srcColumn>23</srcColumn>
+                  <val>4</val>
+                </leftOp>
+                <rightOp class="intVal">
+                  <srcLine>2</srcLine>
+                  <srcColumn>27</srcColumn>
+                  <val>8</val>
+                </rightOp>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>31</srcColumn>
+                <val>9</val>
+              </rightOp>
+            </rightOp>
+          </value>
+        </valDef>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>arithmetic4.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

@@ -1,0 +1,8 @@
+function void main() {
+	val bar b = @bar[1, 2];
+}
+
+record bar {
+	var int a;
+	val int b;
+}

@@ -1,0 +1,36 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:154)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.SyntaxError">
+    <stackTrace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseRecordElementDeclaration(Parser.java:160)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseRecordTypeDeclaration(Parser.java:140)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parse(Parser.java:66)</trace>
+      <trace>mavlc.Main.main(Main.java:149)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Syntax error in line 2, column 1
+Got token &lt;INT int&gt; but expected VAL or VAR</message>
+    <line>2</line>
+    <column>1</column>
+    <actual>
+      <type>INT</type>
+      <spelling>int</spelling>
+      <line>2</line>
+      <column>1</column>
+    </actual>
+    <expected class="java.util.Arrays$ArrayList">
+      <a class="mavlc.parser.recursive_descent.Token$TokenType-array">
+        <mavlc.parser.recursive__descent.Token_-TokenType>VAL</mavlc.parser.recursive__descent.Token_-TokenType>
+        <mavlc.parser.recursive__descent.Token_-TokenType>VAR</mavlc.parser.recursive__descent.Token_-TokenType>
+      </a>
+    </expected>
+  </error>
+  <onlySyntax>true</onlySyntax>
+  <testFile>record1.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

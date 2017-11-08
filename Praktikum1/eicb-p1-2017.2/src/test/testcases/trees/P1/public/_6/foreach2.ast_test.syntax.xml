@@ -1,0 +1,70 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <forEachLoop>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <iterator>
+            <srcLine>2</srcLine>
+            <srcColumn>9</srcColumn>
+            <type class="floatType"/>
+            <name>i</name>
+            <localBaseOffset>0</localBaseOffset>
+            <isVariable>false</isVariable>
+          </iterator>
+          <struct class="structInit">
+            <srcLine>2</srcLine>
+            <srcColumn>23</srcColumn>
+            <elements class="linked-list">
+              <floatVal>
+                <srcLine>2</srcLine>
+                <srcColumn>24</srcColumn>
+                <val>1.0</val>
+              </floatVal>
+              <floatVal>
+                <srcLine>2</srcLine>
+                <srcColumn>29</srcColumn>
+                <val>2.0</val>
+              </floatVal>
+              <floatVal>
+                <srcLine>2</srcLine>
+                <srcColumn>34</srcColumn>
+                <val>3.0</val>
+              </floatVal>
+            </elements>
+          </struct>
+          <body class="callStmt">
+            <srcLine>3</srcLine>
+            <srcColumn>2</srcColumn>
+            <call>
+              <srcLine>3</srcLine>
+              <srcColumn>2</srcColumn>
+              <name>printFloat</name>
+              <actualParameters>
+                <idRef>
+                  <srcLine>3</srcLine>
+                  <srcColumn>13</srcColumn>
+                  <idName>i</idName>
+                </idRef>
+              </actualParameters>
+            </call>
+          </body>
+        </forEachLoop>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>foreach2.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>
