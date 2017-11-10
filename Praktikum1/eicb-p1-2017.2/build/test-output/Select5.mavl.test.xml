@@ -1,0 +1,38 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>c</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="select">
+          <srcLine>2</srcLine>
+          <srcColumn>16</srcColumn>
+          <condition class="recordElemSelect">
+            <srcLine>2</srcLine>
+            <srcColumn>16</srcColumn>
+          </condition>
+          <trueCase class="recordElemSelect">
+            <srcLine>2</srcLine>
+            <srcColumn>33</srcColumn>
+          </trueCase>
+          <falseCase class="recordElemSelect">
+            <srcLine>2</srcLine>
+            <srcColumn>37</srcColumn>
+          </falseCase>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

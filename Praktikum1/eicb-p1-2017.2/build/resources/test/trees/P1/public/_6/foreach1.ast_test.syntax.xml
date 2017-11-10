@@ -1,0 +1,150 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="matrixType">
+            <elemType class="floatType"/>
+            <xDim>2</xDim>
+            <yDim>2</yDim>
+          </type>
+          <name>M</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="structInit">
+            <srcLine>2</srcLine>
+            <srcColumn>29</srcColumn>
+            <elements class="linked-list">
+              <structInit>
+                <srcLine>2</srcLine>
+                <srcColumn>30</srcColumn>
+                <elements class="linked-list">
+                  <floatVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>31</srcColumn>
+                    <val>2.5</val>
+                  </floatVal>
+                  <floatVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>36</srcColumn>
+                    <val>3.1</val>
+                  </floatVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>2</srcLine>
+                <srcColumn>42</srcColumn>
+                <elements class="linked-list">
+                  <floatVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>43</srcColumn>
+                    <val>2.0</val>
+                  </floatVal>
+                  <unaryMinus>
+                    <srcLine>2</srcLine>
+                    <srcColumn>48</srcColumn>
+                    <op class="floatVal">
+                      <srcLine>2</srcLine>
+                      <srcColumn>49</srcColumn>
+                      <val>1.2</val>
+                    </op>
+                  </unaryMinus>
+                </elements>
+              </structInit>
+            </elements>
+          </value>
+        </valDef>
+        <varDecl>
+          <srcLine>3</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="floatType" reference="../../valDef/type/elemType"/>
+          <name>sum</name>
+          <localBaseOffset>0</localBaseOffset>
+        </varDecl>
+        <varAssign>
+          <srcLine>4</srcLine>
+          <srcColumn>1</srcColumn>
+          <identifier>
+            <srcLine>4</srcLine>
+            <srcColumn>1</srcColumn>
+            <name>sum</name>
+          </identifier>
+          <value class="floatVal">
+            <srcLine>4</srcLine>
+            <srcColumn>7</srcColumn>
+            <val>0.0</val>
+          </value>
+        </varAssign>
+        <forEachLoop>
+          <srcLine>5</srcLine>
+          <srcColumn>1</srcColumn>
+          <iterator>
+            <srcLine>5</srcLine>
+            <srcColumn>9</srcColumn>
+            <type class="floatType" reference="../../../valDef/type/elemType"/>
+            <name>i</name>
+            <localBaseOffset>0</localBaseOffset>
+            <isVariable>false</isVariable>
+          </iterator>
+          <struct class="matrixMul">
+            <srcLine>5</srcLine>
+            <srcColumn>23</srcColumn>
+            <leftOp class="idRef">
+              <srcLine>5</srcLine>
+              <srcColumn>23</srcColumn>
+              <idName>M</idName>
+            </leftOp>
+            <rightOp class="idRef">
+              <srcLine>5</srcLine>
+              <srcColumn>27</srcColumn>
+              <idName>M</idName>
+            </rightOp>
+          </struct>
+          <body class="compoundStmt">
+            <srcLine>5</srcLine>
+            <srcColumn>30</srcColumn>
+            <statements>
+              <varAssign>
+                <srcLine>6</srcLine>
+                <srcColumn>2</srcColumn>
+                <identifier>
+                  <srcLine>6</srcLine>
+                  <srcColumn>2</srcColumn>
+                  <name>sum</name>
+                </identifier>
+                <value class="addition">
+                  <srcLine>6</srcLine>
+                  <srcColumn>8</srcColumn>
+                  <leftOp class="idRef">
+                    <srcLine>6</srcLine>
+                    <srcColumn>8</srcColumn>
+                    <idName>sum</idName>
+                  </leftOp>
+                  <rightOp class="idRef">
+                    <srcLine>6</srcLine>
+                    <srcColumn>14</srcColumn>
+                    <idName>i</idName>
+                  </rightOp>
+                </value>
+              </varAssign>
+            </statements>
+          </body>
+        </forEachLoop>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>foreach1.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

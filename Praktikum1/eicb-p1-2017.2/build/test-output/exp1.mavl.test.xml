@@ -1,0 +1,34 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="floatType"/>
+        <name>exp</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="pow">
+          <srcLine>2</srcLine>
+          <srcColumn>17</srcColumn>
+          <leftOp class="recordElemSelect">
+            <srcLine>2</srcLine>
+            <srcColumn>17</srcColumn>
+          </leftOp>
+          <rightOp class="recordElemSelect">
+            <srcLine>2</srcLine>
+            <srcColumn>25</srcColumn>
+          </rightOp>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

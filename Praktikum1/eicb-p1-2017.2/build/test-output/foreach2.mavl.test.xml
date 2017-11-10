@@ -1,0 +1,46 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <forEachLoop>
+        <srcLine>2</srcLine>
+        <srcColumn>1</srcColumn>
+        <iterator>
+          <srcLine>2</srcLine>
+          <srcColumn>9</srcColumn>
+          <type class="floatType"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>false</isVariable>
+        </iterator>
+        <struct class="recordElemSelect">
+          <srcLine>2</srcLine>
+          <srcColumn>23</srcColumn>
+        </struct>
+        <body class="callStmt">
+          <srcLine>3</srcLine>
+          <srcColumn>2</srcColumn>
+          <call>
+            <srcLine>3</srcLine>
+            <srcColumn>2</srcColumn>
+            <name>printFloat</name>
+            <actualParameters>
+              <recordElemSelect>
+                <srcLine>3</srcLine>
+                <srcColumn>13</srcColumn>
+              </recordElemSelect>
+            </actualParameters>
+          </call>
+        </body>
+      </forEachLoop>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

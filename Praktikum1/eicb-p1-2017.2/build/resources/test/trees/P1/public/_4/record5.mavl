@@ -1,0 +1,8 @@
+record bar {
+	var int x;
+}
+
+function void main() {
+	val int c = @bar[1];
+	val int y = c@x;
+}

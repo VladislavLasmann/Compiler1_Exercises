@@ -154,7 +154,7 @@ public final class Parser {
 
 		accept(RBRACE);																					// '}'
 
-		return new RecordTypeDeclaration(sourceLine, sourceColumn, name, element);
+		return new RecordTypeDeclaration(sourceLine, sourceColumn, name, elements);
 	}
 
 	/**
@@ -631,24 +631,33 @@ public final class Parser {
 				currentToken.type == CMPNE ) {
 			TokenType tokenType = currentToken.type;
 			acceptIt();
-			switch(tokenType){
+			switch (tokenType) {
 				// ( ( ’>’ | ’<’|’<=’| '>=' | '==' | '!=' ) addSub)*
 				// !!!CAUTION: Comparators are in Compare->Comparison
 				case RANGLE:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), GREATER); break;			// '>' addSub
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), GREATER);
+					break;            // '>' addSub
 				case LANGLE:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), LESS); break;				// equivalent ....
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), LESS);
+					break;                // equivalent ....
 				case CMPLE:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), LESS_EQUAL); break;
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), LESS_EQUAL);
+					break;
 				case CMPGE:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), GREATER_EQUAL); break;
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), GREATER_EQUAL);
+					break;
 				case CMPEQ:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), EQUAL); break;
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), EQUAL);
+					break;
 				case CMPNE:
-					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), NOT_EQUAL); break;
+					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), NOT_EQUAL);
+					break;
 				default:
 					break;
 			}
+		}
+
+		return expression;
 	}
 
 	/**

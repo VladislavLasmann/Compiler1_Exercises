@@ -1,0 +1,39 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:154)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.SyntaxError">
+    <stackTrace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseIntLitOrMinusIntLit(Parser.java:777)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseCase(Parser.java:425)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseSwitch(Parser.java:409)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseStatement(Parser.java:238)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parseFunction(Parser.java:113)</trace>
+      <trace>mavlc.parser.recursive_descent.Parser.parse(Parser.java:61)</trace>
+      <trace>mavlc.Main.main(Main.java:149)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Syntax error in line 8, column 9
+Got token &lt;COLON :&gt; but expected INTLIT or SUB</message>
+    <line>8</line>
+    <column>9</column>
+    <actual>
+      <type>COLON</type>
+      <spelling>:</spelling>
+      <line>8</line>
+      <column>9</column>
+    </actual>
+    <expected class="java.util.Arrays$ArrayList">
+      <a class="mavlc.parser.recursive_descent.Token$TokenType-array">
+        <mavlc.parser.recursive__descent.Token_-TokenType>INTLIT</mavlc.parser.recursive__descent.Token_-TokenType>
+        <mavlc.parser.recursive__descent.Token_-TokenType>SUB</mavlc.parser.recursive__descent.Token_-TokenType>
+      </a>
+    </expected>
+  </error>
+  <onlySyntax>true</onlySyntax>
+  <testFile>SwitchCase9.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

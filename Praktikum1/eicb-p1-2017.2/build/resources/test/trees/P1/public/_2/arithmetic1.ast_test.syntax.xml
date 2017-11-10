@@ -1,0 +1,61 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="boolType"/>
+          <name>foo</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="compare">
+            <srcLine>2</srcLine>
+            <srcColumn>16</srcColumn>
+            <leftOp class="addition">
+              <srcLine>2</srcLine>
+              <srcColumn>16</srcColumn>
+              <leftOp class="multiplication">
+                <srcLine>2</srcLine>
+                <srcColumn>16</srcColumn>
+                <leftOp class="idRef">
+                  <srcLine>2</srcLine>
+                  <srcColumn>16</srcColumn>
+                  <idName>i</idName>
+                </leftOp>
+                <rightOp class="intVal">
+                  <srcLine>2</srcLine>
+                  <srcColumn>20</srcColumn>
+                  <val>5</val>
+                </rightOp>
+              </leftOp>
+              <rightOp class="idRef">
+                <srcLine>2</srcLine>
+                <srcColumn>24</srcColumn>
+                <idName>k</idName>
+              </rightOp>
+            </leftOp>
+            <rightOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>28</srcColumn>
+              <val>42</val>
+            </rightOp>
+            <comparator>LESS</comparator>
+          </value>
+        </valDef>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>arithmetic1.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

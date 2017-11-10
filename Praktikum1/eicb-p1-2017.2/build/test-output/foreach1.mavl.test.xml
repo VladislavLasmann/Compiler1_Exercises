@@ -1,0 +1,101 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="matrixType">
+          <elemType class="floatType"/>
+          <xDim>2</xDim>
+          <yDim>2</yDim>
+        </type>
+        <name>M</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordElemSelect">
+          <srcLine>2</srcLine>
+          <srcColumn>29</srcColumn>
+        </value>
+      </valDef>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="floatType" reference="../../valDef/type/elemType"/>
+        <name>sum</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>4</srcLine>
+        <srcColumn>1</srcColumn>
+        <identifier>
+          <srcLine>4</srcLine>
+          <srcColumn>1</srcColumn>
+          <name>sum</name>
+        </identifier>
+        <value class="recordElemSelect">
+          <srcLine>4</srcLine>
+          <srcColumn>7</srcColumn>
+        </value>
+      </varAssign>
+      <forEachLoop>
+        <srcLine>5</srcLine>
+        <srcColumn>1</srcColumn>
+        <iterator>
+          <srcLine>5</srcLine>
+          <srcColumn>9</srcColumn>
+          <type class="floatType" reference="../../../valDef/type/elemType"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>false</isVariable>
+        </iterator>
+        <struct class="matrixMul">
+          <srcLine>5</srcLine>
+          <srcColumn>23</srcColumn>
+          <leftOp class="recordElemSelect">
+            <srcLine>5</srcLine>
+            <srcColumn>23</srcColumn>
+          </leftOp>
+          <rightOp class="recordElemSelect">
+            <srcLine>5</srcLine>
+            <srcColumn>27</srcColumn>
+          </rightOp>
+        </struct>
+        <body class="compoundStmt">
+          <srcLine>5</srcLine>
+          <srcColumn>30</srcColumn>
+          <statements>
+            <varAssign>
+              <srcLine>6</srcLine>
+              <srcColumn>2</srcColumn>
+              <identifier>
+                <srcLine>6</srcLine>
+                <srcColumn>2</srcColumn>
+                <name>sum</name>
+              </identifier>
+              <value class="addition">
+                <srcLine>6</srcLine>
+                <srcColumn>8</srcColumn>
+                <leftOp class="recordElemSelect">
+                  <srcLine>6</srcLine>
+                  <srcColumn>8</srcColumn>
+                </leftOp>
+                <rightOp class="recordElemSelect">
+                  <srcLine>6</srcLine>
+                  <srcColumn>14</srcColumn>
+                </rightOp>
+              </value>
+            </varAssign>
+          </statements>
+        </body>
+      </forEachLoop>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

@@ -1,0 +1,22 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="intType"/>
+        <name>foo</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

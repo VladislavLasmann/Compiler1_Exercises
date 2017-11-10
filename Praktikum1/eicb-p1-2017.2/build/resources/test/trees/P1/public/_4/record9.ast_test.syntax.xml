@@ -1,0 +1,71 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="recordType">
+            <name>bar</name>
+          </type>
+          <name>b</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="recordInit">
+            <srcLine>2</srcLine>
+            <srcColumn>13</srcColumn>
+            <elements class="linked-list">
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>18</srcColumn>
+                <val>1</val>
+              </intVal>
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>21</srcColumn>
+                <val>2</val>
+              </intVal>
+            </elements>
+            <name>bar</name>
+          </value>
+        </valDef>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list">
+      <recordTypeDeclaration>
+        <srcLine>5</srcLine>
+        <srcColumn>0</srcColumn>
+        <name>bar</name>
+        <elements>
+          <recordElementDeclaration>
+            <srcLine>6</srcLine>
+            <srcColumn>1</srcColumn>
+            <type class="intType"/>
+            <name>a</name>
+            <localBaseOffset>0</localBaseOffset>
+            <isVariable>true</isVariable>
+          </recordElementDeclaration>
+          <recordElementDeclaration>
+            <srcLine>7</srcLine>
+            <srcColumn>1</srcColumn>
+            <type class="intType" reference="../../recordElementDeclaration/type"/>
+            <name>b</name>
+            <localBaseOffset>0</localBaseOffset>
+            <isVariable>false</isVariable>
+          </recordElementDeclaration>
+        </elements>
+      </recordTypeDeclaration>
+    </records>
+  </AST>
+  <testFile>record9.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>
