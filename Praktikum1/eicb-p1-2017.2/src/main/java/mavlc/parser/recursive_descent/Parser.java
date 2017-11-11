@@ -274,17 +274,18 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private ValueDefinition parseValueDef() throws SyntaxError {
+		// ::= ’val’ type ID ’=’ expr ’;’
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
-		accept(VAL);							// if token is an 'val', accept, get a new one in currentToken
+		accept(VAL);							// 'val'
 		Type valueType = parseType();			// get the Type, updates currentToken
-		String valueName = accept( ID );		// checks if this one is an ID, updates currentToken
+		String valueName = accept( ID );		// checks if token is ID, updates currentToken
 
-		accept(ASSIGN);							// now should be an ASSIGN-type
+		accept(ASSIGN);							// '=' ASSIGN-type
 
 		Expression value = parseExpr();			// should be an expression, update currentToken;
-		accept(SEMICOLON);						// now should be a SEMICOLON-type
+		accept(SEMICOLON);						// ';'
 
 		return new ValueDefinition(sourceLine, sourceColumn, valueType, valueName, value);
 	}
@@ -295,16 +296,16 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private VariableDeclaration parseVarDecl() throws SyntaxError {
-
+		// ::= ’var’ type ID ’;’
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
-		accept(VAR);								// if token is an 'var', accept, update currentToken
+		accept(VAR);								// 'var'
 
-		Type variableType = parseType();			// get the Type, update currentToken
-		String variableName = accept(ID);			// check if this token is an ID, update currentToken
+		Type variableType = parseType();			// get the Type
+		String variableName = accept(ID);			// check if this token is an ID
 
-		accept(SEMICOLON);							// token is ';'?, update
+		accept(SEMICOLON);							// ";"
 
 		return new VariableDeclaration(sourceLine, sourceColumn, variableType, variableName);
 	}
@@ -698,7 +699,6 @@ public final class Parser {
 
 	/**
 	 * Exercise 1.2
-	 * TODO: pow->dim?!?!?!? (Was ist mit minus?)
 	 * @return
 	 * @throws SyntaxError
 	 */
