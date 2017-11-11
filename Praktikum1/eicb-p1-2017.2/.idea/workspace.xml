@@ -17,8 +17,8 @@
           <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/mavlc/parser/recursive_descent/Parser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="417" column="19" lean-forward="false" selection-start-line="417" selection-start-column="7" selection-end-line="417" selection-end-column="19" />
+                <state relative-caret-position="573">
+                  <caret line="440" column="4" lean-forward="true" selection-start-line="440" selection-start-column="4" selection-end-line="440" selection-end-column="4" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -310,12 +310,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510396050383</updated>
-      <workItem from="1510396055425" duration="16920000" />
+      <workItem from="1510396055425" duration="16964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16920000" />
+    <option name="totallyTimeSpent" value="16964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -675,8 +675,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mavlc/parser/recursive_descent/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="417" column="19" lean-forward="false" selection-start-line="417" selection-start-column="7" selection-end-line="417" selection-end-column="19" />
+        <state relative-caret-position="573">
+          <caret line="440" column="4" lean-forward="true" selection-start-line="440" selection-start-column="4" selection-end-line="440" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
