@@ -1,0 +1,3 @@
+function void main(){
+    val int testVal = (4 != 3) ? 3 : 5;
+}

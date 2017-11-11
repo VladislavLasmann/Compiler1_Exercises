@@ -1,0 +1,51 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>testVal</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="select">
+          <srcLine>2</srcLine>
+          <srcColumn>22</srcColumn>
+          <condition class="compare">
+            <srcLine>2</srcLine>
+            <srcColumn>23</srcColumn>
+            <leftOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>23</srcColumn>
+              <val>4</val>
+            </leftOp>
+            <rightOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>28</srcColumn>
+              <val>3</val>
+            </rightOp>
+            <comparator>NOT_EQUAL</comparator>
+          </condition>
+          <trueCase class="intVal">
+            <srcLine>2</srcLine>
+            <srcColumn>33</srcColumn>
+            <val>3</val>
+          </trueCase>
+          <falseCase class="intVal">
+            <srcLine>2</srcLine>
+            <srcColumn>37</srcColumn>
+            <val>5</val>
+          </falseCase>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>
