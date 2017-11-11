@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-11T18:43:55" hostname="Vladis-MacBook-Pro.local" time="0.025">
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-11T18:48:32" hostname="Vladis-MacBook-Pro.local" time="0.047">
   <properties/>
-  <testcase name="testExample[record1]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.012"/>
-  <testcase name="testExample[SwitchCase9]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.013"/>
+  <testcase name="testExample[record1]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.038"/>
+  <testcase name="testExample[SwitchCase9]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.009"/>
   <system-out><![CDATA[[src/test/testcases/errors/P1/public/_4/record1.error_test.syntax.xml, src/test/testcases/errors/P1/public/_5/SwitchCase9.error_test.syntax.xml]
 Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/errors/P1/public/_4/record1.mavl
 Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/errors/P1/public/_5/SwitchCase9.mavl
