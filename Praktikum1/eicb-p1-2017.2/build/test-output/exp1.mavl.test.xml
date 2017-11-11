@@ -17,13 +17,15 @@
         <value class="pow">
           <srcLine>2</srcLine>
           <srcColumn>17</srcColumn>
-          <leftOp class="recordElemSelect">
+          <leftOp class="floatVal">
             <srcLine>2</srcLine>
             <srcColumn>17</srcColumn>
+            <val>3.141</val>
           </leftOp>
-          <rightOp class="recordElemSelect">
+          <rightOp class="floatVal">
             <srcLine>2</srcLine>
             <srcColumn>25</srcColumn>
+            <val>42.0</val>
           </rightOp>
         </value>
       </valDef>

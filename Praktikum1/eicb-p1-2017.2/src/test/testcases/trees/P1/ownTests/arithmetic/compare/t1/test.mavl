@@ -1,0 +1,10 @@
+function void single(){
+    val float floatValue = 5;
+    val float floatValue2 = 5 > 0;
+    val float floatValue3 = 5 < 0;
+    val float floatValue4 = 5 == 0;
+    val float floatValue5 = 5 >= 0;
+    val float floatValue6 = 5 <= 0;
+    val float floatValue2 = 5 != 0;
+}
+

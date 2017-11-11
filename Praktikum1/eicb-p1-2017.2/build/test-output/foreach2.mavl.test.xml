@@ -19,9 +19,26 @@
           <localBaseOffset>0</localBaseOffset>
           <isVariable>false</isVariable>
         </iterator>
-        <struct class="recordElemSelect">
+        <struct class="structInit">
           <srcLine>2</srcLine>
           <srcColumn>23</srcColumn>
+          <elements class="linked-list">
+            <floatVal>
+              <srcLine>2</srcLine>
+              <srcColumn>24</srcColumn>
+              <val>1.0</val>
+            </floatVal>
+            <floatVal>
+              <srcLine>2</srcLine>
+              <srcColumn>29</srcColumn>
+              <val>2.0</val>
+            </floatVal>
+            <floatVal>
+              <srcLine>2</srcLine>
+              <srcColumn>34</srcColumn>
+              <val>3.0</val>
+            </floatVal>
+          </elements>
         </struct>
         <body class="callStmt">
           <srcLine>3</srcLine>
@@ -31,10 +48,11 @@
             <srcColumn>2</srcColumn>
             <name>printFloat</name>
             <actualParameters>
-              <recordElemSelect>
+              <idRef>
                 <srcLine>3</srcLine>
                 <srcColumn>13</srcColumn>
-              </recordElemSelect>
+                <idName>i</idName>
+              </idRef>
             </actualParameters>
           </call>
         </body>

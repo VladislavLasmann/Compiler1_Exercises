@@ -17,17 +17,54 @@
         <value class="select">
           <srcLine>2</srcLine>
           <srcColumn>16</srcColumn>
-          <condition class="recordElemSelect">
+          <condition class="select">
             <srcLine>2</srcLine>
-            <srcColumn>16</srcColumn>
+            <srcColumn>17</srcColumn>
+            <condition class="compare">
+              <srcLine>2</srcLine>
+              <srcColumn>17</srcColumn>
+              <leftOp class="idRef">
+                <srcLine>2</srcLine>
+                <srcColumn>17</srcColumn>
+                <idName>a</idName>
+              </leftOp>
+              <rightOp class="idRef">
+                <srcLine>2</srcLine>
+                <srcColumn>19</srcColumn>
+                <idName>d</idName>
+              </rightOp>
+              <comparator>LESS</comparator>
+            </condition>
+            <trueCase class="compare">
+              <srcLine>2</srcLine>
+              <srcColumn>22</srcColumn>
+              <leftOp class="idRef">
+                <srcLine>2</srcLine>
+                <srcColumn>22</srcColumn>
+                <idName>a</idName>
+              </leftOp>
+              <rightOp class="idRef">
+                <srcLine>2</srcLine>
+                <srcColumn>24</srcColumn>
+                <idName>d</idName>
+              </rightOp>
+              <comparator>GREATER</comparator>
+            </trueCase>
+            <falseCase class="idRef">
+              <srcLine>2</srcLine>
+              <srcColumn>28</srcColumn>
+              <idName>i</idName>
+            </falseCase>
           </condition>
-          <trueCase class="recordElemSelect">
+          <trueCase class="idRef">
             <srcLine>2</srcLine>
             <srcColumn>33</srcColumn>
+            <idName>a</idName>
           </trueCase>
-          <falseCase class="recordElemSelect">
+          <falseCase class="idRef">
             <srcLine>2</srcLine>
             <srcColumn>37</srcColumn>
+            <idName>d</idName>
           </falseCase>
         </value>
       </valDef>

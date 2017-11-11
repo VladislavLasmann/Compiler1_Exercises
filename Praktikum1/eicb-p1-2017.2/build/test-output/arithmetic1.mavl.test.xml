@@ -23,23 +23,27 @@
             <leftOp class="multiplication">
               <srcLine>2</srcLine>
               <srcColumn>16</srcColumn>
-              <leftOp class="recordElemSelect">
+              <leftOp class="idRef">
                 <srcLine>2</srcLine>
                 <srcColumn>16</srcColumn>
+                <idName>i</idName>
               </leftOp>
-              <rightOp class="recordElemSelect">
+              <rightOp class="intVal">
                 <srcLine>2</srcLine>
                 <srcColumn>20</srcColumn>
+                <val>5</val>
               </rightOp>
             </leftOp>
-            <rightOp class="recordElemSelect">
+            <rightOp class="idRef">
               <srcLine>2</srcLine>
               <srcColumn>24</srcColumn>
+              <idName>k</idName>
             </rightOp>
           </leftOp>
-          <rightOp class="recordElemSelect">
+          <rightOp class="intVal">
             <srcLine>2</srcLine>
             <srcColumn>28</srcColumn>
+            <val>42</val>
           </rightOp>
           <comparator>LESS</comparator>
         </value>

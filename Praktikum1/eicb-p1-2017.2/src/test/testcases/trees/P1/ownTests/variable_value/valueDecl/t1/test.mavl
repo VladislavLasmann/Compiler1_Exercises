@@ -1,0 +1,6 @@
+function void main(){
+    var float floatValue;
+    var bool boolValue;
+    var float floatValue2;
+    var bool boolValue2;
+}

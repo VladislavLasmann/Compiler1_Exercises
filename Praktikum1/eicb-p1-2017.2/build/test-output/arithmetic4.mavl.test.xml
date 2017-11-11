@@ -20,13 +20,15 @@
           <leftOp class="multiplication">
             <srcLine>2</srcLine>
             <srcColumn>15</srcColumn>
-            <leftOp class="recordElemSelect">
+            <leftOp class="intVal">
               <srcLine>2</srcLine>
               <srcColumn>15</srcColumn>
+              <val>5</val>
             </leftOp>
-            <rightOp class="recordElemSelect">
+            <rightOp class="intVal">
               <srcLine>2</srcLine>
               <srcColumn>19</srcColumn>
+              <val>6</val>
             </rightOp>
           </leftOp>
           <rightOp class="multiplication">
@@ -35,18 +37,21 @@
             <leftOp class="multiplication">
               <srcLine>2</srcLine>
               <srcColumn>23</srcColumn>
-              <leftOp class="recordElemSelect">
+              <leftOp class="intVal">
                 <srcLine>2</srcLine>
                 <srcColumn>23</srcColumn>
+                <val>4</val>
               </leftOp>
-              <rightOp class="recordElemSelect">
+              <rightOp class="intVal">
                 <srcLine>2</srcLine>
                 <srcColumn>27</srcColumn>
+                <val>8</val>
               </rightOp>
             </leftOp>
-            <rightOp class="recordElemSelect">
+            <rightOp class="intVal">
               <srcLine>2</srcLine>
               <srcColumn>31</srcColumn>
+              <val>9</val>
             </rightOp>
           </rightOp>
         </value>

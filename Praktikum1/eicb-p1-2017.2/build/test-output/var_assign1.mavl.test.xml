@@ -16,9 +16,10 @@
           <srcColumn>1</srcColumn>
           <name>foo</name>
         </identifier>
-        <value class="recordElemSelect">
+        <value class="intVal">
           <srcLine>2</srcLine>
           <srcColumn>7</srcColumn>
+          <val>21</val>
         </value>
       </varAssign>
     </functionBody>

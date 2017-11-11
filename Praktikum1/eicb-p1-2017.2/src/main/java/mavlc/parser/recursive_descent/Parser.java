@@ -29,12 +29,8 @@ import static mavlc.parser.recursive_descent.Token.TokenType.*;
 
 /* TODO: Please fill this out!
  *
- * EiCB group number: 22
+ * EiCB group number:
  * Names and student ID numbers of group members:
- * 		Konstantin Müller	2327697
- * 		Robin Ferrari		2585277
- * 		Vladislav Lasmann	2593078
- *
  */
 
 /**
@@ -141,7 +137,7 @@ public final class Parser {
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 		String name;
-		List<RecordElementDeclaration> elements = new LinkedList<>();
+		List<RecordElementDeclaration> elements = new ArrayList<>();									// not LinkedList!!! (error)
 
 		accept(RECORD);																					// 'record'
 		name = accept(ID);																				// ID
@@ -170,16 +166,17 @@ public final class Parser {
 		Type type;
 		String name;
 
-		if( currentToken.type == VAR ){																	// 'var'? -> isVariable = true
+		if( currentToken.type == VAR )																	// 'var'? -> isVariable = true
 			isVariable = true;
-		}else if( currentToken.type == VAL){															// 'val'? -> isVariable = false
+		else if( currentToken.type == VAL)																// 'val'? -> isVariable = false
 			isVariable = false;
-		}else																							//
-			throw new SyntaxError(currentToken, currentToken.type, VAR, VAL);
+		else																							//
+			throw new SyntaxError(currentToken, VAR, VAL);
 
 		acceptIt();																						// update token
 		type = parseType();																				// got type
 		name = accept(ID);																				// got ID
+		accept(SEMICOLON);																				// ';'
 
 		return new RecordElementDeclaration(sourceLine, sourceColumn, isVariable, type, name);
 	}
@@ -365,13 +362,13 @@ public final class Parser {
 		} else if( currentToken.type == LBRACKET){
 			acceptIt();																						// '['
 			Expression firstIndex = parseExpr();															// expr
-			leftHandIdentifier = new VectorLHSIdentifier(line, column, name, firstIndex);					// one exception in bracket means vector
+			leftHandIdentifier = new VectorLHSIdentifier(line, column, name, firstIndex);					// one expression in brackets means vector
 			accept(RBRACKET);																				// ']'
 
 			if(currentToken.type == LBRACKET){
 				acceptIt();
 				Expression secondIndex = parseExpr();
-				leftHandIdentifier = new MatrixLHSIdentifier(line, column, name, firstIndex, secondIndex);	// 2x exception in bracket means matrix
+				leftHandIdentifier = new MatrixLHSIdentifier(line, column, name, firstIndex, secondIndex);	// 2x expression in brackets means matrix
 				accept(RBRACKET);
 			}
 		}
@@ -486,7 +483,7 @@ public final class Parser {
 				if( switchStatement.getDefaultCases().size() == 0 )
 					switchStatement.addDefault( parseDefault() );							// default, added to SwitchStatement
 				else
-					throw new SyntaxError(currentToken, currentToken.type, CASE, RBRACE);	// if there are more than one default -> syntax error
+					throw new SyntaxError(currentToken, CASE, RBRACE);	// if there are more than one default -> syntax error
 			}
 		}
 
@@ -504,23 +501,16 @@ public final class Parser {
 		// ::= ’case’ ’-’? INT ’:’ statement
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
-
-		boolean occurredSUB = false;											// indicates if a '-' occurred
 		int condition;
-
 		Statement statement;
 
 		accept(CASE);															// 'case'
-		if( currentToken.type == SUB ){											// '-' ?
-			acceptIt();
-			occurredSUB = true;
-		}
+		condition = parseIntLitOrMinusIntLit();									//  ’-’? INT
 
-		condition = parseIntLit();												// INT
-
+		accept(COLON);															// ':'
 		statement = parseStatement();											// statement
 
-		return new Case(sourceLine,sourceColumn, condition, statement);
+		return new Case(sourceLine, sourceColumn, condition, statement);
 	}
 
 	/**
@@ -604,7 +594,7 @@ public final class Parser {
 	private Expression parseNot() throws SyntaxError {
 		int line = currentToken.line;
 		int column = currentToken.column;
-		
+
 		if (currentToken.type == NOT) {
 			acceptIt();
 			return new BoolNot(line, column, parseCompare());
@@ -730,7 +720,7 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private Expression parseExponentiation() throws SyntaxError {
-		// ::= (dim ’^’)* dim
+		// ::= dim ( ’^’ dim )*
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
@@ -740,7 +730,9 @@ public final class Parser {
 			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseDim() );	// '^' dim
 		}
 		return expression;
+
 	}
+
 
 	private Expression parseDim() throws SyntaxError {
 		int line = currentToken.line;
@@ -829,7 +821,6 @@ public final class Parser {
 	}
 
 	/**
-	 * TODO: IMPLEMENT THAT STUFF. HAVE NO CLUE ATM
 	 * Exercise 1.4
 	 * @return
 	 * @throws SyntaxError
@@ -840,15 +831,15 @@ public final class Parser {
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
-		Expression atom = parseAtom();
+		Expression record = parseAtom();									// atom
 
-		if( currentToken.type == AT ){
+		if( currentToken.type == AT ){										// '@'
 			acceptIt();
-
+			String elementName = accept(ID);
+			record = new RecordElementSelect(sourceLine, sourceColumn, record, elementName );	// ID
 		}
 
-		return new RecordElementSelect(sourceLine, sourceColumn, null, null);
-
+		return record;
 	}
 
 	private Expression parseAtom() throws SyntaxError {

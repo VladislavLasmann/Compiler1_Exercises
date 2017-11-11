@@ -9,5 +9,8 @@ Theorieübung 1
 Praktikum 1
 ------------
 - Implementation: Done
-- Testing: to do
+- Testing:
+	- public tests: 100% correct
+	- own tests: coplete writing own. 
+		- see README int trees/ownTests
 

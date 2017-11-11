@@ -1,0 +1,67 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>5</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>6</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="intType"/>
+        <name>c</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordInit">
+          <srcLine>6</srcLine>
+          <srcColumn>13</srcColumn>
+          <elements class="linked-list">
+            <intVal>
+              <srcLine>6</srcLine>
+              <srcColumn>18</srcColumn>
+              <val>1</val>
+            </intVal>
+          </elements>
+          <name>bar</name>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>7</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="intType" reference="../../valDef/type"/>
+        <name>y</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordElemSelect">
+          <srcLine>7</srcLine>
+          <srcColumn>13</srcColumn>
+          <record class="idRef">
+            <srcLine>7</srcLine>
+            <srcColumn>13</srcColumn>
+            <idName>c</idName>
+          </record>
+          <elementName>x</elementName>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list">
+    <recordTypeDeclaration>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>bar</name>
+      <elements>
+        <recordElementDeclaration>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="intType" reference="../../../../../function/functionBody/valDef/type"/>
+          <name>x</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+      </elements>
+    </recordTypeDeclaration>
+  </records>
+</module>

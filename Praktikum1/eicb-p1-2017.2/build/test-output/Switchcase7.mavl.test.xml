@@ -1,0 +1,84 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType"/>
+        <name>a</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="intVal">
+          <srcLine>2</srcLine>
+          <srcColumn>14</srcColumn>
+          <val>10</val>
+        </value>
+      </valDef>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType" reference="../../valDef/type"/>
+        <name>b</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <switch>
+        <srcLine>4</srcLine>
+        <srcColumn>2</srcColumn>
+        <testExpression class="idRef">
+          <srcLine>4</srcLine>
+          <srcColumn>9</srcColumn>
+          <idName>a</idName>
+        </testExpression>
+        <cases>
+          <case>
+            <srcLine>5</srcLine>
+            <srcColumn>4</srcColumn>
+            <statement class="varAssign">
+              <srcLine>6</srcLine>
+              <srcColumn>6</srcColumn>
+              <identifier>
+                <srcLine>6</srcLine>
+                <srcColumn>6</srcColumn>
+                <name>b</name>
+              </identifier>
+              <value class="intVal">
+                <srcLine>6</srcLine>
+                <srcColumn>10</srcColumn>
+                <val>42</val>
+              </value>
+            </statement>
+            <condition>1</condition>
+          </case>
+        </cases>
+        <defaultCases>
+          <default>
+            <srcLine>7</srcLine>
+            <srcColumn>4</srcColumn>
+            <statement class="varAssign">
+              <srcLine>8</srcLine>
+              <srcColumn>6</srcColumn>
+              <identifier>
+                <srcLine>8</srcLine>
+                <srcColumn>6</srcColumn>
+                <name>b</name>
+              </identifier>
+              <value class="intVal">
+                <srcLine>8</srcLine>
+                <srcColumn>10</srcColumn>
+                <val>10</val>
+              </value>
+            </statement>
+          </default>
+        </defaultCases>
+      </switch>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

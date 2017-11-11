@@ -1,0 +1,43 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType"/>
+        <name>floatValue</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>boolValue</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varDecl>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType" reference="../../varDecl/type"/>
+        <name>floatValue2</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varDecl>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../varDecl[2]/type"/>
+        <name>boolValue2</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

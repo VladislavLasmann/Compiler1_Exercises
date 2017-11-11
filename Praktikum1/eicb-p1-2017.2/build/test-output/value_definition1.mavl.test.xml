@@ -14,9 +14,10 @@
         <type class="floatType"/>
         <name>pi</name>
         <localBaseOffset>0</localBaseOffset>
-        <value class="recordElemSelect">
+        <value class="floatVal">
           <srcLine>2</srcLine>
           <srcColumn>16</srcColumn>
+          <val>3.142</val>
         </value>
       </valDef>
     </functionBody>
