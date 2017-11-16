@@ -14,76 +14,32 @@
         <type class="floatType"/>
         <name>x</name>
         <localBaseOffset>0</localBaseOffset>
-        <value class="addition">
+        <value class="unaryMinus">
           <srcLine>2</srcLine>
           <srcColumn>18</srcColumn>
-          <leftOp class="multiplication">
+          <op class="pow">
             <srcLine>2</srcLine>
-            <srcColumn>18</srcColumn>
-            <leftOp class="pow">
+            <srcColumn>19</srcColumn>
+            <leftOp class="intVal">
               <srcLine>2</srcLine>
-              <srcColumn>18</srcColumn>
+              <srcColumn>19</srcColumn>
+              <val>2</val>
+            </leftOp>
+            <rightOp class="pow">
+              <srcLine>2</srcLine>
+              <srcColumn>21</srcColumn>
               <leftOp class="intVal">
                 <srcLine>2</srcLine>
-                <srcColumn>18</srcColumn>
-                <val>2</val>
+                <srcColumn>21</srcColumn>
+                <val>3</val>
               </leftOp>
-              <rightOp class="pow">
+              <rightOp class="intVal">
                 <srcLine>2</srcLine>
-                <srcColumn>20</srcColumn>
-                <leftOp class="intVal">
-                  <srcLine>2</srcLine>
-                  <srcColumn>20</srcColumn>
-                  <val>3</val>
-                </leftOp>
-                <rightOp class="intVal">
-                  <srcLine>2</srcLine>
-                  <srcColumn>22</srcColumn>
-                  <val>6</val>
-                </rightOp>
+                <srcColumn>23</srcColumn>
+                <val>4</val>
               </rightOp>
-            </leftOp>
-            <rightOp class="intVal">
-              <srcLine>2</srcLine>
-              <srcColumn>26</srcColumn>
-              <val>30</val>
             </rightOp>
-          </leftOp>
-          <rightOp class="intVal">
-            <srcLine>2</srcLine>
-            <srcColumn>31</srcColumn>
-            <val>10</val>
-          </rightOp>
-        </value>
-      </valDef>
-      <valDef>
-        <srcLine>3</srcLine>
-        <srcColumn>4</srcColumn>
-        <type class="floatType" reference="../../valDef/type"/>
-        <name>y</name>
-        <localBaseOffset>0</localBaseOffset>
-        <value class="addition">
-          <srcLine>3</srcLine>
-          <srcColumn>18</srcColumn>
-          <leftOp class="intVal">
-            <srcLine>3</srcLine>
-            <srcColumn>18</srcColumn>
-            <val>10</val>
-          </leftOp>
-          <rightOp class="pow">
-            <srcLine>3</srcLine>
-            <srcColumn>23</srcColumn>
-            <leftOp class="intVal">
-              <srcLine>3</srcLine>
-              <srcColumn>23</srcColumn>
-              <val>3</val>
-            </leftOp>
-            <rightOp class="intVal">
-              <srcLine>3</srcLine>
-              <srcColumn>25</srcColumn>
-              <val>5</val>
-            </rightOp>
-          </rightOp>
+          </op>
         </value>
       </valDef>
     </functionBody>
