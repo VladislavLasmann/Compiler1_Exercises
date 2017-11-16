@@ -722,7 +722,7 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private Expression parseExponentiation() throws SyntaxError {
-		// ::= dim ( ’^’ dim )*
+		// ::= dim ( '^' dim)*
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
