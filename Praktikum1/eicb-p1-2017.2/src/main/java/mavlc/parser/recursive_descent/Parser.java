@@ -355,16 +355,18 @@ public final class Parser {
 		 */
 		LeftHandIdentifier leftHandIdentifier = new LeftHandIdentifier(line, column, name);
 
-		if( currentToken.type == AT ){
-			acceptIt();																						// '@'
-			String elementID = accept(ID);																	// ID
-			leftHandIdentifier = new RecordLHSIdentifier(line, column, name, elementID);					// assignment to an record-element
+        switch(currentToken.type) {
+            case AT:
+			    acceptIt();																						// '@'
+			    String elementID = accept(ID);																	// ID
+			    leftHandIdentifier = new RecordLHSIdentifier(line, column, name, elementID);					// assignment to an record-element
+                break;
 
-		} else if( currentToken.type == LBRACKET){
-			acceptIt();																						// '['
-			Expression firstIndex = parseExpr();															// expr
-			leftHandIdentifier = new VectorLHSIdentifier(line, column, name, firstIndex);					// one expression in brackets means vector
-			accept(RBRACKET);																				// ']'
+            case LBRACKET:
+			    acceptIt();																						// '['
+			    Expression firstIndex = parseExpr();															// expr
+			    leftHandIdentifier = new VectorLHSIdentifier(line, column, name, firstIndex);					// one expression in brackets means vector
+			    accept(RBRACKET);																				// ']'
 
 			if(currentToken.type == LBRACKET){
 				acceptIt();
@@ -372,6 +374,12 @@ public final class Parser {
 				leftHandIdentifier = new MatrixLHSIdentifier(line, column, name, firstIndex, secondIndex);	// 2x expression in brackets means matrix
 				accept(RBRACKET);
 			}
+
+            case ASSIGN:
+                break;
+
+            default: 
+                throw new SyntaxError(currentToken, AT, LBRACKET, ASSIGN);
 		}
 
 		accept(ASSIGN);																						// '='
