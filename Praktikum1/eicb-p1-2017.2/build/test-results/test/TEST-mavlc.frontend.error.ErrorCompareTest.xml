@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-16T19:59:57" hostname="seedOS" time="0.134">
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-16T21:14:54" hostname="seedOS" time="0.164">
   <properties/>
-  <testcase name="testExample[record1]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.125"/>
+  <testcase name="testExample[record1]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.156"/>
   <testcase name="testExample[SwitchCase9]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.008"/>
   <system-out><![CDATA[[src/test/testcases/errors/P1/public/_4/record1.error_test.syntax.xml, src/test/testcases/errors/P1/public/_5/SwitchCase9.error_test.syntax.xml]
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/errors/P1/public/_4/record1.mavl

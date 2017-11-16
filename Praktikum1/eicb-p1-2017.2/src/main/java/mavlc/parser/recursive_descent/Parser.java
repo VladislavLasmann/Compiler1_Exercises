@@ -665,15 +665,22 @@ public final class Parser {
 
 		Expression expression = parseMulDiv();														// this should update the currentToken
 		while( currentToken.type == ADD || currentToken.type == SUB ){								// ( ( ’+’ | ’-’ ) mulDiv )*
-			TokenType tokenType = currentToken.type;
-			acceptIt();
-			if( tokenType == ADD )
-				expression = new Addition(sourceLine, sourceColumn, expression, parseMulDiv()); 	// '+' mulDiv
-			else
-				expression = new Subtraction(sourceLine, sourceColumn, expression, parseMulDiv());	// '-' mulDiv
-		}
+            switch (currentToken.type) {
+                case ADD: 
+                    acceptIt();
+                    expression = new Addition(sourceLine, sourceColumn, expression, parseMulDiv()); 	// '+' mulDiv
+                    break;
+                case SUB:
+                    acceptIt();
+                    expression = new Subtraction(sourceLine, sourceColumn, expression, parseMulDiv());	// '-' mulDiv
+                    break;
+                default:
+                   // throw new SyntaxError(currentToken, ADD, SUB);
+		    }
+        }
 		return expression;
-	}
+    }
+    
 
 	/**
 	 * Exercise 1.2

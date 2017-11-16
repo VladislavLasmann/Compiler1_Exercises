@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-11-16T19:59:57" hostname="seedOS" time="0.624">
+<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-11-16T21:14:54" hostname="seedOS" time="0.786">
   <properties/>
-  <testcase name="testExample[record8]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.161"/>
-  <testcase name="testExample[record9]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.047"/>
-  <testcase name="testExample[record5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.048"/>
-  <testcase name="testExample[Select5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.034"/>
-  <testcase name="testExample[foreach2]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.038"/>
-  <testcase name="testExample[foreach1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.063"/>
-  <testcase name="testExample[value_definition1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.02"/>
-  <testcase name="testExample[var_declaration1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.033"/>
-  <testcase name="testExample[var_assign1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.019"/>
-  <testcase name="testExample[exp1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.022"/>
-  <testcase name="testExample[arithmetic4]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.027"/>
-  <testcase name="testExample[arithmetic1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.042"/>
-  <testcase name="testExample[Switchcase7]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.035"/>
-  <testcase name="testExample[Switchcase5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.028"/>
+  <testcase name="testExample[record8]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.179"/>
+  <testcase name="testExample[record9]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.043"/>
+  <testcase name="testExample[record5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.065"/>
+  <testcase name="testExample[Select5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.08"/>
+  <testcase name="testExample[foreach2]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.037"/>
+  <testcase name="testExample[foreach1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.067"/>
+  <testcase name="testExample[value_definition1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.044"/>
+  <testcase name="testExample[var_declaration1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.046"/>
+  <testcase name="testExample[var_assign1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.018"/>
+  <testcase name="testExample[exp1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.023"/>
+  <testcase name="testExample[arithmetic4]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.025"/>
+  <testcase name="testExample[arithmetic1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.04"/>
+  <testcase name="testExample[Switchcase7]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.032"/>
+  <testcase name="testExample[Switchcase5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.085"/>
   <system-out><![CDATA[[src/test/testcases/trees/P1/public/_4/record8.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record9.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_3/Select5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_6/foreach2.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_6/foreach1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/value_definition1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_declaration1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_assign1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/exp1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic4.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase7.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase5.ast_test.syntax.xml]
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record8.mavl
 Writing output of syntactical analysis to build/test-output/record8.mavl.test.xml
