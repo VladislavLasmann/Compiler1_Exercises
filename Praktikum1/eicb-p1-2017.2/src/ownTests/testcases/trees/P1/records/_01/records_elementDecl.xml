@@ -1,0 +1,115 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>6</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>recTypeDecl</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>7</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="recordType">
+          <name>myRecord</name>
+        </type>
+        <name>x</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordInit">
+          <srcLine>7</srcLine>
+          <srcColumn>21</srcColumn>
+          <elements class="linked-list">
+            <floatVal>
+              <srcLine>7</srcLine>
+              <srcColumn>31</srcColumn>
+              <val>1.0</val>
+            </floatVal>
+            <structInit>
+              <srcLine>7</srcLine>
+              <srcColumn>36</srcColumn>
+              <elements class="linked-list">
+                <structInit>
+                  <srcLine>7</srcLine>
+                  <srcColumn>37</srcColumn>
+                  <elements class="linked-list">
+                    <intVal>
+                      <srcLine>7</srcLine>
+                      <srcColumn>38</srcColumn>
+                      <val>1</val>
+                    </intVal>
+                    <intVal>
+                      <srcLine>7</srcLine>
+                      <srcColumn>41</srcColumn>
+                      <val>2</val>
+                    </intVal>
+                  </elements>
+                </structInit>
+                <structInit>
+                  <srcLine>7</srcLine>
+                  <srcColumn>45</srcColumn>
+                  <elements class="linked-list">
+                    <intVal>
+                      <srcLine>7</srcLine>
+                      <srcColumn>46</srcColumn>
+                      <val>3</val>
+                    </intVal>
+                    <intVal>
+                      <srcLine>7</srcLine>
+                      <srcColumn>49</srcColumn>
+                      <val>4</val>
+                    </intVal>
+                  </elements>
+                </structInit>
+              </elements>
+            </structInit>
+            <intVal>
+              <srcLine>7</srcLine>
+              <srcColumn>54</srcColumn>
+              <val>10</val>
+            </intVal>
+          </elements>
+          <name>myRecord</name>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list">
+    <recordTypeDeclaration>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>myRecord</name>
+      <elements>
+        <recordElementDeclaration>
+          <srcLine>2</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="floatType"/>
+          <name>g</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+        <recordElementDeclaration>
+          <srcLine>3</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType"/>
+            <xDim>2</xDim>
+            <yDim>2</yDim>
+          </type>
+          <name>m</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+        <recordElementDeclaration>
+          <srcLine>4</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="intType" reference="../../recordElementDeclaration[2]/type/elemType"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>false</isVariable>
+        </recordElementDeclaration>
+      </elements>
+    </recordTypeDeclaration>
+  </records>
+</module>

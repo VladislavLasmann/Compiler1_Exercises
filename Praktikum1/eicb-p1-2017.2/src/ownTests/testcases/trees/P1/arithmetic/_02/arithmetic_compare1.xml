@@ -1,0 +1,159 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>single</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType"/>
+        <name>refValue</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="intVal">
+          <srcLine>2</srcLine>
+          <srcColumn>25</srcColumn>
+          <val>0</val>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>value2</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>3</srcLine>
+          <srcColumn>22</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>3</srcLine>
+            <srcColumn>22</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="idRef">
+            <srcLine>3</srcLine>
+            <srcColumn>26</srcColumn>
+            <idName>refValue</idName>
+          </rightOp>
+          <comparator>GREATER</comparator>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef[2]/type"/>
+        <name>value3</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>4</srcLine>
+          <srcColumn>22</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>4</srcLine>
+            <srcColumn>22</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>4</srcLine>
+            <srcColumn>26</srcColumn>
+            <val>0</val>
+          </rightOp>
+          <comparator>LESS</comparator>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef[2]/type"/>
+        <name>value4</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>5</srcLine>
+          <srcColumn>22</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>22</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>27</srcColumn>
+            <idName>refValue</idName>
+          </rightOp>
+          <comparator>EQUAL</comparator>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>6</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef[2]/type"/>
+        <name>value5</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>6</srcLine>
+          <srcColumn>22</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>6</srcLine>
+            <srcColumn>22</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>6</srcLine>
+            <srcColumn>27</srcColumn>
+            <val>0</val>
+          </rightOp>
+          <comparator>GREATER_EQUAL</comparator>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>7</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef[2]/type"/>
+        <name>value6</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>7</srcLine>
+          <srcColumn>22</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>7</srcLine>
+            <srcColumn>22</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="idRef">
+            <srcLine>7</srcLine>
+            <srcColumn>27</srcColumn>
+            <idName>refValue</idName>
+          </rightOp>
+          <comparator>LESS_EQUAL</comparator>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>8</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType" reference="../../valDef/type"/>
+        <name>value2</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="compare">
+          <srcLine>8</srcLine>
+          <srcColumn>23</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>8</srcLine>
+            <srcColumn>23</srcColumn>
+            <val>5</val>
+          </leftOp>
+          <rightOp class="idRef">
+            <srcLine>8</srcLine>
+            <srcColumn>28</srcColumn>
+            <idName>refValue</idName>
+          </rightOp>
+          <comparator>NOT_EQUAL</comparator>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

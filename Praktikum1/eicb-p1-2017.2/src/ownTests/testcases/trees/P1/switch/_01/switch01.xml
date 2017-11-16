@@ -1,0 +1,136 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>testValue</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="intVal">
+          <srcLine>2</srcLine>
+          <srcColumn>24</srcColumn>
+          <val>4</val>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>boolValue</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>3</srcLine>
+          <srcColumn>25</srcColumn>
+          <val>false</val>
+        </value>
+      </valDef>
+      <switch>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <testExpression class="addition">
+          <srcLine>5</srcLine>
+          <srcColumn>12</srcColumn>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>12</srcColumn>
+            <idName>testValue</idName>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>24</srcColumn>
+            <val>1</val>
+          </rightOp>
+        </testExpression>
+        <cases>
+          <case>
+            <srcLine>6</srcLine>
+            <srcColumn>8</srcColumn>
+            <statement class="varAssign">
+              <srcLine>7</srcLine>
+              <srcColumn>12</srcColumn>
+              <identifier>
+                <srcLine>7</srcLine>
+                <srcColumn>12</srcColumn>
+                <name>boolValue</name>
+              </identifier>
+              <value class="boolVal">
+                <srcLine>7</srcLine>
+                <srcColumn>24</srcColumn>
+                <val>true</val>
+              </value>
+            </statement>
+            <condition>4</condition>
+          </case>
+          <case>
+            <srcLine>10</srcLine>
+            <srcColumn>8</srcColumn>
+            <statement class="varAssign">
+              <srcLine>11</srcLine>
+              <srcColumn>12</srcColumn>
+              <identifier>
+                <srcLine>11</srcLine>
+                <srcColumn>12</srcColumn>
+                <name>testValue</name>
+              </identifier>
+              <value class="intVal">
+                <srcLine>11</srcLine>
+                <srcColumn>24</srcColumn>
+                <val>3</val>
+              </value>
+            </statement>
+            <condition>1</condition>
+          </case>
+          <case>
+            <srcLine>12</srcLine>
+            <srcColumn>8</srcColumn>
+            <statement class="varAssign">
+              <srcLine>13</srcLine>
+              <srcColumn>12</srcColumn>
+              <identifier>
+                <srcLine>13</srcLine>
+                <srcColumn>12</srcColumn>
+                <name>testValue</name>
+              </identifier>
+              <value class="intVal">
+                <srcLine>13</srcLine>
+                <srcColumn>24</srcColumn>
+                <val>1</val>
+              </value>
+            </statement>
+            <condition>3</condition>
+          </case>
+        </cases>
+        <defaultCases>
+          <default>
+            <srcLine>8</srcLine>
+            <srcColumn>8</srcColumn>
+            <statement class="varAssign">
+              <srcLine>9</srcLine>
+              <srcColumn>12</srcColumn>
+              <identifier>
+                <srcLine>9</srcLine>
+                <srcColumn>12</srcColumn>
+                <name>boolValue</name>
+              </identifier>
+              <value class="boolVal">
+                <srcLine>9</srcLine>
+                <srcColumn>24</srcColumn>
+                <val>false</val>
+              </value>
+            </statement>
+          </default>
+        </defaultCases>
+      </switch>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

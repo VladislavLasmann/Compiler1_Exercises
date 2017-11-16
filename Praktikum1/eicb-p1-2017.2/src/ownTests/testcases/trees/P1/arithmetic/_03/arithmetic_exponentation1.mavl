@@ -1,0 +1,4 @@
+function void main(){
+    val float x = 2^3^6 * 30 + 10;
+    val float y = 10 + 3^5;
+}

@@ -1,0 +1,9 @@
+function void loopForEach(){
+    val vector<int>[5] v = [1,2,3,4,5];
+    foreach(var int i : v) {
+        i = 3;
+    }
+
+    foreach(val int i: v)
+        i = i + 3;
+}

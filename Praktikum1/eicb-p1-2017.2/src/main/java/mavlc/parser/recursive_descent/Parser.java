@@ -530,7 +530,7 @@ public final class Parser {
 	private Default parseDefault() throws SyntaxError {
 		// ::= ’default’  ’:’ statement
 		int sourceLine = currentToken.line;
-		int soureceColumn = currentToken.column;
+		int sourceColumn = currentToken.column;
 		Statement statement;
 
 		accept(DEFAULT);														// 'default'
@@ -538,7 +538,7 @@ public final class Parser {
 
 		statement = parseStatement();											// statement
 
-		return new Default(sourceLine, soureceColumn, statement);
+		return new Default(sourceLine, sourceColumn, statement);
 	}
 
 	private CompoundStatement parseCompound() throws SyntaxError {
@@ -652,7 +652,7 @@ public final class Parser {
 					expression = new Compare(sourceLine, sourceColumn, expression, parseAddSub(), NOT_EQUAL);
 					break;
 				default:
-					break;
+					throw new SyntaxError(currentToken, RANGLE, LANGLE, CMPLE, CMPGE, CMPEQ, CMPNE);
 			}
 		}
 
@@ -711,6 +711,7 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private Expression parseUnaryMinus() throws SyntaxError {
+		// ::= ’-’ ? exponentation
 		int line = currentToken.line;
 		int column = currentToken.column;
 
@@ -728,17 +729,16 @@ public final class Parser {
 	 * @throws SyntaxError
 	 */
 	private Expression parseExponentiation() throws SyntaxError {
-		// ::= dim ( ’^’ dim )*
+		// ::= dim ( '^' dim)*
 		int sourceLine = currentToken.line;
 		int sourceColumn = currentToken.column;
 
 		Expression expression = parseDim();														// dim, should update currentToken
 		while(currentToken.type == EXP){
 			acceptIt();																			//
-			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseDim() );	// '^' dim
+			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseExponentiation() );	// '^' !!!!!!! parseExponention statt dim da rechtsassoziativ bei mehreren exponention
 		}
 		return expression;
-
 	}
 
 

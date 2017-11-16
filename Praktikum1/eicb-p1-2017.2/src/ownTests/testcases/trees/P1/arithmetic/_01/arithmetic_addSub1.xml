@@ -1,0 +1,197 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType"/>
+        <name>floatValue</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="subtraction">
+          <srcLine>2</srcLine>
+          <srcColumn>27</srcColumn>
+          <leftOp class="addition">
+            <srcLine>2</srcLine>
+            <srcColumn>27</srcColumn>
+            <leftOp class="floatVal">
+              <srcLine>2</srcLine>
+              <srcColumn>27</srcColumn>
+              <val>3.1514</val>
+            </leftOp>
+            <rightOp class="multiplication">
+              <srcLine>2</srcLine>
+              <srcColumn>36</srcColumn>
+              <leftOp class="multiplication">
+                <srcLine>2</srcLine>
+                <srcColumn>36</srcColumn>
+                <leftOp class="intVal">
+                  <srcLine>2</srcLine>
+                  <srcColumn>36</srcColumn>
+                  <val>3</val>
+                </leftOp>
+                <rightOp class="intVal">
+                  <srcLine>2</srcLine>
+                  <srcColumn>38</srcColumn>
+                  <val>1</val>
+                </rightOp>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>40</srcColumn>
+                <val>2</val>
+              </rightOp>
+            </rightOp>
+          </leftOp>
+          <rightOp class="subtraction">
+            <srcLine>2</srcLine>
+            <srcColumn>45</srcColumn>
+            <leftOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>45</srcColumn>
+              <val>0</val>
+            </leftOp>
+            <rightOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>47</srcColumn>
+              <val>5</val>
+            </rightOp>
+          </rightOp>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType" reference="../../valDef/type"/>
+        <name>floatValue2</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="subtraction">
+          <srcLine>3</srcLine>
+          <srcColumn>28</srcColumn>
+          <leftOp class="addition">
+            <srcLine>3</srcLine>
+            <srcColumn>28</srcColumn>
+            <leftOp class="multiplication">
+              <srcLine>3</srcLine>
+              <srcColumn>28</srcColumn>
+              <leftOp class="intVal">
+                <srcLine>3</srcLine>
+                <srcColumn>28</srcColumn>
+                <val>5</val>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>3</srcLine>
+                <srcColumn>30</srcColumn>
+                <val>3</val>
+              </rightOp>
+            </leftOp>
+            <rightOp class="unaryMinus">
+              <srcLine>3</srcLine>
+              <srcColumn>34</srcColumn>
+              <op class="intVal">
+                <srcLine>3</srcLine>
+                <srcColumn>35</srcColumn>
+                <val>3</val>
+              </op>
+            </rightOp>
+          </leftOp>
+          <rightOp class="multiplication">
+            <srcLine>3</srcLine>
+            <srcColumn>39</srcColumn>
+            <leftOp class="intVal">
+              <srcLine>3</srcLine>
+              <srcColumn>39</srcColumn>
+              <val>8</val>
+            </leftOp>
+            <rightOp class="intVal">
+              <srcLine>3</srcLine>
+              <srcColumn>41</srcColumn>
+              <val>4</val>
+            </rightOp>
+          </rightOp>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType" reference="../../valDef/type"/>
+        <name>floatValue3</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="multiplication">
+          <srcLine>5</srcLine>
+          <srcColumn>28</srcColumn>
+          <leftOp class="pow">
+            <srcLine>5</srcLine>
+            <srcColumn>28</srcColumn>
+            <leftOp class="intVal">
+              <srcLine>5</srcLine>
+              <srcColumn>28</srcColumn>
+              <val>5</val>
+            </leftOp>
+            <rightOp class="pow">
+              <srcLine>5</srcLine>
+              <srcColumn>32</srcColumn>
+              <leftOp class="intVal">
+                <srcLine>5</srcLine>
+                <srcColumn>32</srcColumn>
+                <val>5</val>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>5</srcLine>
+                <srcColumn>36</srcColumn>
+                <val>3</val>
+              </rightOp>
+            </rightOp>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>40</srcColumn>
+            <val>4</val>
+          </rightOp>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>7</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>boolValue</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="logicOr">
+          <srcLine>7</srcLine>
+          <srcColumn>25</srcColumn>
+          <leftOp class="idRef">
+            <srcLine>7</srcLine>
+            <srcColumn>25</srcColumn>
+            <idName>True</idName>
+          </leftOp>
+          <rightOp class="logicAnd">
+            <srcLine>7</srcLine>
+            <srcColumn>32</srcColumn>
+            <leftOp class="boolNot">
+              <srcLine>7</srcLine>
+              <srcColumn>32</srcColumn>
+              <op class="idRef">
+                <srcLine>7</srcLine>
+                <srcColumn>33</srcColumn>
+                <idName>True</idName>
+              </op>
+            </leftOp>
+            <rightOp class="idRef">
+              <srcLine>7</srcLine>
+              <srcColumn>40</srcColumn>
+              <idName>True</idName>
+            </rightOp>
+          </rightOp>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-11-11T18:48:30" hostname="Vladis-MacBook-Pro.local" time="2.15">
+<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-11-16T19:59:57" hostname="seedOS" time="0.624">
   <properties/>
-  <testcase name="testExample[foreach2]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.506"/>
-  <testcase name="testExample[foreach1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.153"/>
-  <testcase name="testExample[var_declaration1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.065"/>
-  <testcase name="testExample[var_assign1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.053"/>
-  <testcase name="testExample[value_definition1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.126"/>
-  <testcase name="testExample[record5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.151"/>
-  <testcase name="testExample[record9]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.154"/>
-  <testcase name="testExample[record8]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.083"/>
-  <testcase name="testExample[Select5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.17"/>
-  <testcase name="testExample[exp1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.103"/>
-  <testcase name="testExample[arithmetic4]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.161"/>
-  <testcase name="testExample[arithmetic1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.163"/>
-  <testcase name="testExample[Switchcase7]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.12"/>
-  <testcase name="testExample[Switchcase5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.123"/>
-  <system-out><![CDATA[[src/test/testcases/trees/P1/public/_6/foreach2.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_6/foreach1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_declaration1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_assign1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/value_definition1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record9.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record8.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_3/Select5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/exp1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic4.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase7.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase5.ast_test.syntax.xml]
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_6/foreach2.mavl
-Writing output of syntactical analysis to build/test-output/foreach2.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_6/foreach1.mavl
-Writing output of syntactical analysis to build/test-output/foreach1.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/var_declaration1.mavl
-Writing output of syntactical analysis to build/test-output/var_declaration1.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/var_assign1.mavl
-Writing output of syntactical analysis to build/test-output/var_assign1.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/value_definition1.mavl
-Writing output of syntactical analysis to build/test-output/value_definition1.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record5.mavl
-Writing output of syntactical analysis to build/test-output/record5.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record9.mavl
-Writing output of syntactical analysis to build/test-output/record9.mavl.test.xml
-Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record8.mavl
+  <testcase name="testExample[record8]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.161"/>
+  <testcase name="testExample[record9]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.047"/>
+  <testcase name="testExample[record5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.048"/>
+  <testcase name="testExample[Select5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.034"/>
+  <testcase name="testExample[foreach2]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.038"/>
+  <testcase name="testExample[foreach1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.063"/>
+  <testcase name="testExample[value_definition1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.02"/>
+  <testcase name="testExample[var_declaration1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.033"/>
+  <testcase name="testExample[var_assign1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.019"/>
+  <testcase name="testExample[exp1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.022"/>
+  <testcase name="testExample[arithmetic4]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.027"/>
+  <testcase name="testExample[arithmetic1]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.042"/>
+  <testcase name="testExample[Switchcase7]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.035"/>
+  <testcase name="testExample[Switchcase5]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.028"/>
+  <system-out><![CDATA[[src/test/testcases/trees/P1/public/_4/record8.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record9.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_4/record5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_3/Select5.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_6/foreach2.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_6/foreach1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/value_definition1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_declaration1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_1/var_assign1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/exp1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic4.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_2/arithmetic1.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase7.ast_test.syntax.xml, src/test/testcases/trees/P1/public/_5/Switchcase5.ast_test.syntax.xml]
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record8.mavl
 Writing output of syntactical analysis to build/test-output/record8.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_3/Select5.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record9.mavl
+Writing output of syntactical analysis to build/test-output/record9.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_4/record5.mavl
+Writing output of syntactical analysis to build/test-output/record5.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_3/Select5.mavl
 Writing output of syntactical analysis to build/test-output/Select5.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/exp1.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_6/foreach2.mavl
+Writing output of syntactical analysis to build/test-output/foreach2.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_6/foreach1.mavl
+Writing output of syntactical analysis to build/test-output/foreach1.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/value_definition1.mavl
+Writing output of syntactical analysis to build/test-output/value_definition1.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/var_declaration1.mavl
+Writing output of syntactical analysis to build/test-output/var_declaration1.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_1/var_assign1.mavl
+Writing output of syntactical analysis to build/test-output/var_assign1.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/exp1.mavl
 Writing output of syntactical analysis to build/test-output/exp1.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/arithmetic4.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/arithmetic4.mavl
 Writing output of syntactical analysis to build/test-output/arithmetic4.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/arithmetic1.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_2/arithmetic1.mavl
 Writing output of syntactical analysis to build/test-output/arithmetic1.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_5/Switchcase7.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_5/Switchcase7.mavl
 Writing output of syntactical analysis to build/test-output/Switchcase7.mavl.test.xml
 Done.
-Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_5/Switchcase5.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/GroupGit/Compiler1_Exercises/Praktikum1/eicb-p1-2017.2/src/test/testcases/trees/P1/public/_5/Switchcase5.mavl
 Writing output of syntactical analysis to build/test-output/Switchcase5.mavl.test.xml
 Done.
 ]]></system-out>
-  <system-err><![CDATA[Running testcase foreach2.mavl
+  <system-err><![CDATA[Running testcase record8.mavl
+-->Successful
+Running testcase record9.mavl
+-->Successful
+Running testcase record5.mavl
+-->Successful
+Running testcase Select5.mavl
+-->Successful
+Running testcase foreach2.mavl
 -->Successful
 Running testcase foreach1.mavl
+-->Successful
+Running testcase value_definition1.mavl
 -->Successful
 Running testcase var_declaration1.mavl
 -->Successful
 Running testcase var_assign1.mavl
--->Successful
-Running testcase value_definition1.mavl
--->Successful
-Running testcase record5.mavl
--->Successful
-Running testcase record9.mavl
--->Successful
-Running testcase record8.mavl
--->Successful
-Running testcase Select5.mavl
 -->Successful
 Running testcase exp1.mavl
 -->Successful

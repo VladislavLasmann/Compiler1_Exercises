@@ -1,0 +1,10 @@
+function void single(){
+    val float refValue = 0;
+    val bool value2 = 5 > refValue;
+    val bool value3 = 5 < 0;
+    val bool value4 = 5 == refValue;
+    val bool value5 = 5 >= 0;
+    val bool value6 = 5 <= refValue;
+    val float value2 = 5 != refValue;
+}
+

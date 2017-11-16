@@ -1,0 +1,49 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType"/>
+        <name>x</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="unaryMinus">
+          <srcLine>2</srcLine>
+          <srcColumn>18</srcColumn>
+          <op class="pow">
+            <srcLine>2</srcLine>
+            <srcColumn>19</srcColumn>
+            <leftOp class="intVal">
+              <srcLine>2</srcLine>
+              <srcColumn>19</srcColumn>
+              <val>2</val>
+            </leftOp>
+            <rightOp class="pow">
+              <srcLine>2</srcLine>
+              <srcColumn>21</srcColumn>
+              <leftOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>21</srcColumn>
+                <val>3</val>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>2</srcLine>
+                <srcColumn>23</srcColumn>
+                <val>4</val>
+              </rightOp>
+            </rightOp>
+          </op>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

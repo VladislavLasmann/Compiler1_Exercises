@@ -1,0 +1,10 @@
+function void multiple(){
+    val float floatValue = 5;
+    val float floatValue2 = 5-3*5 > 2^5+3;
+    val float floatValue2 = 5-3*5 < 2^5+3;
+    val float floatValue2 = 5-3*5 >= 2^5+3;
+    val float floatValue2 = 5-3*5 <= 2^5+3;
+    val float floatValue2 = 5-3*5 == 2^5+3;
+    val float floatValue2 = 5-3*5 != 2^5+3;
+}
+

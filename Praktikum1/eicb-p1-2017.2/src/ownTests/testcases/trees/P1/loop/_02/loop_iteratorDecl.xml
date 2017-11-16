@@ -1,0 +1,112 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>interator1</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>i</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>3</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>i</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>3</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>0</val>
+        </value>
+      </varAssign>
+      <varDecl>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>counter</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <forLoop>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <initVarName>counter</initVarName>
+        <initValue class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>18</srcColumn>
+          <val>0</val>
+        </initValue>
+        <check class="compare">
+          <srcLine>5</srcLine>
+          <srcColumn>21</srcColumn>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>21</srcColumn>
+            <idName>counter</idName>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>31</srcColumn>
+            <val>10</val>
+          </rightOp>
+          <comparator>LESS</comparator>
+        </check>
+        <incrVarName>counter</incrVarName>
+        <incrExpr class="addition">
+          <srcLine>5</srcLine>
+          <srcColumn>45</srcColumn>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>45</srcColumn>
+            <idName>counter</idName>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>55</srcColumn>
+            <val>1</val>
+          </rightOp>
+        </incrExpr>
+        <body class="compoundStmt">
+          <srcLine>5</srcLine>
+          <srcColumn>58</srcColumn>
+          <statements>
+            <varAssign>
+              <srcLine>6</srcLine>
+              <srcColumn>8</srcColumn>
+              <identifier>
+                <srcLine>6</srcLine>
+                <srcColumn>8</srcColumn>
+                <name>i</name>
+              </identifier>
+              <value class="addition">
+                <srcLine>6</srcLine>
+                <srcColumn>12</srcColumn>
+                <leftOp class="idRef">
+                  <srcLine>6</srcLine>
+                  <srcColumn>12</srcColumn>
+                  <idName>i</idName>
+                </leftOp>
+                <rightOp class="intVal">
+                  <srcLine>6</srcLine>
+                  <srcColumn>16</srcColumn>
+                  <val>2</val>
+                </rightOp>
+              </value>
+            </varAssign>
+          </statements>
+        </body>
+      </forLoop>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>
