@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 ##############################################################################
 ##
@@ -33,11 +33,11 @@ DEFAULT_JVM_OPTS=""
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
 
-warn ( ) {
+warn () {
     echo "$*"
 }
 
-die ( ) {
+die () {
     echo
     echo "$*"
     echo
@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=/Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/bin:/Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum1/eicb-p1-2017.2/build/classes/main:/Users/v4/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.3.1/1303efbc4b181e5a58bf2e967dc156a3132b97c0/commons-cli-1.3.1.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.9/c43f6e6bfa79b56e04a8898a923c3cf7144dd460/xstream-1.4.9.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.2.1/1f3c89bdf2800ab830a0b556c883ecf99083460c/xmlunit-core-2.2.1.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-matchers/2.2.1/26c2afc03381d88ffa32ef2351c69e8ae90c3a8c/xmlunit-matchers-2.2.1.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar:/Users/v4/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar
+CLASSPATH=/home/seed/Workspace/TuDarmstadt/EiCb/PrivateGit/Internship1/TestOfGroupParser/eicb-p1-2017.2/bin:/home/seed/Workspace/TuDarmstadt/EiCb/PrivateGit/Internship1/TestOfGroupParser/eicb-p1-2017.2/build/classes/java/main:/home/seed/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.3.1/1303efbc4b181e5a58bf2e967dc156a3132b97c0/commons-cli-1.3.1.jar:/home/seed/.gradle/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.9/c43f6e6bfa79b56e04a8898a923c3cf7144dd460/xstream-1.4.9.jar:/home/seed/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-matchers/2.2.1/26c2afc03381d88ffa32ef2351c69e8ae90c3a8c/xmlunit-matchers-2.2.1.jar:/home/seed/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.2.1/1f3c89bdf2800ab830a0b556c883ecf99083460c/xmlunit-core-2.2.1.jar:/home/seed/.gradle/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar:/home/seed/.gradle/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar:/home/seed/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -154,16 +154,19 @@ if $cygwin ; then
     esac
 fi
 
-# Split up the JVM_OPTS And MAVLC_OPTS values into an array, following the shell quoting and substitution rules
-function splitJvmOpts() {
-    JVM_OPTS=("$@")
+# Escape application args
+save () {
+    for i do printf %s\\n "$i" | sed "s/'/'\\\\''/g;1s/^/'/;\$s/\$/' \\\\/" ; done
+    echo " "
 }
-eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $MAVLC_OPTS
+APP_ARGS=$(save "$@")
 
+# Collect all arguments for the java command, following the shell quoting and substitution rules
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $MAVLC_OPTS -classpath "\"$CLASSPATH\"" mavlc.Main "$APP_ARGS"
 
 # by default we should be in the correct project dir, but when run from Finder on Mac, the cwd is wrong
-if [[ "$(uname)" == "Darwin" ]] && [[ "$HOME" == "$PWD" ]]; then
+if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
   cd "$(dirname "$0")"
 fi
 
-exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" mavlc.Main "$@"
+exec "$JAVACMD" "$@"
