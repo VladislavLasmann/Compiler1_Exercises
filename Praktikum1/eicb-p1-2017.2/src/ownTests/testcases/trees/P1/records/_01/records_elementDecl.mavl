@@ -1,0 +1,8 @@
+record myRecord {
+        var float g;
+        var matrix<int>[2][2] m;
+        val int i;
+    }
+function void recTypeDecl(){
+    val myRecord x = @myRecord[1.0, [[1, 2], [3, 4]], 10];
+}

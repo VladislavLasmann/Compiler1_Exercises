@@ -1,0 +1,63 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>b</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>2</srcLine>
+          <srcColumn>17</srcColumn>
+          <val>true</val>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef/type"/>
+        <name>notB</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolNot">
+          <srcLine>3</srcLine>
+          <srcColumn>20</srcColumn>
+          <op class="idRef">
+            <srcLine>3</srcLine>
+            <srcColumn>21</srcColumn>
+            <idName>b</idName>
+          </op>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef/type"/>
+        <name>notNotB</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolNot">
+          <srcLine>4</srcLine>
+          <srcColumn>23</srcColumn>
+          <op class="boolNot">
+            <srcLine>4</srcLine>
+            <srcColumn>25</srcColumn>
+            <op class="idRef">
+              <srcLine>4</srcLine>
+              <srcColumn>26</srcColumn>
+              <idName>b</idName>
+            </op>
+          </op>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

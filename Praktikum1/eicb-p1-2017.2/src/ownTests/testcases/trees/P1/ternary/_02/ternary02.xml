@@ -1,0 +1,91 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType"/>
+        <name>t</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>2</srcLine>
+          <srcColumn>17</srcColumn>
+          <val>true</val>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="boolType" reference="../../valDef/type"/>
+        <name>f</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>3</srcLine>
+          <srcColumn>17</srcColumn>
+          <val>false</val>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>testVal</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="select">
+          <srcLine>4</srcLine>
+          <srcColumn>22</srcColumn>
+          <condition class="idRef">
+            <srcLine>4</srcLine>
+            <srcColumn>23</srcColumn>
+            <idName>t</idName>
+          </condition>
+          <trueCase class="intVal">
+            <srcLine>4</srcLine>
+            <srcColumn>28</srcColumn>
+            <val>3</val>
+          </trueCase>
+          <falseCase class="intVal">
+            <srcLine>4</srcLine>
+            <srcColumn>32</srcColumn>
+            <val>5</val>
+          </falseCase>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../valDef[3]/type"/>
+        <name>testVal</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="select">
+          <srcLine>5</srcLine>
+          <srcColumn>22</srcColumn>
+          <condition class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>23</srcColumn>
+            <idName>f</idName>
+          </condition>
+          <trueCase class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>28</srcColumn>
+            <val>3</val>
+          </trueCase>
+          <falseCase class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>32</srcColumn>
+            <val>5</val>
+          </falseCase>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

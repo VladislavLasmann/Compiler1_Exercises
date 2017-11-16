@@ -1,0 +1,9 @@
+function void main(){
+    val float a = 33 * 10 / 5;
+    val float b = 10 / (2 * 5);
+    val float c = 10 / 3 * 2;
+    val float d = 4 / 3 / 3;
+    val float e = 8 * 8 / 2;
+    val float f = 10 / 3 * 2 +1 ;
+    val float g = 4 / 3 + 8 / 3;
+}

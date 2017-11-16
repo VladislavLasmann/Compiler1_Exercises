@@ -1,0 +1,12 @@
+record myRecord {
+            var float g;
+            var int i;
+}
+
+function void elemSel(){
+    val myRecord x = @myRecord[3.4, 5];
+    val myRecord y = @myRecord[3.7, 8];
+
+    val float fVal = x@g;
+    val int iVal = y@i;
+}

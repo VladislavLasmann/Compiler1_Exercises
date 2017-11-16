@@ -1,0 +1,125 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>6</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>elemSel</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>7</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="recordType">
+          <name>myRecord</name>
+        </type>
+        <name>x</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordInit">
+          <srcLine>7</srcLine>
+          <srcColumn>21</srcColumn>
+          <elements class="linked-list">
+            <floatVal>
+              <srcLine>7</srcLine>
+              <srcColumn>31</srcColumn>
+              <val>3.4</val>
+            </floatVal>
+            <intVal>
+              <srcLine>7</srcLine>
+              <srcColumn>36</srcColumn>
+              <val>5</val>
+            </intVal>
+          </elements>
+          <name>myRecord</name>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>8</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="recordType">
+          <name>myRecord</name>
+        </type>
+        <name>y</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordInit">
+          <srcLine>8</srcLine>
+          <srcColumn>21</srcColumn>
+          <elements class="linked-list">
+            <floatVal>
+              <srcLine>8</srcLine>
+              <srcColumn>31</srcColumn>
+              <val>3.7</val>
+            </floatVal>
+            <intVal>
+              <srcLine>8</srcLine>
+              <srcColumn>36</srcColumn>
+              <val>8</val>
+            </intVal>
+          </elements>
+          <name>myRecord</name>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>10</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="floatType"/>
+        <name>fVal</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordElemSelect">
+          <srcLine>10</srcLine>
+          <srcColumn>21</srcColumn>
+          <record class="idRef">
+            <srcLine>10</srcLine>
+            <srcColumn>21</srcColumn>
+            <idName>x</idName>
+          </record>
+          <elementName>g</elementName>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>11</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>iVal</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="recordElemSelect">
+          <srcLine>11</srcLine>
+          <srcColumn>19</srcColumn>
+          <record class="idRef">
+            <srcLine>11</srcLine>
+            <srcColumn>19</srcColumn>
+            <idName>y</idName>
+          </record>
+          <elementName>i</elementName>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list">
+    <recordTypeDeclaration>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>myRecord</name>
+      <elements>
+        <recordElementDeclaration>
+          <srcLine>2</srcLine>
+          <srcColumn>12</srcColumn>
+          <type class="floatType" reference="../../../../../function/functionBody/valDef[3]/type"/>
+          <name>g</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+        <recordElementDeclaration>
+          <srcLine>3</srcLine>
+          <srcColumn>12</srcColumn>
+          <type class="intType" reference="../../../../../function/functionBody/valDef[4]/type"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+      </elements>
+    </recordTypeDeclaration>
+  </records>
+</module>

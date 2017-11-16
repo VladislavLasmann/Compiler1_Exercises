@@ -1,0 +1,6 @@
+function void main(){
+    val bool t = true;
+    val bool f = false;
+    val int testVal = (t) ? 3 : 5;
+    val int testVal = (f) ? 3 : 5;
+}

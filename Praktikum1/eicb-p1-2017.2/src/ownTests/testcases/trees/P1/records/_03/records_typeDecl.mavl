@@ -1,0 +1,5 @@
+record myRecord {
+        var float g;
+        var matrix<int>[2][2] m;
+        val int i;
+}

@@ -1,0 +1,9 @@
+function void main(){
+    val int i = -1;
+    val int j = 3 + -1;
+    val int k = -4 - -5;
+    val int l = 7 - -2;
+    val int m = -8 + 3;
+    val float n = -2 * -3;
+    val float o = -4 / -5;
+}

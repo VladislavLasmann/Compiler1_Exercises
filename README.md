@@ -11,6 +11,5 @@ Praktikum 1
 - Implementation: Done
 - Testing:
 	- public tests: 100% correct
-	- own tests: coplete writing own. 
-		- see README int trees/ownTests
-
+	- own tests: located in src/ownTests
+	    - run Makefile to generate AST's as pdf

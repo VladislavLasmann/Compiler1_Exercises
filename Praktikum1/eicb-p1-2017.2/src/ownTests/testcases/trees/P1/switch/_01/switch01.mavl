@@ -1,0 +1,15 @@
+function void main(){
+    val int testValue = 4;
+    val bool boolValue = false;
+
+    switch( testValue + 1){
+        case 4:
+            boolValue = true;
+        default:
+            boolValue = false;
+        case 1:
+            testValue = 3;
+        case 3:
+            testValue = 1;
+    }
+}

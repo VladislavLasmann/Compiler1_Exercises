@@ -1,0 +1,41 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <records class="linked-list">
+    <recordTypeDeclaration>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>myRecord</name>
+      <elements>
+        <recordElementDeclaration>
+          <srcLine>2</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="floatType"/>
+          <name>g</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+        <recordElementDeclaration>
+          <srcLine>3</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType"/>
+            <xDim>2</xDim>
+            <yDim>2</yDim>
+          </type>
+          <name>m</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>true</isVariable>
+        </recordElementDeclaration>
+        <recordElementDeclaration>
+          <srcLine>4</srcLine>
+          <srcColumn>8</srcColumn>
+          <type class="intType" reference="../../recordElementDeclaration[2]/type/elemType"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>false</isVariable>
+        </recordElementDeclaration>
+      </elements>
+    </recordTypeDeclaration>
+  </records>
+</module>
