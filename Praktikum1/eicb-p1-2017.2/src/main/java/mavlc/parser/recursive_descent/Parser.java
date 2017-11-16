@@ -732,7 +732,6 @@ public final class Parser {
 			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseExponentiation() );	// '^' !!!!!!! parseExponention statt dim da rechtsassoziativ bei mehreren exponention
 		}
 		return expression;
-
 	}
 
 

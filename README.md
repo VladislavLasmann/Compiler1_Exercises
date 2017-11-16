@@ -13,3 +13,4 @@ Praktikum 1
 	- public tests: 100% correct
 	- own tests: located in src/ownTests
 	    - run Makefile to generate AST's as pdf
+	
