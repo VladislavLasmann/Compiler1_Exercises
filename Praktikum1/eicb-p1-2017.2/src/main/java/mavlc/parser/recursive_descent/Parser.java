@@ -675,7 +675,7 @@ public final class Parser {
                     expression = new Subtraction(sourceLine, sourceColumn, expression, parseMulDiv());	// '-' mulDiv
                     break;
                 default:
-                   // throw new SyntaxError(currentToken, ADD, SUB);
+                    throw new SyntaxError(currentToken, ADD, SUB);
 		    }
         }
 		return expression;
