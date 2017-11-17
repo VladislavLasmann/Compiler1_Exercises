@@ -734,9 +734,11 @@ public final class Parser {
 		int sourceColumn = currentToken.column;
 
 		Expression expression = parseDim();														// dim, should update currentToken
-		while(currentToken.type == EXP){
-			acceptIt();																			//
-			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseExponentiation() );	// '^' !!!!!!! parseExponention statt dim da rechtsassoziativ bei mehreren exponention
+        // Because of recursion, if statement is enough
+        if(currentToken.type == EXP){
+			acceptIt();
+            // '^' !!!!!!! parseExponention statt paseDim da rechtsassoziativ bei mehreren exponention
+			expression = new Exponentiation(sourceLine, sourceColumn, expression, parseExponentiation() );
 		}
 		return expression;
 	}

@@ -40,3 +40,4 @@ task prepareSubmission(type: Zip) {
 }
 
 apply from: 'generateStartScripts.gradle'
+
