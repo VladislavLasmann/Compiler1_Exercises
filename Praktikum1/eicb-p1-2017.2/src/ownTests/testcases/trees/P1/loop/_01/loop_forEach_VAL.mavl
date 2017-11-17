@@ -1,0 +1,12 @@
+function void main() {
+    var vector<int>[2] v;
+    v  = [0,1];
+    
+    foreach (var int i : v) {
+        i = 3;
+    }
+
+    foreach (val int i : v + 2 ) {
+        //do nothing
+    }
+}

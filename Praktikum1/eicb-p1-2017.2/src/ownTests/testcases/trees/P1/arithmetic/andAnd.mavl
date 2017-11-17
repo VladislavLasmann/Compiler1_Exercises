@@ -1,0 +1,9 @@
+function void main() {
+    var bool a;
+    var bool b;
+    var bool c;
+    var bool x;
+
+    // ((a & c) & c)
+    x = a & b & c;
+}
