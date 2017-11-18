@@ -29,8 +29,10 @@ import static mavlc.parser.recursive_descent.Token.TokenType.*;
 
 /* TODO: Please fill this out!
  *
- * EiCB group number:
- * Names and student ID numbers of group members:
+ * EiCB group number:	122
+ * Names and student ID numbers of group members:	Konstantin Müller		2327697
+							Robin Ferrari			2585277	
+							Vladislav Lasmann		2593078
  */
 
 /**
