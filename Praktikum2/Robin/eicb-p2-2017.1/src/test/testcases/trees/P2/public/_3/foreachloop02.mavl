@@ -1,0 +1,9 @@
+function void main() {
+	val matrix<int>[2][3] M = [[2, 3, 5], [0, 1, 4]];
+	foreach(val int i : M)
+		foo(i);
+}
+
+function void foo(int i) {
+
+}

@@ -1,0 +1,9 @@
+record foo {
+	val int x;
+}
+
+function void main(){
+    var foo a;
+    a = @foo[10];
+    a@x = 2;
+}
