@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.262s</div>
+<div class="counter">0.253s</div>
 <p>duration</p>
 </div>
 </td>
@@ -80,8 +80,13 @@
 <h3 class="failures">testExample[arith01]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:524)
+	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.expression.Subtraction.accept(Subtraction.java:45)
+	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:251)
+	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -151,8 +156,10 @@
 <h3 class="failures">testExample[arith02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -222,8 +229,10 @@
 <h3 class="failures">testExample[assign03]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -293,8 +302,10 @@
 <h3 class="failures">testExample[assign04]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -364,8 +375,10 @@
 <h3 class="failures">testExample[compound03]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -435,8 +448,10 @@
 <h3 class="failures">testExample[foreachloop03]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:327)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -506,8 +521,10 @@
 <h3 class="failures">testExample[switch01]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.IdentificationTable.openNewScope(IdentificationTable.java:55)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:174)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:370)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
 	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
@@ -585,22 +602,22 @@
 </thead>
 <tr>
 <td class="failures">testExample[arith01]</td>
-<td>0.015s</td>
+<td>0.012s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[arith02]</td>
-<td>0.017s</td>
+<td>0.028s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[assign03]</td>
-<td>0.007s</td>
+<td>0.006s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[assign04]</td>
-<td>0.013s</td>
+<td>0.009s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -610,12 +627,12 @@
 </tr>
 <tr>
 <td class="failures">testExample[foreachloop03]</td>
-<td>0.015s</td>
+<td>0.014s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[switch01]</td>
-<td>0.189s</td>
+<td>0.178s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -655,7 +672,7 @@ Running testcase arith01.mavl
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 11, 2017 10:00:28 PM</p>
+<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 13, 2017 4:57:45 PM</p>
 </div>
 </div>
 </body>

@@ -18,12 +18,15 @@
 
 package mavlc.context_analysis;
 
+import java.util.Stack;
 import mavlc.ast.nodes.statement.Declaration;
 
 /**
  * A table for identifiers used inside a function.
  */
 public class IdentificationTable {
+    // A stack to organize the open scopes
+    private Stack<Scope> scopes = new Stack<Scope>();
 	
 	/**
 	 * Declares the given identifier in the current scope.
@@ -32,8 +35,7 @@ public class IdentificationTable {
 	 * @param declaration the reference to the identifier's declaration site
 	 */
 	public void addIdentifier(String name, Declaration declaration){
-		// TODO: implement (exercise 2.1)
-		throw new UnsupportedOperationException();
+            this.scopes.peek().addIdentifier(name, declaration);
 	}
 	
 	/**
@@ -43,24 +45,27 @@ public class IdentificationTable {
 	 * @return the identifier's innermost declaration site
 	 */
 	public Declaration getDeclaration(String name){
-		// TODO: implement (exercise 2.1)
-		throw new UnsupportedOperationException();
+        return this.scopes.peek().getDeclaration(name);
 	}
 	
 	/**
 	 * Opens a new scope.
 	 */
 	public void openNewScope(){
-		// TODO: implement (exercise 2.1)
-		throw new UnsupportedOperationException();
+        // if no scope is opend we open the global scope with param null
+        // else we open a new scope and pass the scope on top of the Stack scopes as parent scope
+        if (this.scopes.empty()) {
+            this.scopes.push(new Scope(null));
+        } else { 
+            this.scopes.push(new Scope(scopes.peek()));        
+        }
+
 	}
 	
 	/**
 	 * Closes the current scope.
 	 */
 	public void closeCurrentScope(){
-		// TODO: implement (exercise 2.1)
-		throw new UnsupportedOperationException();
+       this.scopes.pop(); 
 	}
-
 }

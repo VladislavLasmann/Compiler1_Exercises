@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.Set;
 
-import java.
 import mavlc.ast.nodes.ASTNode;
 import mavlc.ast.nodes.expression.Addition;
 import mavlc.ast.nodes.expression.And;
