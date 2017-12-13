@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="7" errors="0" timestamp="2017-12-13T15:57:45" hostname="seedOS" time="0.253">
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="7" errors="0" timestamp="2017-12-13T17:16:05" hostname="seedOS" time="0.206">
   <properties/>
-  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.178">
+  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.139">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:370)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:377)
 	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -70,7 +70,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.014">
+  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.022">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:327)
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
@@ -139,7 +139,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.006">
+  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.007">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
@@ -346,7 +346,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.028">
+  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.013">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
@@ -415,9 +415,9 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.012">
+  <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.01">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:524)
+	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:531)
 	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.Subtraction.accept(Subtraction.java:45)
 	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:251)

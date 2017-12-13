@@ -360,8 +360,17 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 
 	@Override
 	public Type visitCompoundStatement(CompoundStatement compoundStatement, Boolean __) {
-		// TODO: implement (exercise 2.1)
-		throw new UnsupportedOperationException();
+        // Here we need to open a new scope which we close before return
+        table.openNewScope();
+
+        // getting a Iterator to iterate over all statements and passing them to VisitStatement
+        Iterator<Statement> it = compoundStatement.getStatements().iterator();
+        while(it.hasNext()) {
+            Statement stm = it.next();
+            stm.accept(this, false);
+        }
+        table.closeCurrentScope();
+        return null;
 	}
 	
 	@Override
