@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.163s</div>
+<div class="counter">0.340s</div>
 <p>duration</p>
 </div>
 </td>
@@ -80,7 +80,10 @@
 <h3 class="failures">testExample[arith03]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
+	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:549)
+	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.expression.Addition.accept(Addition.java:46)
+	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:260)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -153,7 +156,7 @@
 <h3 class="failures">testExample[arith04]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:525)
+	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:549)
 	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.Addition.accept(Addition.java:46)
 	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:251)
@@ -228,18 +231,50 @@
 <a name="testExample[assign01]"></a>
 <h3 class="failures">testExample[assign01]</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:144)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:68)
+<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
+        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;5&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;11&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;varAssign&gt;
+        &lt;srcLine&gt;6&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;identifier&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+          &lt;name&gt;y&lt;/name&gt;
+          &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl[2]&quot;/]&gt;
+        &lt;/identifi...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
+        [&lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;5&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;11&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;varAssign&gt;
+        &lt;srcLine&gt;6&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;identifier&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+          &lt;name&gt;y&lt;/name]&gt;
+        &lt;/identifi...&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
+	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -302,6 +337,9 @@
 <h3 class="failures">testExample[assign02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
+	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:305)
+	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.RecordLHSIdentifier.accept(RecordLHSIdentifier.java:42)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
@@ -374,18 +412,96 @@
 <a name="testExample[compound01]"></a>
 <h3 class="failures">testExample[compound01]</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:144)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:68)
+<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
+        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;3&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;10&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;compoundStmt&gt;
+        &lt;srcLine&gt;5&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;statements&gt;
+          &lt;valDef&gt;
+            &lt;srcLine&gt;6&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
+            &lt;name&gt;x&lt;/name&gt;
+            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+            &lt;value class=&quot;intVal&quot;&gt;
+              &lt;srcLine&gt;6&lt;/srcLine&gt;
+              &lt;srcColumn&gt;20&lt;/srcColumn&gt;
+              &lt;val&gt;33&lt;/val&gt;
+            &lt;/value&gt;
+          &lt;/valDef&gt;
+          &lt;varDecl&gt;
+            &lt;srcLine&gt;7&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
+            &lt;name&gt;y&lt;/name&gt;
+            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+          &lt;/varDecl&gt;
+          &lt;varAssign&gt;
+            &lt;srcLine&gt;8&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;identifier&gt;
+              &lt;srcLine&gt;8&lt;/srcLine&gt;
+              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+              &lt;name&gt;y&lt;/name&gt;
+              &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/]&gt;
+            &lt;/iden...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
+        [&lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;3&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;10&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;compoundStmt&gt;
+        &lt;srcLine&gt;5&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;statements&gt;
+          &lt;valDef&gt;
+            &lt;srcLine&gt;6&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
+            &lt;name&gt;x&lt;/name&gt;
+            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+            &lt;value class=&quot;intVal&quot;&gt;
+              &lt;srcLine&gt;6&lt;/srcLine&gt;
+              &lt;srcColumn&gt;20&lt;/srcColumn&gt;
+              &lt;val&gt;33&lt;/val&gt;
+            &lt;/value&gt;
+          &lt;/valDef&gt;
+          &lt;varDecl&gt;
+            &lt;srcLine&gt;7&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
+            &lt;name&gt;y&lt;/name&gt;
+            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+          &lt;/varDecl&gt;
+          &lt;varAssign&gt;
+            &lt;srcLine&gt;8&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;identifier&gt;
+              &lt;srcLine&gt;8&lt;/srcLine&gt;
+              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+              &lt;name&gt;y&lt;/name]&gt;
+            &lt;/iden...&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
+	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -447,18 +563,123 @@
 <a name="testExample[compound02]"></a>
 <h3 class="failures">testExample[compound02]</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:144)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:68)
+<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
+        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;5&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;11&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;varAssign&gt;
+        &lt;srcLine&gt;6&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;identifier&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+          &lt;name&gt;y&lt;/name&gt;
+          &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl[2]&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;22&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;compoundStmt&gt;
+        &lt;srcLine&gt;8&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;statements&gt;
+          &lt;compoundStmt&gt;
+            &lt;srcLine&gt;9&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;statements&gt;
+              &lt;valDef&gt;
+                &lt;srcLine&gt;10&lt;/srcLine&gt;
+                &lt;srcColumn&gt;12&lt;/srcColumn&gt;
+                &lt;type class=&quot;intType&quot; reference=&quot;../../../../../../varDecl/type&quot;/&gt;
+                &lt;name&gt;y&lt;/name&gt;
+                &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+                &lt;value class=&quot;intVal&quot;&gt;
+                  &lt;srcLine&gt;10&lt;/srcLine&gt;
+                  &lt;srcColumn&gt;24&lt;/srcColumn&gt;
+                  &lt;val&gt;33&lt;/val&gt;
+                &lt;/value&gt;
+              &lt;/valDef&gt;
+            &lt;/statements&gt;
+          &lt;/compoundStmt&gt;
+          &lt;varAssign&gt;
+            &lt;srcLine&gt;12&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;identifier&gt;
+              &lt;srcLine&gt;12&lt;/srcLine&gt;
+              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+              &lt;name&gt;y&lt;/name&gt;
+              &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../../../varDecl[2]&quot;/]&gt;
+            &lt;/iden...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
+        [&lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;5&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;11&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;varAssign&gt;
+        &lt;srcLine&gt;6&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;identifier&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+          &lt;name&gt;y&lt;/name&gt;
+        &lt;/identifier&gt;
+        &lt;value class=&quot;intVal&quot;&gt;
+          &lt;srcLine&gt;6&lt;/srcLine&gt;
+          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+          &lt;val&gt;22&lt;/val&gt;
+        &lt;/value&gt;
+      &lt;/varAssign&gt;
+      &lt;compoundStmt&gt;
+        &lt;srcLine&gt;8&lt;/srcLine&gt;
+        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
+        &lt;statements&gt;
+          &lt;compoundStmt&gt;
+            &lt;srcLine&gt;9&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;statements&gt;
+              &lt;valDef&gt;
+                &lt;srcLine&gt;10&lt;/srcLine&gt;
+                &lt;srcColumn&gt;12&lt;/srcColumn&gt;
+                &lt;type class=&quot;intType&quot; reference=&quot;../../../../../../varDecl/type&quot;/&gt;
+                &lt;name&gt;y&lt;/name&gt;
+                &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
+                &lt;value class=&quot;intVal&quot;&gt;
+                  &lt;srcLine&gt;10&lt;/srcLine&gt;
+                  &lt;srcColumn&gt;24&lt;/srcColumn&gt;
+                  &lt;val&gt;33&lt;/val&gt;
+                &lt;/value&gt;
+              &lt;/valDef&gt;
+            &lt;/statements&gt;
+          &lt;/compoundStmt&gt;
+          &lt;varAssign&gt;
+            &lt;srcLine&gt;12&lt;/srcLine&gt;
+            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+            &lt;identifier&gt;
+              &lt;srcLine&gt;12&lt;/srcLine&gt;
+              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
+              &lt;name&gt;y&lt;/name]&gt;
+            &lt;/iden...&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
+	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
+	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -521,9 +742,9 @@
 <h3 class="failures">testExample[foreachloop01]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:349)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
+	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
@@ -594,7 +815,7 @@
 <h3 class="failures">testExample[foreachloop02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:327)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:349)
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -667,7 +888,7 @@
 <h3 class="failures">testExample[switch02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:377)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:401)
 	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -758,37 +979,37 @@
 </tr>
 <tr>
 <td class="failures">testExample[assign01]</td>
-<td>0.010s</td>
+<td>0.035s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[assign02]</td>
-<td>0.013s</td>
+<td>0.012s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[compound01]</td>
-<td>0.011s</td>
+<td>0.155s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[compound02]</td>
-<td>0.026s</td>
+<td>0.039s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[foreachloop01]</td>
-<td>0.022s</td>
+<td>0.033s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[foreachloop02]</td>
-<td>0.021s</td>
+<td>0.016s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[switch02]</td>
-<td>0.036s</td>
+<td>0.026s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -801,9 +1022,15 @@ Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop02.mavl
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop01.mavl
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound01.mavl
+Writing output of contextual analysis to build/test-output/compound01.mavl.test.xml
+Done.
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound02.mavl
+Writing output of contextual analysis to build/test-output/compound02.mavl.test.xml
+Done.
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign02.mavl
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign01.mavl
+Writing output of contextual analysis to build/test-output/assign01.mavl.test.xml
+Done.
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith04.mavl
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith03.mavl
 </pre>
@@ -832,7 +1059,7 @@ Running testcase arith03.mavl
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 13, 2017 6:16:06 PM</p>
+<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 15, 2017 6:15:38 PM</p>
 </div>
 </div>
 </body>

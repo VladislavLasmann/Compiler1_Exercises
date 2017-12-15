@@ -1,0 +1,85 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>x</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>y</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>5</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>x</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>11</val>
+        </value>
+      </varAssign>
+      <varAssign>
+        <srcLine>6</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>6</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>y</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>6</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>22</val>
+        </value>
+      </varAssign>
+      <valDef>
+        <srcLine>8</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>z</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="idRef">
+          <srcLine>8</srcLine>
+          <srcColumn>16</srcColumn>
+          <type class="intType" reference="../../../varDecl/type"/>
+          <declaration class="varDecl" reference="../../../varDecl"/>
+          <idName>x</idName>
+        </value>
+      </valDef>
+      <valDef>
+        <srcLine>9</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>u</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="idRef">
+          <srcLine>9</srcLine>
+          <srcColumn>16</srcColumn>
+          <type class="intType" reference="../../../varDecl/type"/>
+          <declaration class="valDef" reference="../../../valDef"/>
+          <idName>z</idName>
+        </value>
+      </valDef>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

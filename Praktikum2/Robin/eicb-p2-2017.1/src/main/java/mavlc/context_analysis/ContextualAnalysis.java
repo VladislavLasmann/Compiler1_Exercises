@@ -255,26 +255,48 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 
 	@Override
 	public Type visitVariableAssignment(VariableAssignment variableAssignment, Boolean __) {
-		// TODO: implement (exercise 2.2)
-		throw new UnsupportedOperationException();
+        // first call accept methods for left and right site.
+        Type lhs = variableAssignment.getIdentifier().accept(this, null);
+        Type rhs = variableAssignment.getValue().accept(this, null);
+
+        // lets see if the Variable was declared before and if the types matches
+        //Type declaredType = table.getDeclaration(variableAssignment.getIdentifier().getName()).getType();
+        
+        // now check the types
+        checkType(variableAssignment, lhs, rhs);
+        return null;
+
+        
 	}
 
 	@Override
 	public Type visitLeftHandIdentifier(LeftHandIdentifier leftHandIdentifier, Boolean __) {
-		// TODO: implement (exercise 2.2)
-		throw new UnsupportedOperationException();
+        // lets check that ident points on a variable and not a constant
+        if (! table.getDeclaration(leftHandIdentifier.getName()).isVariable())
+            throw new ConstantAssignmentError(leftHandIdentifier);
+
+        return  table.getDeclaration(leftHandIdentifier.getName()).getType();
 	}
 
 	@Override
 	public Type visitMatrixLHSIdentifier(MatrixLHSIdentifier matrixLHSIdentifier, Boolean __) {
-		// TODO: implement (exercise 2.2)
-		throw new UnsupportedOperationException();
+        // lets check that the types of y and x are int
+        Type xType = matrixLHSIdentifier.getXIndex().accept(this, null);
+        Type yType = matrixLHSIdentifier.getYIndex().accept(this, null);
+
+        checkType(matrixLHSIdentifier, xType, Type.getIntType());
+        checkType (matrixLHSIdentifier, yType, Type.getIntType());
+
+       return ((StructType) table.getDeclaration(matrixLHSIdentifier.getName()).getType()).getElementType();
 	}
 
 	@Override
 	public Type visitVectorLHSIdentifier(VectorLHSIdentifier vectorLHSIdentifier, Boolean __) {
-		// TODO: implement (exercise 2.2)
-		throw new UnsupportedOperationException();
+        // lets check that the index is a int
+        Type index = vectorLHSIdentifier.getIndex().accept(this, null);
+        checkType(vectorLHSIdentifier, index, Type.getIntType());
+
+        return ((StructType) table.getDeclaration(vectorLHSIdentifier.getName()).getType()).getElementType();
 	}
 
 	@Override

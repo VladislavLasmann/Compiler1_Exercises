@@ -1,0 +1,29 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varAssign>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>2</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>x</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>2</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>0</val>
+        </value>
+      </varAssign>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

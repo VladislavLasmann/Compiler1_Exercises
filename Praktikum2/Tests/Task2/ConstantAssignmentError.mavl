@@ -1,0 +1,4 @@
+function void main() {
+    val int x = 42;
+    x = 5;
+}

@@ -1,0 +1,4 @@
+function void main() {
+    var int x;
+    x = false;
+}

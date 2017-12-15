@@ -1,0 +1,33 @@
+// Expected to be valid
+
+record myRecord {
+    var float r;
+}
+
+function void main() {
+    var int i;
+    var float f;
+    var bool b;
+
+    i = 42;
+    f = 42.42;
+    b = true;
+
+    var vector<int> [3] vec1;
+    vec1 = [1,2,3];
+    vec1[0] = 7;
+
+    var matrix<int> [3][3] mat1;
+    mat1 = [[1,2,3],
+            [4,5,6],
+            [7,8,9]];
+    mat1[1][2] = 0;
+
+    val myRecord x = @myRecord[5,5];
+
+    {
+        val int i = 42;
+        val float f = 42.42;
+        val bool = true;
+    }
+}

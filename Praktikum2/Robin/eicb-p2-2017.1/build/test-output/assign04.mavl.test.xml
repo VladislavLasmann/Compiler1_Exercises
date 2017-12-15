@@ -1,0 +1,77 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>5</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>6</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="recordType">
+          <name>foo</name>
+          <declaration>
+            <srcLine>1</srcLine>
+            <srcColumn>0</srcColumn>
+            <name>foo</name>
+            <elements>
+              <recordElementDeclaration>
+                <srcLine>2</srcLine>
+                <srcColumn>1</srcColumn>
+                <type class="intType"/>
+                <name>x</name>
+                <localBaseOffset>0</localBaseOffset>
+                <isVariable>false</isVariable>
+              </recordElementDeclaration>
+            </elements>
+          </declaration>
+        </type>
+        <name>a</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>7</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>7</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>a</name>
+        </identifier>
+        <value class="recordInit">
+          <srcLine>7</srcLine>
+          <srcColumn>8</srcColumn>
+          <elements class="linked-list">
+            <intVal>
+              <srcLine>7</srcLine>
+              <srcColumn>13</srcColumn>
+              <val>10</val>
+            </intVal>
+          </elements>
+          <name>foo</name>
+        </value>
+      </varAssign>
+      <varAssign>
+        <srcLine>8</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier class="recordId">
+          <srcLine>8</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>a</name>
+          <elementName>x</elementName>
+        </identifier>
+        <value class="intVal">
+          <srcLine>8</srcLine>
+          <srcColumn>10</srcColumn>
+          <val>2</val>
+        </value>
+      </varAssign>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list">
+    <recordTypeDeclaration reference="../../function/functionBody/varDecl/type/declaration"/>
+  </records>
+</module>

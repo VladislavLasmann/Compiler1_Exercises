@@ -1,0 +1,104 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType"/>
+        <name>a</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="boolType"/>
+        <name>b</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>3</srcLine>
+          <srcColumn>15</srcColumn>
+          <val>false</val>
+        </value>
+      </valDef>
+      <varDecl>
+        <srcLine>4</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>c</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <valDef>
+        <srcLine>5</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>d</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>14</srcColumn>
+          <val>20</val>
+        </value>
+      </valDef>
+      <varAssign>
+        <srcLine>6</srcLine>
+        <srcColumn>2</srcColumn>
+        <identifier>
+          <srcLine>6</srcLine>
+          <srcColumn>2</srcColumn>
+          <name>a</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>6</srcLine>
+          <srcColumn>6</srcColumn>
+          <val>10</val>
+        </value>
+      </varAssign>
+      <varAssign>
+        <srcLine>8</srcLine>
+        <srcColumn>2</srcColumn>
+        <identifier>
+          <srcLine>8</srcLine>
+          <srcColumn>2</srcColumn>
+          <name>c</name>
+        </identifier>
+        <value class="addition">
+          <srcLine>8</srcLine>
+          <srcColumn>6</srcColumn>
+          <leftOp class="intVal">
+            <srcLine>8</srcLine>
+            <srcColumn>6</srcColumn>
+            <val>10</val>
+          </leftOp>
+          <rightOp class="select">
+            <srcLine>8</srcLine>
+            <srcColumn>12</srcColumn>
+            <condition class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>12</srcColumn>
+              <idName>b</idName>
+            </condition>
+            <trueCase class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>15</srcColumn>
+              <idName>a</idName>
+            </trueCase>
+            <falseCase class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>19</srcColumn>
+              <idName>d</idName>
+            </falseCase>
+          </rightOp>
+        </value>
+      </varAssign>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

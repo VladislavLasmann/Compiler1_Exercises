@@ -1,0 +1,7 @@
+record myRecord {
+    var int i;
+}
+
+function void main() {
+    val myRecord x = @myRecord[false];
+}

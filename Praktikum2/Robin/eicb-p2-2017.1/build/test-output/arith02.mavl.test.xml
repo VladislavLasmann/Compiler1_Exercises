@@ -1,0 +1,105 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType"/>
+        <name>a</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <valDef>
+        <srcLine>3</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="boolType"/>
+        <name>b</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="boolVal">
+          <srcLine>3</srcLine>
+          <srcColumn>15</srcColumn>
+          <val>true</val>
+        </value>
+      </valDef>
+      <varDecl>
+        <srcLine>4</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>c</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <valDef>
+        <srcLine>5</srcLine>
+        <srcColumn>2</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>d</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>14</srcColumn>
+          <val>20</val>
+        </value>
+      </valDef>
+      <varAssign>
+        <srcLine>6</srcLine>
+        <srcColumn>2</srcColumn>
+        <identifier>
+          <srcLine>6</srcLine>
+          <srcColumn>2</srcColumn>
+          <name>a</name>
+        </identifier>
+        <value class="intVal">
+          <srcLine>6</srcLine>
+          <srcColumn>6</srcColumn>
+          <val>10</val>
+        </value>
+      </varAssign>
+      <varAssign>
+        <srcLine>8</srcLine>
+        <srcColumn>2</srcColumn>
+        <identifier>
+          <srcLine>8</srcLine>
+          <srcColumn>2</srcColumn>
+          <name>c</name>
+        </identifier>
+        <value class="select">
+          <srcLine>8</srcLine>
+          <srcColumn>6</srcColumn>
+          <condition class="compare">
+            <srcLine>8</srcLine>
+            <srcColumn>7</srcColumn>
+            <leftOp class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>7</srcColumn>
+              <idName>a</idName>
+            </leftOp>
+            <rightOp class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>9</srcColumn>
+              <idName>d</idName>
+            </rightOp>
+            <comparator>GREATER</comparator>
+          </condition>
+          <trueCase class="idRef">
+            <srcLine>8</srcLine>
+            <srcColumn>14</srcColumn>
+            <idName>b</idName>
+          </trueCase>
+          <falseCase class="idRef">
+            <srcLine>8</srcLine>
+            <srcColumn>18</srcColumn>
+            <idName>d</idName>
+          </falseCase>
+        </value>
+      </varAssign>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>
