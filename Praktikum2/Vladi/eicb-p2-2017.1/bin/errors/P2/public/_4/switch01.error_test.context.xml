@@ -1,0 +1,44 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:205)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.DuplicateCaseException">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:448)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:100)</trace>
+      <trace>mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:185)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:100)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:73)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:137)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:100)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:47)</trace>
+      <trace>mavlc.Main.main(Main.java:200)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Error in Switch Case Statement @ 
+switch( a[1][1] ){ 
+case 5:
+ b = 7;
+case 4:
+ b = 27;
+case 4:
+ b = 27;
+default:
+ b = 10;
+}
+in line 5, column 2: 
+Two cases with the same condition were found:
+case 4:
+ b = 27;
+case 4:
+ b = 27;
+</message>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>switch01.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

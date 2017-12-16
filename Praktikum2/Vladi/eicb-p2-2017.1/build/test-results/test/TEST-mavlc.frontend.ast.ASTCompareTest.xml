@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="9" skipped="0" failures="1" errors="0" timestamp="2017-12-16T13:59:38" hostname="Vladis-MacBook-Pro.local" time="2.237">
+  <properties/>
+  <testcase name="testExample[compound02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.87"/>
+  <testcase name="testExample[compound01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.165"/>
+  <testcase name="testExample[switch02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.163"/>
+  <testcase name="testExample[foreachloop01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.133"/>
+  <testcase name="testExample[foreachloop02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.154"/>
+  <testcase name="testExample[assign02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.345"/>
+  <testcase name="testExample[assign01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.136"/>
+  <testcase name="testExample[arith03]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.159"/>
+  <testcase name="testExample[arith04]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.091">
+    <failure message="Type error @ val VECTOR &lt;INT&gt; [3] x = a * b ^ a + c; in line 6, column 4: &#10;VECTOR &lt;INT&gt; [3] does not match INT" type="mavlc.error_reporting.TypeError">Type error @ val VECTOR &lt;INT&gt; [3] x = a * b ^ a + c; in line 6, column 4: 
+VECTOR &lt;INT&gt; [3] does not match INT
+	at mavlc.context_analysis.ContextualAnalysis.checkType(ContextualAnalysis.java:128)
+	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:256)
+	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:108)
+	at mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:193)
+	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:108)
+	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
+	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:145)
+	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:108)
+	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
+	at mavlc.Main.main(Main.java:144)
+	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</failure>
+  </testcase>
+  <system-out><![CDATA[[src/test/testcases/trees/P2/public/_1/compound02.ast_test.context.xml, src/test/testcases/trees/P2/public/_1/compound01.ast_test.context.xml, src/test/testcases/trees/P2/public/_4/switch02.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop01.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign01.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith03.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith04.ast_test.context.xml]
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound02.mavl
+Writing output of contextual analysis to build/test-output/compound02.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound01.mavl
+Writing output of contextual analysis to build/test-output/compound01.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_4/switch02.mavl
+Writing output of contextual analysis to build/test-output/switch02.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop01.mavl
+Writing output of contextual analysis to build/test-output/foreachloop01.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop02.mavl
+Writing output of contextual analysis to build/test-output/foreachloop02.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign02.mavl
+Writing output of contextual analysis to build/test-output/assign02.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign01.mavl
+Writing output of contextual analysis to build/test-output/assign01.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith03.mavl
+Writing output of contextual analysis to build/test-output/arith03.mavl.test.xml
+Done.
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith04.mavl
+]]></system-out>
+  <system-err><![CDATA[Running testcase compound02.mavl
+-->Successful
+Running testcase compound01.mavl
+-->Successful
+Running testcase switch02.mavl
+-->Successful
+Running testcase foreachloop01.mavl
+-->Successful
+Running testcase foreachloop02.mavl
+-->Successful
+Running testcase assign02.mavl
+-->Successful
+Running testcase assign01.mavl
+-->Successful
+Running testcase arith03.mavl
+-->Successful
+Running testcase arith04.mavl
+]]></system-err>
+</testsuite>

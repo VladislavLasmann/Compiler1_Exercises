@@ -1,0 +1,151 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="vectorType">
+          <elemType class="floatType"/>
+          <dim>2</dim>
+        </type>
+        <name>v</name>
+        <localBaseOffset>0</localBaseOffset>
+        <value class="structInit">
+          <srcLine>2</srcLine>
+          <srcColumn>26</srcColumn>
+          <type class="vectorType">
+            <elemType class="floatType" reference="../../../type/elemType"/>
+            <dim>2</dim>
+          </type>
+          <elements class="linked-list">
+            <floatVal>
+              <srcLine>2</srcLine>
+              <srcColumn>27</srcColumn>
+              <val>2.5</val>
+            </floatVal>
+            <floatVal>
+              <srcLine>2</srcLine>
+              <srcColumn>32</srcColumn>
+              <val>3.1</val>
+            </floatVal>
+          </elements>
+        </value>
+      </valDef>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>1</srcColumn>
+        <type class="floatType" reference="../../valDef/type/elemType"/>
+        <name>m</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>4</srcLine>
+        <srcColumn>1</srcColumn>
+        <identifier>
+          <srcLine>4</srcLine>
+          <srcColumn>1</srcColumn>
+          <name>m</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
+        </identifier>
+        <value class="floatVal">
+          <srcLine>4</srcLine>
+          <srcColumn>5</srcColumn>
+          <val>0.0</val>
+        </value>
+      </varAssign>
+      <forEachLoop>
+        <srcLine>5</srcLine>
+        <srcColumn>1</srcColumn>
+        <iterator>
+          <srcLine>5</srcLine>
+          <srcColumn>9</srcColumn>
+          <type class="floatType" reference="../../../valDef/type/elemType"/>
+          <name>i</name>
+          <localBaseOffset>0</localBaseOffset>
+          <isVariable>false</isVariable>
+        </iterator>
+        <struct class="multiplication">
+          <srcLine>5</srcLine>
+          <srcColumn>23</srcColumn>
+          <type class="vectorType" reference="../../../valDef/type"/>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>23</srcColumn>
+            <type class="vectorType" reference="../../../../valDef/type"/>
+            <declaration class="valDef" reference="../../../../valDef"/>
+            <idName>v</idName>
+          </leftOp>
+          <rightOp class="structInit">
+            <srcLine>5</srcLine>
+            <srcColumn>27</srcColumn>
+            <type class="vectorType">
+              <elemType class="floatType" reference="../../../../../valDef/type/elemType"/>
+              <dim>2</dim>
+            </type>
+            <elements class="linked-list">
+              <unaryMinus>
+                <srcLine>5</srcLine>
+                <srcColumn>28</srcColumn>
+                <type class="floatType" reference="../../../../../../valDef/type/elemType"/>
+                <op class="floatVal">
+                  <srcLine>5</srcLine>
+                  <srcColumn>29</srcColumn>
+                  <val>1.0</val>
+                </op>
+              </unaryMinus>
+              <floatVal>
+                <srcLine>5</srcLine>
+                <srcColumn>34</srcColumn>
+                <val>2.0</val>
+              </floatVal>
+            </elements>
+          </rightOp>
+        </struct>
+        <body class="compoundStmt">
+          <srcLine>5</srcLine>
+          <srcColumn>40</srcColumn>
+          <statements>
+            <varAssign>
+              <srcLine>6</srcLine>
+              <srcColumn>2</srcColumn>
+              <identifier>
+                <srcLine>6</srcLine>
+                <srcColumn>2</srcColumn>
+                <name>m</name>
+                <declaration class="varDecl" reference="../../../../../../varDecl"/>
+              </identifier>
+              <value class="multiplication">
+                <srcLine>6</srcLine>
+                <srcColumn>6</srcColumn>
+                <type class="floatType" reference="../../../../../../valDef/type/elemType"/>
+                <leftOp class="idRef">
+                  <srcLine>6</srcLine>
+                  <srcColumn>6</srcColumn>
+                  <type class="floatType" reference="../../../../../../../valDef/type/elemType"/>
+                  <declaration class="varDecl" reference="../../../../../../../varDecl"/>
+                  <idName>m</idName>
+                </leftOp>
+                <rightOp class="idRef">
+                  <srcLine>6</srcLine>
+                  <srcColumn>10</srcColumn>
+                  <type class="floatType" reference="../../../../../../../valDef/type/elemType"/>
+                  <declaration class="iteratorDeclaration" reference="../../../../../../iterator"/>
+                  <idName>i</idName>
+                </rightOp>
+              </value>
+            </varAssign>
+          </statements>
+        </body>
+      </forEachLoop>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

@@ -1,0 +1,35 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <varAssign>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <identifier>
+            <srcLine>2</srcLine>
+            <srcColumn>1</srcColumn>
+            <name>foo</name>
+          </identifier>
+          <value class="intVal">
+            <srcLine>2</srcLine>
+            <srcColumn>7</srcColumn>
+            <val>21</val>
+          </value>
+        </varAssign>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>var_assign1.mavl</testFile>
+  <onlySyntax>true</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

@@ -1,0 +1,10 @@
+record complex {
+	var float r;
+	var float i;
+}
+
+function void main() {
+	var complex c;
+	c = @complex[3.141, 9000.1];
+	c@r = c@i;
+}

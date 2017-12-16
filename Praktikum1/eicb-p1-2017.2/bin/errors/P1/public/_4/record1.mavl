@@ -1,0 +1,7 @@
+record foo {
+	int a;
+	val int b;
+}
+
+function void main() {
+}

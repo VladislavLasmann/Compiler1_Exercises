@@ -1,0 +1,149 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>1</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType"/>
+            <xDim>2</xDim>
+            <yDim>3</yDim>
+          </type>
+          <name>M</name>
+          <localBaseOffset>0</localBaseOffset>
+          <value class="structInit">
+            <srcLine>2</srcLine>
+            <srcColumn>27</srcColumn>
+            <type class="matrixType">
+              <elemType class="intType" reference="../../../type/elemType"/>
+              <xDim>2</xDim>
+              <yDim>3</yDim>
+            </type>
+            <elements class="linked-list">
+              <structInit>
+                <srcLine>2</srcLine>
+                <srcColumn>28</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../type/elemType"/>
+                  <dim>3</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>29</srcColumn>
+                    <val>2</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>32</srcColumn>
+                    <val>3</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>35</srcColumn>
+                    <val>5</val>
+                  </intVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>2</srcLine>
+                <srcColumn>39</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../type/elemType"/>
+                  <dim>3</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>40</srcColumn>
+                    <val>0</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>43</srcColumn>
+                    <val>1</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>46</srcColumn>
+                    <val>4</val>
+                  </intVal>
+                </elements>
+              </structInit>
+            </elements>
+          </value>
+        </valDef>
+        <forEachLoop>
+          <srcLine>3</srcLine>
+          <srcColumn>1</srcColumn>
+          <iterator>
+            <srcLine>3</srcLine>
+            <srcColumn>9</srcColumn>
+            <type class="intType" reference="../../../valDef/type/elemType"/>
+            <name>i</name>
+            <localBaseOffset>0</localBaseOffset>
+            <isVariable>false</isVariable>
+          </iterator>
+          <struct class="idRef">
+            <srcLine>3</srcLine>
+            <srcColumn>21</srcColumn>
+            <type class="matrixType" reference="../../../valDef/type"/>
+            <declaration class="valDef" reference="../../../valDef"/>
+            <idName>M</idName>
+          </struct>
+          <body class="callStmt">
+            <srcLine>4</srcLine>
+            <srcColumn>2</srcColumn>
+            <call>
+              <srcLine>4</srcLine>
+              <srcColumn>2</srcColumn>
+              <type class="voidType" reference="../../../../../returnType"/>
+              <name>foo</name>
+              <callee>
+                <srcLine>7</srcLine>
+                <srcColumn>0</srcColumn>
+                <name>foo</name>
+                <returnType class="voidType" reference="../../../../../../returnType"/>
+                <parameters>
+                  <formalParameter>
+                    <srcLine>7</srcLine>
+                    <srcColumn>18</srcColumn>
+                    <type class="intType" reference="../../../../../../../valDef/type/elemType"/>
+                    <name>i</name>
+                    <localBaseOffset>0</localBaseOffset>
+                  </formalParameter>
+                </parameters>
+                <functionBody/>
+                <sourceCodeOffset>-1</sourceCodeOffset>
+              </callee>
+              <actualParameters>
+                <idRef>
+                  <srcLine>4</srcLine>
+                  <srcColumn>6</srcColumn>
+                  <type class="intType" reference="../../../../../../valDef/type/elemType"/>
+                  <declaration class="iteratorDeclaration" reference="../../../../../iterator"/>
+                  <idName>i</idName>
+                </idRef>
+              </actualParameters>
+            </call>
+          </body>
+        </forEachLoop>
+      </functionBody>
+      <sourceCodeOffset>-1</sourceCodeOffset>
+    </function>
+    <function reference="../function/functionBody/forEachLoop/body/call/callee"/>
+    <records class="linked-list"/>
+  </AST>
+  <testFile>foreachloop02.mavl</testFile>
+  <onlySyntax>false</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

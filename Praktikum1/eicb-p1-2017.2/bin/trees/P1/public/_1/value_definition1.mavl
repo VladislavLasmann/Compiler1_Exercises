@@ -1,0 +1,3 @@
+function void main(){
+	val float pi = 3.142;
+}
