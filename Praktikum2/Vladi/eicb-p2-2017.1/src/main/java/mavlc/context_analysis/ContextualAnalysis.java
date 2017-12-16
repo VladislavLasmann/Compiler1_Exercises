@@ -264,7 +264,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 	public Type visitVariableAssignment(VariableAssignment variableAssignment, Boolean __) {
 		Type identifier = variableAssignment.getIdentifier().accept(this, null);
 		Type value = variableAssignment.getValue().accept(this, null);
-
+		
 		checkType(variableAssignment, identifier, value);
 
 		return null;
@@ -299,7 +299,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		Declaration declaration = table.getDeclaration(name);
 
 		// Check whether declaration is a variable. if not -> throw error
-		if( declaration.isVariable() ){
+		if( ! declaration.isVariable() ){
 			throw new ConstantAssignmentError( matrixLHSIdentifier );
 		}
 		// check sucessfull, set declaration 
@@ -317,7 +317,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		checkType(matrixLHSIdentifier, yIndexType, Type.getIntType() );
 
 		// Typecast declarations type to a matrix
-		MatrixType matrixType = (MatrixType) declaration.getType();
+		Type matrixType = ((MatrixType) declaration.getType()).getElementType();
 
 		return matrixType;
 	}
@@ -347,7 +347,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		checkType(vectorLHSIdentifier, indexType, Type.getIntType() );
 
 		// Typecast declarations type to a matrix
-		VectorType vectorType = (VectorType) declaration.getType();
+		Type vectorType = ((VectorType) declaration.getType()).getElementType();
 		
 		return vectorType;
 	}
@@ -720,15 +720,15 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 			// get struct element type
 			Type structElementType = ((StructType) rightOperandType).getElementType();
 			checkType(multiplication, leftOperandType, structElementType);
-			multiplication.setType(structElementType);
-			return leftOperandType;
+			multiplication.setType(rightOperandType);
+			return rightOperandType;
 
 		}
 		else if( rightOperandType.isScalarType() && (leftOperandType instanceof StructType) ){
 			Type structElementType = ((StructType) leftOperandType).getElementType();
 			checkType(multiplication, rightOperandType, structElementType);
-			multiplication.setType(structElementType);
-			return rightOperandType;
+			multiplication.setType(leftOperandType);
+			return leftOperandType;
 		}
 		else{
 			checkType(multiplication, leftOperandType, rightOperandType);
@@ -764,22 +764,22 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		if(!(leftOperandType.isScalarType()) && !( leftOperandType instanceof StructType) ){
 			throw new InapplicableOperationError(addition, leftOperandType, IntType.class, FloatType.class, VectorType.class, MatrixType.class);
 		}
-		else if(!(rightOperandType.isScalarType()) && !( rightOperandType instanceof StructType )){
+		else if(!(rightOperandType.isScalarType()) && !( rightOperandType instanceof StructType) ){
 			throw new InapplicableOperationError(addition, rightOperandType, IntType.class, FloatType.class, VectorType.class, MatrixType.class);
 		}
 		else if( leftOperandType.isScalarType() && (rightOperandType instanceof StructType) ){
 			// get struct element type
 			Type structElementType = ((StructType) rightOperandType).getElementType();
 			checkType(addition, leftOperandType, structElementType);
-			addition.setType(structElementType);
-			return leftOperandType;
+			addition.setType(rightOperandType);
+			return rightOperandType;
 
 		}
 		else if( rightOperandType.isScalarType() && (leftOperandType instanceof StructType) ){
 			Type structElementType = ((StructType) leftOperandType).getElementType();
 			checkType(addition, rightOperandType, structElementType);
-			addition.setType(structElementType);
-			return rightOperandType;
+			addition.setType(leftOperandType);
+			return leftOperandType;
 		}
 		else{
 			checkType(addition, leftOperandType, rightOperandType);
