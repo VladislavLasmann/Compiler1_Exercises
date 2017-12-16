@@ -1,6 +1,0 @@
-function void main() {
-	val vector<int>[3] v = [1, 2, 3];
-	foreach(var int i : v) {
-		i = 3;
-	}
-}

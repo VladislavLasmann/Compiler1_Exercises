@@ -1,6 +1,0 @@
-function void main(){
-    val vector<int>[3] a = [3, 3, 3];
-    val vector<int>[2] b = [2, 2];
-
-    val vector<int>[3] x = a - b;
-}

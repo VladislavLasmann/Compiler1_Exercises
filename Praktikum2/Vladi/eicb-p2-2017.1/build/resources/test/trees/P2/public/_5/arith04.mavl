@@ -1,7 +1,0 @@
-function void main(){
-    val vector<int>[3] a = [3, 3, 3];
-    val vector<int>[3] b = [4, 4, 4];
-    val int c = 5;
-
-    val vector<int>[3] x = a * b ^ a + c;
-}
