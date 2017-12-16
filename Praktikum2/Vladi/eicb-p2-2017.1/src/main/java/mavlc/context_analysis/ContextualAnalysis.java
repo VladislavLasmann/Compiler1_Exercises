@@ -267,7 +267,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		
 		checkType(variableAssignment, identifier, value);
 
-		return null;
+        throw new ConstantAssignmentError(variableAssignment);
 	}
 
 	/**
@@ -351,6 +351,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		// get declaration from table
 		Declaration declaration = table.getDeclaration( vectorLHSIdentifier.getName() );
 
+        // Check whether declaration is a variable. if not -> throw error
 		// Check whether declaration is a variable. if not -> error
 		if( ! declaration.isVariable() ){
 			throw new ConstantAssignmentError( vectorLHSIdentifier );

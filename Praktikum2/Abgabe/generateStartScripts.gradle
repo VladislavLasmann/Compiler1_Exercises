@@ -1,0 +1,80 @@
+import org.gradle.api.internal.plugins.StartScriptGenerator;
+import org.gradle.api.internal.plugins.StartScriptTemplateBindingFactory;
+import org.gradle.api.internal.plugins.DefaultTemplateBasedStartScriptGenerator;
+import org.gradle.api.internal.plugins.UnixStartScriptGenerator;
+import org.gradle.api.internal.plugins.WindowsStartScriptGenerator;
+
+class StartScriptForProjectTemplateBindingFactory
+		implements Transformer<Map<String, String>, JavaAppStartScriptGenerationDetails> {
+
+	private boolean windows;
+	private StartScriptTemplateBindingFactory delegate;
+	
+	public StartScriptForProjectTemplateBindingFactory(boolean windows) {
+		this.windows = windows;
+		delegate = windows ? StartScriptTemplateBindingFactory.windows() : StartScriptTemplateBindingFactory.unix();
+	}
+
+	public Map<String, String> transform(JavaAppStartScriptGenerationDetails details) {
+		Map<String, String> binding = delegate.transform(details);
+		String cp = binding.get("classpath");
+		if (windows)
+			cp = cp.replace("%APP_HOME%\\", "");
+		else
+			cp = cp.replace("\$APP_HOME/", "");
+		binding.put("classpath", cp);
+		return binding;
+	}
+}
+
+class UnixStartScriptForProjectGenerator extends DefaultTemplateBasedStartScriptGenerator {
+	public UnixStartScriptForProjectGenerator() {
+		super(TextUtil.getUnixLineSeparator(),
+			new StartScriptForProjectTemplateBindingFactory(false),
+			utf8ClassPathResource(UnixStartScriptGenerator.class, "unixStartScript.txt"));
+	}
+}
+
+class WindowsStartScriptForProjectGenerator extends DefaultTemplateBasedStartScriptGenerator {
+	public WindowsStartScriptForProjectGenerator() {
+		super(TextUtil.getWindowsLineSeparator(),
+			new StartScriptForProjectTemplateBindingFactory(true),
+			utf8ClassPathResource(WindowsStartScriptGenerator.class, "windowsStartScript.txt"));
+	}
+}
+
+class CreateStartScriptsForProject extends CreateStartScripts {
+	@TaskAction
+	public void generate() {
+		StartScriptGenerator generator = new StartScriptGenerator(unixStartScriptGenerator, windowsStartScriptGenerator);
+			generator.setApplicationName(getApplicationName());
+			generator.setMainClassName(getMainClassName());
+			generator.setDefaultJvmOpts(getDefaultJvmOpts());
+			generator.setOptsEnvironmentVar(getOptsEnvironmentVar());
+			generator.setExitEnvironmentVar(getExitEnvironmentVar());
+			generator.setClasspath(getClasspath());
+			generator.setScriptRelPath('build/' + getUnixScript().getName());
+			generator.generateUnixScript(getUnixScript());
+			generator.generateWindowsScript(getWindowsScript());
+	}
+}
+
+task mavlc(type: CreateStartScriptsForProject, dependsOn: classes) {
+	description = "Creates a script to invoke the MAVL compiler"
+	mainClassName = "mavlc.Main"
+	applicationName = "mavlc"
+	outputDir = project.buildDir
+	classpath = files([file('bin/'), sourceSets.main.output.classesDir] + configurations.runtime)
+	unixStartScriptGenerator = new UnixStartScriptForProjectGenerator()
+	windowsStartScriptGenerator = new WindowsStartScriptForProjectGenerator()
+}
+
+task interpreter(type: CreateStartScriptsForProject, dependsOn: classes) {
+	description = "Creates a script to invoke the MTAM interpreter"
+	mainClassName = "MTAM.Interpreter"
+	applicationName = "interpreter"
+	outputDir = project.buildDir
+	classpath = files([file('bin/'), sourceSets.main.output.classesDir] + configurations.runtime)
+	unixStartScriptGenerator = new UnixStartScriptForProjectGenerator()
+	windowsStartScriptGenerator = new WindowsStartScriptForProjectGenerator()
+}
