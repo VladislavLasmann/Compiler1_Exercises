@@ -305,6 +305,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		// check sucessfull, set declaration 
 		matrixLHSIdentifier.setDeclaration(declaration);
 
+
 		// check whether the declaration type is a matrix type. if not -> error
 		if( ! (declaration.getType() instanceof MatrixType) ){
 			throw new InapplicableOperationError(matrixLHSIdentifier, declaration.getType(), MatrixType.class);
@@ -345,6 +346,13 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		// get index and check its type (should be integer)
 		Type indexType = vectorLHSIdentifier.getIndex().accept(this, null);
 		checkType(vectorLHSIdentifier, indexType, Type.getIntType() );
+
+		int declarationOffset = declaration.getLocalBaseOffset();
+		int vectorIdentifierOffset = getOffSet(vectorLHSIdentifier.getIndex());
+
+		if( vectorIdentifierOffset < 0 || vectorIdentifierOffset > declarationOffset ){
+			throw new StructureDimensionError(vectorLHSIdentifier, declarationOffset, vectorIdentifierOffset);
+		}
 
 		// Typecast declarations type to a matrix
 		Type vectorType = ((VectorType) declaration.getType()).getElementType();
