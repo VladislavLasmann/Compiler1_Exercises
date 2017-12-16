@@ -1,0 +1,79 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>x</name>
+        <localBaseOffset>0</localBaseOffset>
+      </varDecl>
+      <varAssign>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>3</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>x</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
+        </identifier>
+        <value class="intVal">
+          <srcLine>3</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>10</val>
+        </value>
+      </varAssign>
+      <compoundStmt>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <statements>
+          <valDef>
+            <srcLine>6</srcLine>
+            <srcColumn>8</srcColumn>
+            <type class="intType" reference="../../../../varDecl/type"/>
+            <name>x</name>
+            <localBaseOffset>0</localBaseOffset>
+            <value class="intVal">
+              <srcLine>6</srcLine>
+              <srcColumn>20</srcColumn>
+              <val>33</val>
+            </value>
+          </valDef>
+          <varDecl>
+            <srcLine>7</srcLine>
+            <srcColumn>8</srcColumn>
+            <type class="intType" reference="../../../../varDecl/type"/>
+            <name>y</name>
+            <localBaseOffset>0</localBaseOffset>
+          </varDecl>
+          <varAssign>
+            <srcLine>8</srcLine>
+            <srcColumn>8</srcColumn>
+            <identifier>
+              <srcLine>8</srcLine>
+              <srcColumn>8</srcColumn>
+              <name>y</name>
+              <declaration class="varDecl" reference="../../../varDecl"/>
+            </identifier>
+            <value class="idRef">
+              <srcLine>8</srcLine>
+              <srcColumn>12</srcColumn>
+              <type class="intType" reference="../../../../../varDecl/type"/>
+              <declaration class="valDef" reference="../../../valDef"/>
+              <idName>x</idName>
+            </value>
+          </varAssign>
+        </statements>
+      </compoundStmt>
+    </functionBody>
+    <sourceCodeOffset>-1</sourceCodeOffset>
+  </function>
+  <records class="linked-list"/>
+</module>

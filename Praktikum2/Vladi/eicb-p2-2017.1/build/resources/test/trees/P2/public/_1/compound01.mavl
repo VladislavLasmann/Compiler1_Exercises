@@ -1,0 +1,10 @@
+function void main(){
+    var int x;
+    x = 10;
+
+    {
+        val int x = 33;
+        var int y;
+        y = x;
+    }
+}

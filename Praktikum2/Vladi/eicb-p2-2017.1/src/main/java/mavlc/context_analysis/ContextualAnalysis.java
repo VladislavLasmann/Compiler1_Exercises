@@ -297,6 +297,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		// get name from indentifier and declaration from table
 		String name = matrixLHSIdentifier.getName();
 		Declaration declaration = table.getDeclaration(name);
+		Type declarationType = declaration.getType();
 
 		// Check whether declaration is a variable. if not -> throw error
 		if( ! declaration.isVariable() ){
@@ -307,7 +308,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 
 
 		// check whether the declaration type is a matrix type. if not -> error
-		if( ! (declaration.getType() instanceof MatrixType) ){
+		if( ! (declarationType instanceof MatrixType) ){
 			throw new InapplicableOperationError(matrixLHSIdentifier, declaration.getType(), MatrixType.class);
 		}
 
@@ -316,6 +317,25 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		Type yIndexType = matrixLHSIdentifier.getYIndex().accept(this, null);
 		checkType(matrixLHSIdentifier, xIndexType, Type.getIntType() );
 		checkType(matrixLHSIdentifier, yIndexType, Type.getIntType() );
+
+		int xDimension = ((MatrixType) declarationType).getxDimension();
+		int yDimension = ((MatrixType) declarationType).getyDimension();
+		int identifierDimensionX = getOffSet(matrixLHSIdentifier.getXIndex());
+		int identifierDimensionY = getOffSet(matrixLHSIdentifier.getYIndex());
+
+
+		if( identifierDimensionX < 0  ){
+			throw new StructureDimensionError(matrixLHSIdentifier, identifierDimensionX, 0);
+		}
+		if( identifierDimensionX >  xDimension ){
+			throw new StructureDimensionError(matrixLHSIdentifier, xDimension, identifierDimensionX);
+		}
+		if( identifierDimensionY < 0 ){
+			throw new StructureDimensionError(matrixLHSIdentifier, identifierDimensionY, 0);
+		}
+		if( identifierDimensionY < 0 || identifierDimensionY > yDimension){
+			throw new StructureDimensionError(matrixLHSIdentifier, yDimension, identifierDimensionY);
+		}
 
 		// Typecast declarations type to a matrix
 		Type matrixType = ((MatrixType) declaration.getType()).getElementType();
@@ -350,7 +370,10 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		int declarationOffset = declaration.getLocalBaseOffset();
 		int vectorIdentifierOffset = getOffSet(vectorLHSIdentifier.getIndex());
 
-		if( vectorIdentifierOffset < 0 || vectorIdentifierOffset > declarationOffset ){
+		if( vectorIdentifierOffset < 0){
+			throw new StructureDimensionError(vectorLHSIdentifier, vectorIdentifierOffset, 0);
+		}
+		if( vectorIdentifierOffset > declarationOffset ){
 			throw new StructureDimensionError(vectorLHSIdentifier, declarationOffset, vectorIdentifierOffset);
 		}
 

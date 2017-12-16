@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-16T17:16:46" hostname="Vladis-MacBook-Pro.local" time="0.139">
+  <properties/>
+  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.017"/>
+  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.009"/>
+  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.013"/>
+  <testcase name="testExample[assign03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.008"/>
+  <testcase name="testExample[assign04]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.009"/>
+  <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.032"/>
+  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.045"/>
+  <system-out><![CDATA[[src/test/testcases/errors/P2/public/_1/compound03.error_test.context.xml, src/test/testcases/errors/P2/public/_4/switch01.error_test.context.xml, src/test/testcases/errors/P2/public/_3/foreachloop03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign04.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith01.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith02.error_test.context.xml]
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_1/compound03.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_4/switch01.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_3/foreachloop03.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign03.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign04.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith01.mavl
+Compiling file /Users/v4/Documents/Uni/Semester/5_WS_17u18/EiCB/Uebungen/Praktikum2/Vladi/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith02.mavl
+]]></system-out>
+  <system-err><![CDATA[Running testcase compound03.mavl
+-->Successful
+Running testcase switch01.mavl
+-->Successful
+Running testcase foreachloop03.mavl
+-->Successful
+Running testcase assign03.mavl
+-->Successful
+Running testcase assign04.mavl
+-->Successful
+Running testcase arith01.mavl
+-->Successful
+Running testcase arith02.mavl
+-->Successful
+]]></system-err>
+</testsuite>

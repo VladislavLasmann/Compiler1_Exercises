@@ -1,0 +1,9 @@
+function void main (){
+  var int a;
+  val bool b = true;
+  var int c;
+  val int d = 20;
+  a = 10;
+
+  c = (a>d) ? b : d;
+}
