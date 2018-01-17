@@ -29,6 +29,7 @@
           <srcLine>5</srcLine>
           <srcColumn>4</srcColumn>
           <name>x</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
         </identifier>
         <value class="intVal">
           <srcLine>5</srcLine>
@@ -43,6 +44,7 @@
           <srcLine>6</srcLine>
           <srcColumn>4</srcColumn>
           <name>y</name>
+          <declaration class="varDecl" reference="../../../varDecl[2]"/>
         </identifier>
         <value class="intVal">
           <srcLine>6</srcLine>
@@ -79,6 +81,7 @@
               <srcLine>12</srcLine>
               <srcColumn>8</srcColumn>
               <name>y</name>
+              <declaration class="varDecl" reference="../../../../../varDecl[2]"/>
             </identifier>
             <value class="idRef">
               <srcLine>12</srcLine>

@@ -36,6 +36,7 @@
           <srcLine>12</srcLine>
           <srcColumn>4</srcColumn>
           <name>i</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
         </identifier>
         <value class="intVal">
           <srcLine>12</srcLine>
@@ -50,6 +51,7 @@
           <srcLine>13</srcLine>
           <srcColumn>4</srcColumn>
           <name>f</name>
+          <declaration class="varDecl" reference="../../../varDecl[2]"/>
         </identifier>
         <value class="floatVal">
           <srcLine>13</srcLine>
@@ -64,6 +66,7 @@
           <srcLine>14</srcLine>
           <srcColumn>4</srcColumn>
           <name>b</name>
+          <declaration class="varDecl" reference="../../../varDecl[3]"/>
         </identifier>
         <value class="boolVal">
           <srcLine>14</srcLine>
@@ -88,6 +91,7 @@
           <srcLine>17</srcLine>
           <srcColumn>4</srcColumn>
           <name>vec1</name>
+          <declaration class="varDecl" reference="../../../varDecl[4]"/>
         </identifier>
         <value class="structInit">
           <srcLine>17</srcLine>
@@ -122,6 +126,7 @@
           <srcLine>18</srcLine>
           <srcColumn>4</srcColumn>
           <name>vec1</name>
+          <declaration class="varDecl" reference="../../../varDecl[4]"/>
           <index class="intVal">
             <srcLine>18</srcLine>
             <srcColumn>9</srcColumn>
@@ -152,6 +157,7 @@
           <srcLine>21</srcLine>
           <srcColumn>4</srcColumn>
           <name>mat1</name>
+          <declaration class="varDecl" reference="../../../varDecl[5]"/>
         </identifier>
         <value class="structInit">
           <srcLine>21</srcLine>
@@ -247,6 +253,7 @@
           <srcLine>24</srcLine>
           <srcColumn>4</srcColumn>
           <name>mat1</name>
+          <declaration class="varDecl" reference="../../../varDecl[5]"/>
           <xIndex class="intVal">
             <srcLine>24</srcLine>
             <srcColumn>9</srcColumn>

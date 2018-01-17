@@ -47,10 +47,15 @@
           <srcLine>8</srcLine>
           <srcColumn>1</srcColumn>
           <name>c</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
         </identifier>
         <value class="recordInit">
           <srcLine>8</srcLine>
           <srcColumn>5</srcColumn>
+          <type class="recordType">
+            <name>complex</name>
+            <declaration reference="../../../../varDecl/type/declaration"/>
+          </type>
           <elements class="linked-list">
             <floatVal>
               <srcLine>8</srcLine>
@@ -73,14 +78,18 @@
           <srcLine>9</srcLine>
           <srcColumn>1</srcColumn>
           <name>c</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
           <elementName>r</elementName>
         </identifier>
         <value class="recordElemSelect">
           <srcLine>9</srcLine>
           <srcColumn>7</srcColumn>
+          <type class="floatType" reference="../../../varDecl/type/declaration/elements/recordElementDeclaration/type"/>
           <record class="idRef">
             <srcLine>9</srcLine>
             <srcColumn>7</srcColumn>
+            <type class="recordType" reference="../../../../varDecl/type"/>
+            <declaration class="varDecl" reference="../../../../varDecl"/>
             <idName>c</idName>
           </record>
           <elementName>i</elementName>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="5" errors="0" timestamp="2017-12-15T17:15:37" hostname="seedOS" time="0.236">
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="4" errors="0" timestamp="2017-12-17T16:55:11" hostname="seedOS" time="0.209">
   <properties/>
-  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.164">
+  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.152">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:401)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:461)
 	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -70,9 +70,9 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.015">
+  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.014">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:349)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:413)
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -139,83 +139,12 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.005"/>
+  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.006"/>
   <testcase name="testExample[assign03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.006"/>
-  <testcase name="testExample[assign04]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.008">
+  <testcase name="testExample[assign04]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.009"/>
+  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.012">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:305)
-	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.RecordLHSIdentifier.accept(RecordLHSIdentifier.java:42)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:144)
-	at mavlc.frontend.error.ErrorCompareTest.testExample(ErrorCompareTest.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-  </testcase>
-  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.025">
-    <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSelectExpression(ContextualAnalysis.java:883)
+	at mavlc.context_analysis.ContextualAnalysis.visitSelectExpression(ContextualAnalysis.java:943)
 	at mavlc.context_analysis.ContextualAnalysis.visitSelectExpression(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.SelectExpression.accept(SelectExpression.java:67)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:260)
@@ -287,7 +216,7 @@
   </testcase>
   <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.01">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:555)
+	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:615)
 	at mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.Subtraction.accept(Subtraction.java:45)
 	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:251)
@@ -358,13 +287,13 @@
 </failure>
   </testcase>
   <system-out><![CDATA[[src/test/testcases/errors/P2/public/_4/switch01.error_test.context.xml, src/test/testcases/errors/P2/public/_3/foreachloop03.error_test.context.xml, src/test/testcases/errors/P2/public/_1/compound03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign04.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith02.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith01.error_test.context.xml]
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_4/switch01.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_3/foreachloop03.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_1/compound03.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign03.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign04.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith02.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith01.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_4/switch01.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_3/foreachloop03.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_1/compound03.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign03.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_2/assign04.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith02.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/errors/P2/public/_5/arith01.mavl
 ]]></system-out>
   <system-err><![CDATA[Running testcase switch01.mavl
 Running testcase foreachloop03.mavl
@@ -373,6 +302,7 @@ Running testcase compound03.mavl
 Running testcase assign03.mavl
 -->Successful
 Running testcase assign04.mavl
+-->Successful
 Running testcase arith02.mavl
 Running testcase arith01.mavl
 ]]></system-err>

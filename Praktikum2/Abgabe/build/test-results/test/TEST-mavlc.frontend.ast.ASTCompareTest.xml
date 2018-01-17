@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-12-16T18:37:21" hostname="seedOS" time="0.507">
+<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-12-17T16:36:18" hostname="seedOS" time="0.581">
   <properties/>
-  <testcase name="testExample[switch02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.178"/>
-  <testcase name="testExample[foreachloop02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.057"/>
-  <testcase name="testExample[foreachloop01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.059"/>
-  <testcase name="testExample[compound01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.035"/>
-  <testcase name="testExample[compound02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.033"/>
-  <testcase name="testExample[assign02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.038"/>
-  <testcase name="testExample[assign01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.037"/>
-  <testcase name="testExample[arith04]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.032"/>
-  <testcase name="testExample[arith03]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.037"/>
+  <testcase name="testExample[switch02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.184"/>
+  <testcase name="testExample[foreachloop02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.051"/>
+  <testcase name="testExample[foreachloop01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.071"/>
+  <testcase name="testExample[compound01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.03"/>
+  <testcase name="testExample[compound02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.065"/>
+  <testcase name="testExample[assign02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.045"/>
+  <testcase name="testExample[assign01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.045"/>
+  <testcase name="testExample[arith04]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.036"/>
+  <testcase name="testExample[arith03]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.053"/>
   <system-out><![CDATA[[src/test/testcases/trees/P2/public/_4/switch02.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop02.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop01.ast_test.context.xml, src/test/testcases/trees/P2/public/_1/compound01.ast_test.context.xml, src/test/testcases/trees/P2/public/_1/compound02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign01.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith04.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith03.ast_test.context.xml]
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Abgabe/src/test/testcases/trees/P2/public/_4/switch02.mavl
 Writing output of contextual analysis to build/test-output/switch02.mavl.test.xml

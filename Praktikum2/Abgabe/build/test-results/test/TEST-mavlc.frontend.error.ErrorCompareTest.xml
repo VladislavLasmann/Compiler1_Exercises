@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-16T18:37:21" hostname="seedOS" time="0.193">
+<testsuite name="mavlc.frontend.error.ErrorCompareTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-17T16:36:17" hostname="seedOS" time="0.206">
   <properties/>
-  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.136"/>
-  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.015"/>
-  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.006"/>
-  <testcase name="testExample[assign03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.005"/>
+  <testcase name="testExample[switch01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.137"/>
+  <testcase name="testExample[foreachloop03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.014"/>
+  <testcase name="testExample[compound03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.005"/>
+  <testcase name="testExample[assign03]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.006"/>
   <testcase name="testExample[assign04]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.008"/>
-  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.012"/>
-  <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.009"/>
+  <testcase name="testExample[arith02]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.025"/>
+  <testcase name="testExample[arith01]" classname="mavlc.frontend.error.ErrorCompareTest" time="0.01"/>
   <system-out><![CDATA[[src/test/testcases/errors/P2/public/_4/switch01.error_test.context.xml, src/test/testcases/errors/P2/public/_3/foreachloop03.error_test.context.xml, src/test/testcases/errors/P2/public/_1/compound03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign03.error_test.context.xml, src/test/testcases/errors/P2/public/_2/assign04.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith02.error_test.context.xml, src/test/testcases/errors/P2/public/_5/arith01.error_test.context.xml]
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Abgabe/src/test/testcases/errors/P2/public/_4/switch01.mavl
 Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Abgabe/src/test/testcases/errors/P2/public/_3/foreachloop03.mavl

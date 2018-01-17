@@ -10,10 +10,14 @@
  * prior written permission of the authors.
  ******************************************************************************/
 
-/* TODO: Please fill this out!
- * 
- * EiCB group number:
+ /* 
+ * EiCB group number: 22
+ *
  * Names and student ID numbers of group members:
+ * 
+ * Vladislav Lasmann    2593078
+ * Konstantin Müller    2327697
+ * Robin Ferrari        2585277
  */
 
 package mavlc.context_analysis;

@@ -258,24 +258,22 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
         // first call accept methods for left and right site.
         Type lhs = variableAssignment.getIdentifier().accept(this, null);
         Type rhs = variableAssignment.getValue().accept(this, null);
-
-        // lets see if the Variable was declared before and if the types matches
-        //Type declaredType = table.getDeclaration(variableAssignment.getIdentifier().getName()).getType();
         
         // now check the types
         checkType(variableAssignment, lhs, rhs);
         return null;
-
-        
 	}
 
 	@Override
 	public Type visitLeftHandIdentifier(LeftHandIdentifier leftHandIdentifier, Boolean __) {
+        Declaration declaration = table.getDeclaration(leftHandIdentifier.getName());
+
         // lets check that ident points on a variable and not a constant
-        if (! table.getDeclaration(leftHandIdentifier.getName()).isVariable())
+        if (! declaration.isVariable())
             throw new ConstantAssignmentError(leftHandIdentifier);
 
-        return  table.getDeclaration(leftHandIdentifier.getName()).getType();
+        leftHandIdentifier.setDeclaration(declaration);
+        return  declaration.getType();
 	}
 
 	@Override
@@ -283,11 +281,41 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
         // lets check that the types of y and x are int
         Type xType = matrixLHSIdentifier.getXIndex().accept(this, null);
         Type yType = matrixLHSIdentifier.getYIndex().accept(this, null);
-
         checkType(matrixLHSIdentifier, xType, Type.getIntType());
         checkType (matrixLHSIdentifier, yType, Type.getIntType());
 
-       return ((StructType) table.getDeclaration(matrixLHSIdentifier.getName()).getType()).getElementType();
+        // lets check the declaration
+        Declaration declaration = table.getDeclaration(matrixLHSIdentifier.getName());
+        if (! (declaration.getType() instanceof MatrixType))
+                throw new InapplicableOperationError(matrixLHSIdentifier, declaration.getType(), MatrixType.class);
+
+        int declaredX = ((MatrixType) declaration.getType()).getxDimension();
+        int declaredY = ((MatrixType) declaration.getType()).getyDimension();
+
+        System.out.
+        
+        int passedX = getOffSet(matrixLHSIdentifier.getXIndex());
+        int passedY = getOffSet(matrixLHSIdentifier.getYIndex());
+
+        if (passedX < 0)
+            throw new StructureDimensionError(matrixLHSIdentifier, passedX, 0);
+
+        if (passedX >= declaredX)
+            throw new StructureDimensionError(matrixLHSIdentifier, passedX, declaredX);
+
+        if (passedY < 0)
+            throw new StructureDimensionError(matrixLHSIdentifier, passedY, 0);
+
+        if (passedY >= declaredY) 
+            throw new StructureDimensionError(matrixLHSIdentifier, passedY, declaredY);
+
+       
+       if (! declaration.isVariable())
+           throw new ConstantAssignmentError(matrixLHSIdentifier);
+
+       // all okay
+       matrixLHSIdentifier.setDeclaration(declaration);
+       return ((MatrixType) declaration.getType()).getElementType();
 	}
 
 	@Override
@@ -296,13 +324,51 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
         Type index = vectorLHSIdentifier.getIndex().accept(this, null);
         checkType(vectorLHSIdentifier, index, Type.getIntType());
 
-        return ((StructType) table.getDeclaration(vectorLHSIdentifier.getName()).getType()).getElementType();
+        // check declaration
+        Declaration declaration = table.getDeclaration(vectorLHSIdentifier.getName());
+        if ( ! (declaration.getType() instanceof VectorType))
+            throw new InapplicableOperationError(vectorLHSIdentifier, declaration.getType(), VectorType.class);
+
+        int declaredIndex = ((VectorType) declaration.getType()).getDimension();
+        int passedIndex = getOffSet(vectorLHSIdentifier.getIndex());
+
+        if (passedIndex < 0)
+            throw new StructureDimensionError(vectorLHSIdentifier, passedIndex, 0);
+
+        if (passedIndex >= declaredIndex)
+            throw new StructureDimensionError(vectorLHSIdentifier, passedIndex, declaredIndex);
+
+        vectorLHSIdentifier.setDeclaration(declaration);
+        return ((VectorType) declaration.getType()).getElementType();
 	}
 
 	@Override
 	public Type visitRecordLHSIdentifier(RecordLHSIdentifier recordLHSIdentifier, Boolean __) {
-		// TODO: implement (exercise 2.2)
-		throw new UnsupportedOperationException();
+        Declaration decl = table.getDeclaration(recordLHSIdentifier.getName());
+
+        if ( ! (decl.getType() instanceof RecordType))
+            throw new InapplicableOperationError(recordLHSIdentifier, decl.getType(), RecordType.class);
+
+        if (! decl.isVariable())
+            throw new ConstantAssignmentError(recordLHSIdentifier);
+
+        RecordElementDeclaration recordElemDecl = 
+            ((RecordType) decl.getType())
+            .getTypeDeclaration()
+            .getElement(recordLHSIdentifier.getElementName());
+
+        if (! recordElemDecl.isVariable()) 
+            throw new ConstantAssignmentError(recordLHSIdentifier);
+
+        checkType(
+                recordLHSIdentifier,
+                recordElemDecl.accept(this, null), 
+                recordElemDecl.getType()
+                );
+
+        recordLHSIdentifier.setDeclaration(decl);
+        return recordElemDecl.accept(this, null);
+
 	}
 	
 	@Override
@@ -345,8 +411,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 
 	@Override
 	public Type visitForEachLoop(ForEachLoop forEachLoop, Boolean __) {
-		// TODO: implement (exercise 2.3)
-		throw new UnsupportedOperationException();
+        Default initVarDecl = table.getDeclaration(forEachLoop.
 	}
 	
 	@Override
@@ -384,12 +449,8 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 	public Type visitCompoundStatement(CompoundStatement compoundStatement, Boolean __) {
         // Here we need to open a new scope which we close before return
         table.openNewScope();
-
-        // getting a Iterator to iterate over all statements and passing them to VisitStatement
-        Iterator<Statement> it = compoundStatement.getStatements().iterator();
-        while(it.hasNext()) {
-            Statement stm = it.next();
-            stm.accept(this, false);
+        for (Statement stm : compoundStatement.getStatements()) {
+            stm.accept(this, null);
         }
         table.closeCurrentScope();
         return null;

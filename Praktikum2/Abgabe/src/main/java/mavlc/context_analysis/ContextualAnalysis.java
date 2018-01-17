@@ -10,10 +10,14 @@
  * prior written permission of the authors.
  ******************************************************************************/
 
-/* TODO: Please fill this out!
- * 
- * EiCB group number:
+ /* 
+ * EiCB group number: 22
+ *
  * Names and student ID numbers of group members:
+ * 
+ * Vladislav Lasmann    2593078
+ * Konstantin Müller    2327697
+ * Robin Ferrari        2585277
  */
 
 package mavlc.context_analysis;
@@ -327,13 +331,13 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		if( identifierDimensionX < 0  ){
 			throw new StructureDimensionError(matrixLHSIdentifier, identifierDimensionX, 0);
 		}
-		if( identifierDimensionX >  xDimension ){
+		if( identifierDimensionX >=  xDimension ){
 			throw new StructureDimensionError(matrixLHSIdentifier, xDimension, identifierDimensionX);
 		}
 		if( identifierDimensionY < 0 ){
 			throw new StructureDimensionError(matrixLHSIdentifier, identifierDimensionY, 0);
 		}
-		if( identifierDimensionY > yDimension){
+		if( identifierDimensionY >= yDimension){
 			throw new StructureDimensionError(matrixLHSIdentifier, yDimension, identifierDimensionY);
 		}
 
@@ -374,7 +378,7 @@ public class ContextualAnalysis extends ASTNodeBaseVisitor<Type, Boolean> {
 		if( vectorIdentifierOffset < 0){
 			throw new StructureDimensionError(vectorLHSIdentifier, vectorIdentifierOffset, 0);
 		}
-		if( vectorIdentifierOffset > declarationOffset ){
+		if( vectorIdentifierOffset >= declarationOffset ){
 			throw new StructureDimensionError(vectorLHSIdentifier, declarationOffset, vectorIdentifierOffset);
 		}
 

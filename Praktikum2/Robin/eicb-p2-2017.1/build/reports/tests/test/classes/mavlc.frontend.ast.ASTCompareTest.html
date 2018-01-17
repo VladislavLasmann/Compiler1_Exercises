@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">9</div>
+<div class="counter">5</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.340s</div>
+<div class="counter">0.366s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">44%</div>
 <p>successful</p>
 </div>
 </td>
@@ -80,7 +80,7 @@
 <h3 class="failures">testExample[arith03]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:549)
+	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:609)
 	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.Addition.accept(Addition.java:46)
 	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:260)
@@ -156,7 +156,7 @@
 <h3 class="failures">testExample[arith04]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:549)
+	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:609)
 	at mavlc.context_analysis.ContextualAnalysis.visitAddition(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.expression.Addition.accept(Addition.java:46)
 	at mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:251)
@@ -228,521 +228,11 @@
 </span>
 </div>
 <div class="test">
-<a name="testExample[assign01]"></a>
-<h3 class="failures">testExample[assign01]</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
-        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
-        &lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;5&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;11&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;varAssign&gt;
-        &lt;srcLine&gt;6&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;identifier&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-          &lt;name&gt;y&lt;/name&gt;
-          &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl[2]&quot;/]&gt;
-        &lt;/identifi...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
-        [&lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;5&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;11&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;varAssign&gt;
-        &lt;srcLine&gt;6&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;identifier&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-          &lt;name&gt;y&lt;/name]&gt;
-        &lt;/identifi...&gt;
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
-	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
-	at org.junit.Assert.assertThat(Assert.java:956)
-	at org.junit.Assert.assertThat(Assert.java:923)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testExample[assign02]"></a>
-<h3 class="failures">testExample[assign02]</h3>
-<span class="code">
-<pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:305)
-	at mavlc.context_analysis.ContextualAnalysis.visitRecordLHSIdentifier(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.RecordLHSIdentifier.accept(RecordLHSIdentifier.java:42)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:259)
-	at mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
-	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:144)
-	at mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:107)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:144)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:68)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testExample[compound01]"></a>
-<h3 class="failures">testExample[compound01]</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
-        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
-        &lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;3&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;10&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;compoundStmt&gt;
-        &lt;srcLine&gt;5&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;statements&gt;
-          &lt;valDef&gt;
-            &lt;srcLine&gt;6&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
-            &lt;name&gt;x&lt;/name&gt;
-            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-            &lt;value class=&quot;intVal&quot;&gt;
-              &lt;srcLine&gt;6&lt;/srcLine&gt;
-              &lt;srcColumn&gt;20&lt;/srcColumn&gt;
-              &lt;val&gt;33&lt;/val&gt;
-            &lt;/value&gt;
-          &lt;/valDef&gt;
-          &lt;varDecl&gt;
-            &lt;srcLine&gt;7&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
-            &lt;name&gt;y&lt;/name&gt;
-            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-          &lt;/varDecl&gt;
-          &lt;varAssign&gt;
-            &lt;srcLine&gt;8&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;identifier&gt;
-              &lt;srcLine&gt;8&lt;/srcLine&gt;
-              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-              &lt;name&gt;y&lt;/name&gt;
-              &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/]&gt;
-            &lt;/iden...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
-        [&lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;3&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;10&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;compoundStmt&gt;
-        &lt;srcLine&gt;5&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;statements&gt;
-          &lt;valDef&gt;
-            &lt;srcLine&gt;6&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
-            &lt;name&gt;x&lt;/name&gt;
-            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-            &lt;value class=&quot;intVal&quot;&gt;
-              &lt;srcLine&gt;6&lt;/srcLine&gt;
-              &lt;srcColumn&gt;20&lt;/srcColumn&gt;
-              &lt;val&gt;33&lt;/val&gt;
-            &lt;/value&gt;
-          &lt;/valDef&gt;
-          &lt;varDecl&gt;
-            &lt;srcLine&gt;7&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;type class=&quot;intType&quot; reference=&quot;../../../../varDecl/type&quot;/&gt;
-            &lt;name&gt;y&lt;/name&gt;
-            &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-          &lt;/varDecl&gt;
-          &lt;varAssign&gt;
-            &lt;srcLine&gt;8&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;identifier&gt;
-              &lt;srcLine&gt;8&lt;/srcLine&gt;
-              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-              &lt;name&gt;y&lt;/name]&gt;
-            &lt;/iden...&gt;
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
-	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
-	at org.junit.Assert.assertThat(Assert.java:956)
-	at org.junit.Assert.assertThat(Assert.java:923)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testExample[compound02]"></a>
-<h3 class="failures">testExample[compound02]</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: Expected child nodelist length '4' but was '3' - comparing &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] to &lt;identifier...&gt; at /module[1]/function[1]/functionBody[1]/varAssign[1]/identifier[1] expected:&lt;...me&gt;x&lt;/name&gt;
-        [  &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl&quot;/&gt;
-        &lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;5&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;11&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;varAssign&gt;
-        &lt;srcLine&gt;6&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;identifier&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-          &lt;name&gt;y&lt;/name&gt;
-          &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../varDecl[2]&quot;/&gt;
-        &lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;22&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;compoundStmt&gt;
-        &lt;srcLine&gt;8&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;statements&gt;
-          &lt;compoundStmt&gt;
-            &lt;srcLine&gt;9&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;statements&gt;
-              &lt;valDef&gt;
-                &lt;srcLine&gt;10&lt;/srcLine&gt;
-                &lt;srcColumn&gt;12&lt;/srcColumn&gt;
-                &lt;type class=&quot;intType&quot; reference=&quot;../../../../../../varDecl/type&quot;/&gt;
-                &lt;name&gt;y&lt;/name&gt;
-                &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-                &lt;value class=&quot;intVal&quot;&gt;
-                  &lt;srcLine&gt;10&lt;/srcLine&gt;
-                  &lt;srcColumn&gt;24&lt;/srcColumn&gt;
-                  &lt;val&gt;33&lt;/val&gt;
-                &lt;/value&gt;
-              &lt;/valDef&gt;
-            &lt;/statements&gt;
-          &lt;/compoundStmt&gt;
-          &lt;varAssign&gt;
-            &lt;srcLine&gt;12&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;identifier&gt;
-              &lt;srcLine&gt;12&lt;/srcLine&gt;
-              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-              &lt;name&gt;y&lt;/name&gt;
-              &lt;declaration class=&quot;varDecl&quot; reference=&quot;../../../../../varDecl[2]&quot;/]&gt;
-            &lt;/iden...&gt; but was:&lt;...me&gt;x&lt;/name&gt;
-        [&lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;5&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;11&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;varAssign&gt;
-        &lt;srcLine&gt;6&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;identifier&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-          &lt;name&gt;y&lt;/name&gt;
-        &lt;/identifier&gt;
-        &lt;value class=&quot;intVal&quot;&gt;
-          &lt;srcLine&gt;6&lt;/srcLine&gt;
-          &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-          &lt;val&gt;22&lt;/val&gt;
-        &lt;/value&gt;
-      &lt;/varAssign&gt;
-      &lt;compoundStmt&gt;
-        &lt;srcLine&gt;8&lt;/srcLine&gt;
-        &lt;srcColumn&gt;4&lt;/srcColumn&gt;
-        &lt;statements&gt;
-          &lt;compoundStmt&gt;
-            &lt;srcLine&gt;9&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;statements&gt;
-              &lt;valDef&gt;
-                &lt;srcLine&gt;10&lt;/srcLine&gt;
-                &lt;srcColumn&gt;12&lt;/srcColumn&gt;
-                &lt;type class=&quot;intType&quot; reference=&quot;../../../../../../varDecl/type&quot;/&gt;
-                &lt;name&gt;y&lt;/name&gt;
-                &lt;localBaseOffset&gt;0&lt;/localBaseOffset&gt;
-                &lt;value class=&quot;intVal&quot;&gt;
-                  &lt;srcLine&gt;10&lt;/srcLine&gt;
-                  &lt;srcColumn&gt;24&lt;/srcColumn&gt;
-                  &lt;val&gt;33&lt;/val&gt;
-                &lt;/value&gt;
-              &lt;/valDef&gt;
-            &lt;/statements&gt;
-          &lt;/compoundStmt&gt;
-          &lt;varAssign&gt;
-            &lt;srcLine&gt;12&lt;/srcLine&gt;
-            &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-            &lt;identifier&gt;
-              &lt;srcLine&gt;12&lt;/srcLine&gt;
-              &lt;srcColumn&gt;8&lt;/srcColumn&gt;
-              &lt;name&gt;y&lt;/name]&gt;
-            &lt;/iden...&gt;
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:315)
-	at org.xmlunit.matchers.CompareMatcher.createComparisonFailure(CompareMatcher.java:299)
-	at org.xmlunit.matchers.CompareMatcher.matches(CompareMatcher.java:279)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:12)
-	at org.junit.Assert.assertThat(Assert.java:956)
-	at org.junit.Assert.assertThat(Assert.java:923)
-	at mavlc.frontend.ast.ASTCompareTest.testExample(ASTCompareTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="testExample[foreachloop01]"></a>
 <h3 class="failures">testExample[foreachloop01]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:349)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:413)
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -815,7 +305,7 @@
 <h3 class="failures">testExample[foreachloop02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:349)
+	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:413)
 	at mavlc.context_analysis.ContextualAnalysis.visitForEachLoop(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.ForEachLoop.accept(ForEachLoop.java:94)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -888,7 +378,7 @@
 <h3 class="failures">testExample[switch02]</h3>
 <span class="code">
 <pre>java.lang.UnsupportedOperationException
-	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:401)
+	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:461)
 	at mavlc.context_analysis.ContextualAnalysis.visitSwitchStatement(ContextualAnalysis.java:107)
 	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
 	at mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:192)
@@ -969,47 +459,47 @@
 </thead>
 <tr>
 <td class="failures">testExample[arith03]</td>
-<td>0.011s</td>
+<td>0.010s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[arith04]</td>
-<td>0.013s</td>
+<td>0.024s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">testExample[assign01]</td>
-<td>0.035s</td>
-<td class="failures">failed</td>
+<td class="success">testExample[assign01]</td>
+<td>0.032s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testExample[assign02]</td>
-<td>0.012s</td>
-<td class="failures">failed</td>
+<td class="success">testExample[assign02]</td>
+<td>0.046s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testExample[compound01]</td>
-<td>0.155s</td>
-<td class="failures">failed</td>
+<td class="success">testExample[compound01]</td>
+<td>0.137s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testExample[compound02]</td>
-<td>0.039s</td>
-<td class="failures">failed</td>
+<td class="success">testExample[compound02]</td>
+<td>0.050s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">testExample[foreachloop01]</td>
-<td>0.033s</td>
+<td>0.022s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[foreachloop02]</td>
-<td>0.016s</td>
+<td>0.020s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">testExample[switch02]</td>
-<td>0.026s</td>
+<td>0.025s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -1018,21 +508,23 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>[src/test/testcases/trees/P2/public/_4/switch02.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop02.ast_test.context.xml, src/test/testcases/trees/P2/public/_3/foreachloop01.ast_test.context.xml, src/test/testcases/trees/P2/public/_1/compound01.ast_test.context.xml, src/test/testcases/trees/P2/public/_1/compound02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign02.ast_test.context.xml, src/test/testcases/trees/P2/public/_2/assign01.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith04.ast_test.context.xml, src/test/testcases/trees/P2/public/_5/arith03.ast_test.context.xml]
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_4/switch02.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop02.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop01.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound01.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_4/switch02.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop02.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_3/foreachloop01.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound01.mavl
 Writing output of contextual analysis to build/test-output/compound01.mavl.test.xml
 Done.
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound02.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_1/compound02.mavl
 Writing output of contextual analysis to build/test-output/compound02.mavl.test.xml
 Done.
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign02.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign01.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign02.mavl
+Writing output of contextual analysis to build/test-output/assign02.mavl.test.xml
+Done.
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_2/assign01.mavl
 Writing output of contextual analysis to build/test-output/assign01.mavl.test.xml
 Done.
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith04.mavl
-Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith03.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith04.mavl
+Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/Compiler1_Exercises/Praktikum2/Robin/eicb-p2-2017.1/src/test/testcases/trees/P2/public/_5/arith03.mavl
 </pre>
 </span>
 </div>
@@ -1043,9 +535,13 @@ Compiling file /home/seed/Workspace/TuDarmstadt/EiCb/git/Praktikum2/Robin/eicb-p
 Running testcase foreachloop02.mavl
 Running testcase foreachloop01.mavl
 Running testcase compound01.mavl
+--&gt;Successful
 Running testcase compound02.mavl
+--&gt;Successful
 Running testcase assign02.mavl
+--&gt;Successful
 Running testcase assign01.mavl
+--&gt;Successful
 Running testcase arith04.mavl
 Running testcase arith03.mavl
 </pre>
@@ -1059,7 +555,7 @@ Running testcase arith03.mavl
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 15, 2017 6:15:38 PM</p>
+<a href="http://www.gradle.org">Gradle 4.1</a> at Dec 17, 2017 5:55:11 PM</p>
 </div>
 </div>
 </body>
