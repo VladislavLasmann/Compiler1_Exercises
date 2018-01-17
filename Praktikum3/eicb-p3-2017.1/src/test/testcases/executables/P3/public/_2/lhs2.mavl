@@ -1,0 +1,10 @@
+//LHS2
+function void main(){
+    var vector<int>[3] i;
+    i[0] = 4;
+    i[1] = 17;
+    i[2] = 9;
+    printInt(i[0]);
+    printInt(i[1]);    
+    printInt(i[2]);
+}

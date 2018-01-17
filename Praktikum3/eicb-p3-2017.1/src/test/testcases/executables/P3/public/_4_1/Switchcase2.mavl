@@ -1,0 +1,11 @@
+function void main(){
+
+  var int b;
+  switch(16-20){
+    default:
+      b = 10;
+    case -4:
+      b = 27;
+  }
+  printInt(b);
+}

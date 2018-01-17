@@ -1,0 +1,14 @@
+function void main() {
+	var matrix<int>[2][2] M;
+	var int v;
+	v = 0;
+	foreach(var int i : M) {
+		i = v;
+		v = v + 1;
+	}
+
+	printInt(M[0][0]);
+	printInt(M[0][1]);
+	printInt(M[1][0]);
+	printInt(M[1][1]);
+}

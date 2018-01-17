@@ -1,0 +1,9 @@
+record text {
+	val string s;
+	val int length;
+}
+
+function void main() {
+	val text msg = @text["hello world!", 12];
+	printString(msg@s);
+}

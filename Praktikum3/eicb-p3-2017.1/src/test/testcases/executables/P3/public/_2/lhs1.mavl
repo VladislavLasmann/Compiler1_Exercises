@@ -1,0 +1,7 @@
+//LHS1
+function void main(){
+    var int i;
+    i = 4;
+    i = 5;
+    printInt(i);
+}

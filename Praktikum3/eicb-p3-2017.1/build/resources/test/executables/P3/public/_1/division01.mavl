@@ -1,0 +1,12 @@
+//DIV1
+function void main(){
+    val float a = 6.6;
+    val float b = 2.2;
+    val float c = a / b; 
+    printFloat(c);
+    val int a2 = 6;
+    val int b2 = 2;
+    val int c2 = a2 / b2; 
+    printInt(c2);
+}
+

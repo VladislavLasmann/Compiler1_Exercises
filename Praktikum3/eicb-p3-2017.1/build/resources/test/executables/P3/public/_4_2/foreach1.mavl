@@ -1,0 +1,11 @@
+function void main() {
+	var vector<int>[3] v;
+	v = [1, 1 + 1, 3];
+	foreach(var int i : v) {
+		i = 3;
+	}
+	
+	printInt(v[0]);
+	printInt(v[1]);
+	printInt(v[2]);
+}

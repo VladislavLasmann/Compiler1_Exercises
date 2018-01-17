@@ -1,0 +1,15 @@
+function void main(){
+
+  val int c = 4;
+  var int b;
+  switch(c){
+    case 5:
+      b = 7;
+    case 4:
+      b = 27;
+    default:
+      b = 10;
+  }
+
+  printInt(b);
+}

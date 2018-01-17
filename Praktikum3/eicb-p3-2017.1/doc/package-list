@@ -1,0 +1,17 @@
+MTAM
+mavlc
+mavlc.ast.dot
+mavlc.ast.nodes
+mavlc.ast.nodes.expression
+mavlc.ast.nodes.function
+mavlc.ast.nodes.module
+mavlc.ast.nodes.record
+mavlc.ast.nodes.statement
+mavlc.ast.serialization
+mavlc.ast.type
+mavlc.ast.visitor
+mavlc.codegen
+mavlc.context_analysis
+mavlc.error_reporting
+mavlc.parser.recursive_descent
+mavlc.test_wrapper
