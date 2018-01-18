@@ -203,39 +203,74 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitVariableAssignment(mavlc.ast.nodes.statement.VariableAssignment, java.lang.Function)
+     * Task 3.2 
 	 */
 	@Override
 	public Instruction visitVariableAssignment(VariableAssignment variableAssignment, Integer arg1) {
-		//TODO Task 3.2
-		throw new UnsupportedOperationException();
+        // first get the type of the assignment
+        Type type = variableAssignment.getValue().getType();
 
+        // put the value on the stack
+        variableAssignment.getValue().accept(this, null);
+
+        if (type.equals(IntType.getIntType())) {
+            // now we need the address of the declaration where to store the int
+            variableAssignment.getIdentifier().accept(this, null); //is on stack now
+
+            // now we tell the assembler to store the value at the address
+            assembler.storeToStackAddress(1);
+
+        } else if (type instanceof VectorType) {
+            System.out.println("Hallo Robin");
+        } else {
+            throw new UnsupportedOperationException();
+        }
+
+        return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitLeftHandIdentifier(mavlc.ast.nodes.statement.LeftHandIdentifier, java.lang.Function)
-	 */
+	 * Task 3.2
+     */
 	@Override
 	public Instruction visitLeftHandIdentifier(LeftHandIdentifier leftHandIdentifier, Integer arg1) {
-		//TODO Task 3.2
-		throw new UnsupportedOperationException();
+        // get the address  of the declared variable
+        int offset = leftHandIdentifier.getDeclaration().getLocalBaseOffset();
+        // now we push the address on the stack
+        assembler.loadAddress(Register.LB, offset);
+        return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitMatrixLHSIdentifier(mavlc.ast.nodes.statement.MatrixLHSIdentifier, java.lang.Function)
+     *
+     * Task 3.2
 	 */
 	@Override
 	public Instruction visitMatrixLHSIdentifier(MatrixLHSIdentifier matrixLHSIdentifier, Integer arg1) {
-		//TODO Task 3.2
-		throw new UnsupportedOperationException();
+        // get the address of the declared Matrix
+        int offset = matrixLHSIdentifier.getDeclaration().getLocalBaseOffset();
+
+        // load the address on the stack
+        assembler.loadAddress(Register.LB, offset);
+        return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitVectorLHSIdentifier(mavlc.ast.nodes.statement.VectorLHSIdentifier, java.lang.Function)
+     *
+     * Task 3.2
 	 */
 	@Override
 	public Instruction visitVectorLHSIdentifier(VectorLHSIdentifier vectorLHSIdentifier, Integer arg1) {
-		//TODO Task 3.2
-		throw new UnsupportedOperationException();
+        // get the address of the declared Vector
+        int offset = vectorLHSIdentifier.getDeclaration().getLocalBaseOffset();
+
+        // load the address on the stack
+        assembler.loadAddress(Register.LB, offset);
+
+        return null;
 	}
 
 	/* (non-Javadoc)
@@ -645,12 +680,14 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
         // contex analises
         Type resultType = division.getType();
         
-        // accept the Operands TODO: why??? (seams to push the values on the stack but cant find the implementation)
+        // accept the Operands which will put them on the stack
         division.getLeftOp().accept(this, null);
         division.getRightOp().accept(this, null);
 
         // Result must be int or float
         if (resultType.equals(IntType.getIntType())) {
+            // gets the 2 most up elements from the stack and makes a division and pushes the result 
+            // back to the stack
             assembler.emitIntegerDivision();
         } else {
             assembler.emitFloatDivision();
