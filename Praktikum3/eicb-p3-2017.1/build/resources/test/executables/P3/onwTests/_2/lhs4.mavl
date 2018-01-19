@@ -1,0 +1,21 @@
+//LHS4
+record myRecord {
+    var matrix<int>[2][2] m;
+    var int i;
+}
+
+function void main() {
+    var myRecord x;
+    x  = @myRecord[[[1, 2], [3, 4]], 10];
+    printInt(x@m[0][0]);
+    printInt(x@m[0][1]);
+    printInt(x@m[1][0]);
+    printInt(x@m[1][1]);
+    printInt(x@i);
+    
+    x@i = 42;
+    x@m = [[5, 6], [7, 8]];
+
+    printInt(x@i);
+    printInt(x@m[1][1]);
+}

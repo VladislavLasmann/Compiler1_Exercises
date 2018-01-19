@@ -1,0 +1,10 @@
+//LHS3
+function void main(){
+    var matrix<int>[3][3] i;
+    i[0][1] = 4;
+    i[1][2] = 17;
+    i[2][2] = 9;
+    printInt(i[0][1]);
+    printInt(i[1][2]);    
+    printInt(i[2][2]);
+}

@@ -207,24 +207,14 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	 */
 	@Override
 	public Instruction visitVariableAssignment(VariableAssignment variableAssignment, Integer arg1) {
-        // first get the type of the assignment
-        Type type = variableAssignment.getValue().getType();
-
         // put the value on the stack
         variableAssignment.getValue().accept(this, null);
 
-        if (type.equals(IntType.getIntType())) {
-            // now we need the address of the declaration where to store the int
-            variableAssignment.getIdentifier().accept(this, null); //is on stack now
+        // now we need the address of the declaration where to store the value
+        variableAssignment.getIdentifier().accept(this, null); //is on stack now
 
-            // now we tell the assembler to store the value at the address
-            assembler.storeToStackAddress(1);
-
-        } else if (type instanceof VectorType) {
-            System.out.println("Hallo Robin");
-        } else {
-            throw new UnsupportedOperationException();
-        }
+        // now we tell the assembler to store the value at the address
+        assembler.storeToStackAddress(1);
 
         return null;
 	}
@@ -237,8 +227,10 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	public Instruction visitLeftHandIdentifier(LeftHandIdentifier leftHandIdentifier, Integer arg1) {
         // get the address  of the declared variable
         int offset = leftHandIdentifier.getDeclaration().getLocalBaseOffset();
+        
         // now we push the address on the stack
         assembler.loadAddress(Register.LB, offset);
+        
         return null;
 	}
 
@@ -252,8 +244,32 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
         // get the address of the declared Matrix
         int offset = matrixLHSIdentifier.getDeclaration().getLocalBaseOffset();
 
-        // load the address on the stack
+        // get the index and compute the address
+        // to do this we have to compute the following x*ySize + y
+        // so for e.g when we have a matrix<int>[3][3] the address of m[2][1] is
+        // 2*3 + 1
+        // so first we need to know the max size of y
+        int ySize = ((MatrixType) matrixLHSIdentifier.getDeclaration().getType()).getyDimension();
+
+        // now we push the value on the stack
+        assembler.loadIntegerValue(ySize);
+        
+        // now we get the x value and push it on the stack
+        matrixLHSIdentifier.getXIndex().accept(this, null);
+
+        // now we multiply the value (x*ySize)
+        assembler.emitIntegerMultiplication();
+
+        // now we get the y index and push it on the stack
+        matrixLHSIdentifier.getYIndex().accept(this, null);
+
+        // now we add it to the preivous result ((x*ySize) + x)
+        assembler.emitIntegerAddition(); // this is now the index
+
+        // load the address on the stack and add it with the computet index
         assembler.loadAddress(Register.LB, offset);
+        assembler.emitIntegerAddition(); // this is now the needed adress and is top of the stack
+
         return null;
 	}
 
@@ -267,19 +283,30 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
         // get the address of the declared Vector
         int offset = vectorLHSIdentifier.getDeclaration().getLocalBaseOffset();
 
-        // load the address on the stack
+        // get the index an compute the address
+        // so first we load the index on the stack
+        vectorLHSIdentifier.getIndex().accept(this, null);
+        
+        // now we load the address on the stack
         assembler.loadAddress(Register.LB, offset);
+
+        // now we make a addition and the result will be the address of the element
+        assembler.emitIntegerAddition();
 
         return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitRecordLHSIdentifier(mavlc.ast.nodes.statement.RecordLHSIdentifier, java.lang.Function)
+     *
+     * Task 3.2
 	 */
 	@Override
 	public Instruction visitRecordLHSIdentifier(RecordLHSIdentifier recordLHSIdentifier, Integer arg1) {
-		//TODO Task 3.2
-		throw new UnsupportedOperationException();
+        // get the offset of the declared record
+        int offset = recordLHSIdentifier.getDeclaration().getLocalBaseOffset();
+
+        return null;
 	}
 
 	/* (non-Javadoc)
@@ -331,8 +358,10 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	public Instruction visitForEachLoop(ForEachLoop forEachLoop, Integer arg1) {
 		//TODO Task 3.4.2
 		throw new UnsupportedOperationException();
-	}
-
+    }
+	
+ 
+ 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitIfStatement(mavlc.ast.nodes.statement.IfStatement, java.lang.Function)
 	 */

@@ -1,5 +1,9 @@
+1
+2
+3
 4
-17
-9
+10
+42
+8
 
 Program has halted normally.
