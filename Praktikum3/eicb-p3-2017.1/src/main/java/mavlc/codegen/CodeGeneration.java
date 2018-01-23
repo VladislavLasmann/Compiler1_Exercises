@@ -214,7 +214,12 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
         variableAssignment.getIdentifier().accept(this, null); //is on stack now
 
         // now we tell the assembler to store the value at the address
-        assembler.storeToStackAddress(1);
+        assembler.storeToStackAddress(
+                variableAssignment
+                .getValue()
+                .getType()
+                .wordSize()
+                );
 
         return null;
 	}
@@ -305,7 +310,29 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	public Instruction visitRecordLHSIdentifier(RecordLHSIdentifier recordLHSIdentifier, Integer arg1) {
         // get the offset of the declared record
         int offset = recordLHSIdentifier.getDeclaration().getLocalBaseOffset();
+        // load it on the stack
+        assembler.loadAddress(Register.LB, offset);
 
+        // get the elements of the records
+        List<RecordElementDeclaration> elements = 
+            ((RecordType) recordLHSIdentifier.getDeclaration().getType())
+            .getTypeDeclaration()
+            .getElements();
+            
+        // now we go trough the List and check for the names and count up an counter for the index
+        int index = 0;
+        for (RecordElementDeclaration e : elements) {
+            if (e.getName().equals(recordLHSIdentifier.getElementName()))
+                break; // element found
+            index += e.getType().wordSize();
+        }
+
+        // now we load the index on the stack
+        assembler.loadIntegerValue(index);
+
+        // and add it with the offset we put on the stack earlier
+        assembler.emitIntegerAddition();
+            
         return null;
 	}
 
@@ -1149,12 +1176,49 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitRecordElementSelect(mavlc.ast.nodes.expression.RecordElementSelect, java.lang.Function)
+     *
+     * Task 3.3
 	 */
 	@Override
 	public Instruction visitRecordElementSelect(RecordElementSelect recordElementSelect, Integer arg1) {
-		//TODO Task 3.3
-		throw new UnsupportedOperationException();
-	}
+        // put the record on the stack
+        Expression record =recordElementSelect.getRecord();
+        record.accept(this, null);
+
+        // ST pointing on the first word behind the record
+        // So the base address is for the element ist ST - record size
+        assembler.loadAddress(Register.ST, record.getType().wordSize() * -1);
+
+        // get the elements of the records
+        List<RecordElementDeclaration> elements =
+            ((RecordType) recordElementSelect.getRecord().getType())
+            .getTypeDeclaration()
+            .getElements();
+            
+        // now we go to the element and check if it is the one
+        int index = 0;
+        int elementSize = 0;
+        for (RecordElementDeclaration e : elements) {
+            if (e.getName().equals(recordElementSelect.getElementName())) {
+                elementSize = e.getType().wordSize();
+                break;
+            }
+            index += e.getType().wordSize();
+        }
+
+        // now we load the index on the stack
+        assembler.loadIntegerValue(index);
+        // now we add the index to the offset
+        assembler.emitIntegerAddition();
+
+        // now we load the element on the stack
+        assembler.loadFromStackAddress(elementSize);
+
+        // remove the rest of the record
+        assembler.emitPop(elementSize, record.getType().wordSize());
+
+        return null;
+    }
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitSubMatrix(mavlc.ast.nodes.expression.SubMatrix, java.lang.Function)

@@ -1,0 +1,15 @@
+//LHS4
+record myRecord {
+    var int a;
+    var int i;
+    var int c;
+}
+
+function void main() {
+    var myRecord x;
+    x  = @myRecord[1, 2, 3];
+    
+    printInt(x@a);
+    printInt(x@i);
+    printInt(x@c);
+}
