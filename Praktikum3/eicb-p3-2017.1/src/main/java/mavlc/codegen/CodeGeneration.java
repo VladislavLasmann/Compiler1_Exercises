@@ -484,37 +484,59 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	@Override
     // Task 3.4.1
 	public Instruction visitSwitchStatement(SwitchStatement switchCaseStatement, Integer arg1) {
+        // we need this instruction to be outside of the for scope
+        Instruction jumpOverDefault = null;
+
         // do for each case
         for (Case aCase : switchCaseStatement.getCases()) {
             // load the TestExp on the stack
-            //switchCaseStatement.getTestExpression().accept();
-
+            switchCaseStatement.getTestExpression().accept(this, null);
+            
             // load the condition on the stack
             assembler.loadIntegerValue(aCase.getCondition());
 
             // see if they are equal
-            //assembler.emitIntegerComparison(EQUAL);
+            assembler.emitIntegerComparison(Comparison.EQUAL);
 
             // make jump to skip this if not equal
+            Instruction jumpOverCase = assembler.emitConditionalJump(false, -1); 
+
+            //puts the case on the stack
+            aCase.accept(this, null); 
+
+            // if a case was running we need to jump over the default part
+            jumpOverDefault = assembler.emitJump(-1);
             
-            //aCase.g
-            //aCase.accept(this, null); //puts the case on the stack
+            // backpatch the jump
+            assembler.backPatchJump(jumpOverCase, assembler.getNextInstructionAddress());
         }
-            return null;
+
+        // lets run the default part
+        for (Default theDefault : switchCaseStatement.getDefaultCases()) {
+            // run the default
+            theDefault.accept(this, null);
+
+            // now we backpatch the jump if a case was running
+            assembler.backPatchJump(jumpOverDefault, assembler.getNextInstructionAddress());
+        }
+        
+        return null;
 	}
 
 	@Override
     // Task 3.4.1
 	public Instruction visitCase(Case aCase,Integer arg1){
-        // put the condition on the stack
-        aCase.getCondition();
+        // get the Statement
+        aCase.getStatement().accept(this, null);
+
         return null;
 	}
 
 	@Override
+    // Task 3.4.1
 	public Instruction visitDefault(Default defCase,Integer arg1){
-		//TODO Task 3.4.1
-		throw new UnsupportedOperationException();
+        defCase.getStatement().accept(this, null);
+        return null;
 	}
 
 	/* (non-Javadoc)
