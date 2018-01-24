@@ -482,15 +482,33 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	}
 
 	@Override
+    // Task 3.4.1
 	public Instruction visitSwitchStatement(SwitchStatement switchCaseStatement, Integer arg1) {
-		//TODO Task 3.4.1
-		throw new UnsupportedOperationException();
+        // do for each case
+        for (Case aCase : switchCaseStatement.getCases()) {
+            // load the TestExp on the stack
+            //switchCaseStatement.getTestExpression().accept();
+
+            // load the condition on the stack
+            assembler.loadIntegerValue(aCase.getCondition());
+
+            // see if they are equal
+            //assembler.emitIntegerComparison(EQUAL);
+
+            // make jump to skip this if not equal
+            
+            //aCase.g
+            //aCase.accept(this, null); //puts the case on the stack
+        }
+            return null;
 	}
 
 	@Override
+    // Task 3.4.1
 	public Instruction visitCase(Case aCase,Integer arg1){
-		//TODO Task 3.4.1
-		throw new UnsupportedOperationException();
+        // put the condition on the stack
+        aCase.getCondition();
+        return null;
 	}
 
 	@Override
@@ -1182,7 +1200,7 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	@Override
 	public Instruction visitRecordElementSelect(RecordElementSelect recordElementSelect, Integer arg1) {
         // put the record on the stack
-        Expression record =recordElementSelect.getRecord();
+        Expression record = recordElementSelect.getRecord();
         record.accept(this, null);
 
         // ST pointing on the first word behind the record
@@ -1407,7 +1425,33 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	@Override
 	public Instruction visitSelectExpression(SelectExpression exp, Integer arg1){
 		//TODO Task 3.4.3
-		throw new UnsupportedOperationException();
+		// evaluate condition and push it on stack
+		exp.getCondition().accept(this, null);
+
+		/*
+		 *  Jump to falseCase part if conditional is false.
+		 *  The jump must be backpatched later on.
+		 */
+		Instruction jump2false = assembler.emitConditionalJump(false, 1);
+
+		exp.getTrueCase().accept(this, null);
+
+		Instruction jumpOverFalse = assembler.emitJump(-1);
+
+		/*
+		 * Backpatch jump to the falseCase part.
+		 */
+		int startElse = assembler.getNextInstructionAddress();
+		assembler.backPatchJump(jump2false, startElse);
+		exp.getFalseCase().accept(this, null);
+
+		/*
+		 * Backpatch jump over falseCase.
+		 */
+		int endElse = assembler.getNextInstructionAddress();
+		assembler.backPatchJump(jumpOverFalse, endElse);
+
+		return null;
 
 	}
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.codegen.output.OutputCompareTest" tests="12" skipped="0" failures="5" errors="0" timestamp="2018-01-23T15:07:31" hostname="seedOS" time="0.199">
+<testsuite name="mavlc.codegen.output.OutputCompareTest" tests="12" skipped="0" failures="4" errors="0" timestamp="2018-01-24T08:50:10" hostname="seedOS" time="0.21">
   <properties/>
-  <testcase name="testExample[foreach2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.048">
+  <testcase name="testExample[foreach2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.045">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
 	at mavlc.codegen.CodeGeneration.visitForEachLoop(CodeGeneration.java:387)
 	at mavlc.codegen.CodeGeneration.visitForEachLoop(CodeGeneration.java:91)
@@ -70,7 +70,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[foreach1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.002">
+  <testcase name="testExample[foreach1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.001">
     <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
 	at mavlc.codegen.CodeGeneration.visitForEachLoop(CodeGeneration.java:387)
 	at mavlc.codegen.CodeGeneration.visitForEachLoop(CodeGeneration.java:91)
@@ -139,19 +139,22 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[Switchcase2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.002">
-    <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.codegen.CodeGeneration.visitSwitchStatement(CodeGeneration.java:487)
-	at mavlc.codegen.CodeGeneration.visitSwitchStatement(CodeGeneration.java:91)
-	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:147)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:91)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:116)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:91)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:173)
-	at mavlc.codegen.output.OutputCompareTest.testExample(OutputCompareTest.java:60)
+  <testcase name="testExample[Switchcase2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.077">
+    <failure message="java.lang.AssertionError: Resulting output does not match reference:&#10;Reference:&#10;27&#10;&#10;Program has halted normally.&#10;&#10;Output:&#10;0&#10;&#10;Program has halted normally.&#10;&#10;" type="java.lang.AssertionError">java.lang.AssertionError: Resulting output does not match reference:
+Reference:
+27
+
+Program has halted normally.
+
+Output:
+0
+
+Program has halted normally.
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at mavlc.codegen.output.OutputCompareTest.testExample(OutputCompareTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -208,19 +211,22 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[Switchcase1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.001">
-    <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.codegen.CodeGeneration.visitSwitchStatement(CodeGeneration.java:487)
-	at mavlc.codegen.CodeGeneration.visitSwitchStatement(CodeGeneration.java:91)
-	at mavlc.ast.nodes.statement.SwitchStatement.accept(SwitchStatement.java:89)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:147)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:91)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:116)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:91)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:173)
-	at mavlc.codegen.output.OutputCompareTest.testExample(OutputCompareTest.java:60)
+  <testcase name="testExample[Switchcase1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.003">
+    <failure message="java.lang.AssertionError: Resulting output does not match reference:&#10;Reference:&#10;27&#10;&#10;Program has halted normally.&#10;&#10;Output:&#10;0&#10;&#10;Program has halted normally.&#10;&#10;" type="java.lang.AssertionError">java.lang.AssertionError: Resulting output does not match reference:
+Reference:
+27
+
+Program has halted normally.
+
+Output:
+0
+
+Program has halted normally.
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at mavlc.codegen.output.OutputCompareTest.testExample(OutputCompareTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -277,85 +283,14 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="testExample[recordSelect1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.077"/>
-  <testcase name="testExample[division01]" classname="mavlc.codegen.output.OutputCompareTest" time="0.006"/>
-  <testcase name="testExample[lhs2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.01"/>
+  <testcase name="testExample[recordSelect1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.006"/>
+  <testcase name="testExample[division01]" classname="mavlc.codegen.output.OutputCompareTest" time="0.022"/>
+  <testcase name="testExample[lhs2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.008"/>
   <testcase name="testExample[lhs1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
-  <testcase name="testExample[Select1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.002">
-    <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at mavlc.codegen.CodeGeneration.visitSelectExpression(CodeGeneration.java:1409)
-	at mavlc.codegen.CodeGeneration.visitSelectExpression(CodeGeneration.java:91)
-	at mavlc.ast.nodes.expression.SelectExpression.accept(SelectExpression.java:67)
-	at mavlc.codegen.CodeGeneration.visitVariableAssignment(CodeGeneration.java:211)
-	at mavlc.codegen.CodeGeneration.visitVariableAssignment(CodeGeneration.java:91)
-	at mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:147)
-	at mavlc.codegen.CodeGeneration.visitFunction(CodeGeneration.java:91)
-	at mavlc.ast.nodes.function.Function.accept(Function.java:73)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:116)
-	at mavlc.codegen.CodeGeneration.visitModule(CodeGeneration.java:91)
-	at mavlc.ast.nodes.module.Module.accept(Module.java:47)
-	at mavlc.Main.main(Main.java:173)
-	at mavlc.codegen.output.OutputCompareTest.testExample(OutputCompareTest.java:60)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-  </testcase>
-  <testcase name="testExample[lhs3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.013"/>
-  <testcase name="testExample[lhs4]" classname="mavlc.codegen.output.OutputCompareTest" time="0.029"/>
-  <testcase name="testExample[lhs5]" classname="mavlc.codegen.output.OutputCompareTest" time="0.003"/>
+  <testcase name="testExample[Select1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.009"/>
+  <testcase name="testExample[lhs3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.012"/>
+  <testcase name="testExample[lhs4]" classname="mavlc.codegen.output.OutputCompareTest" time="0.015"/>
+  <testcase name="testExample[lhs5]" classname="mavlc.codegen.output.OutputCompareTest" time="0.006"/>
   <system-out><![CDATA[[src/test/testcases/executables/P3/public/_4_2/foreach2.mavl, src/test/testcases/executables/P3/public/_4_2/foreach1.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl, src/test/testcases/executables/P3/public/_3/recordSelect1.mavl, src/test/testcases/executables/P3/public/_1/division01.mavl, src/test/testcases/executables/P3/public/_2/lhs2.mavl, src/test/testcases/executables/P3/public/_2/lhs1.mavl, src/test/testcases/executables/P3/public/_4_3/Select1.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs3.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs4.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs5.mavl]
 src/test/testcases/executables/P3/public/_4_2/foreach2.mavl
 src/test/testcases/executables/P3/public/_4_2/foreach2.txt
@@ -366,9 +301,37 @@ Compiling file src/test/testcases/executables/P3/public/_4_2/foreach1.mavl
 src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl
 src/test/testcases/executables/P3/public/_4_1/Switchcase2.txt
 Compiling file src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl
+.text
+0000:  CALL  (CB)  1[CB]	main
+
+# function VOID main()
+0001:  PUSH        1
+0002:  LOADL       -4
+0003:  LOAD  (1)   2[LB]
+0004:  CALL  (CB)  32756[CB]	printInt
+0005:  HALT  
+Done.
+********** TAM Interpreter (Java Version 2.1esa3) **********
+InputFile: build/test-output/a.tam
+OutputFile: build/test-output/output.txt
 src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl
 src/test/testcases/executables/P3/public/_4_1/Switchcase1.txt
 Compiling file src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl
+.text
+0000:  CALL  (CB)  1[CB]	main
+
+# function VOID main()
+0001:  LOADL       4
+0002:  PUSH        1
+0003:  LOADL       5
+0004:  LOADL       4
+0005:  LOAD  (1)   3[LB]
+0006:  CALL  (CB)  32756[CB]	printInt
+0007:  HALT  
+Done.
+********** TAM Interpreter (Java Version 2.1esa3) **********
+InputFile: build/test-output/a.tam
+OutputFile: build/test-output/output.txt
 src/test/testcases/executables/P3/public/_3/recordSelect1.mavl
 src/test/testcases/executables/P3/public/_3/recordSelect1.txt
 Compiling file src/test/testcases/executables/P3/public/_3/recordSelect1.mavl
@@ -497,6 +460,32 @@ OutputFile: build/test-output/output.txt
 src/test/testcases/executables/P3/public/_4_3/Select1.mavl
 src/test/testcases/executables/P3/public/_4_3/Select1.txt
 Compiling file src/test/testcases/executables/P3/public/_4_3/Select1.mavl
+.text
+0000:  CALL  (CB)  1[CB]	main
+
+# function VOID main()
+0001:  PUSH        1
+0002:  PUSH        1
+0003:  LOADL       20
+0004:  LOADL       10
+0005:  LOADA       2[LB]
+0006:  STOREI(1)   
+0007:  LOAD  (1)   2[LB]
+0008:  LOAD  (1)   4[LB]
+0009:  gt
+000A:  JUMPIF(0)   13[CB]
+000B:  LOAD  (1)   2[LB]
+000C:  JUMP        14[CB]
+000D:  LOAD  (1)   4[LB]
+000E:  LOADA       3[LB]
+000F:  STOREI(1)   
+0010:  LOAD  (1)   3[LB]
+0011:  CALL  (CB)  32756[CB]	printInt
+0012:  HALT  
+Done.
+********** TAM Interpreter (Java Version 2.1esa3) **********
+InputFile: build/test-output/a.tam
+OutputFile: build/test-output/output.txt
 src/test/testcases/executables/P3/onwTests/_2/lhs3.mavl
 src/test/testcases/executables/P3/onwTests/_2/lhs3.txt
 Compiling file src/test/testcases/executables/P3/onwTests/_2/lhs3.mavl
@@ -780,7 +769,9 @@ OutputFile: build/test-output/output.txt
   <system-err><![CDATA[Running testcase foreach2
 Running testcase foreach1
 Running testcase Switchcase2
+Executing binary!
 Running testcase Switchcase1
+Executing binary!
 Running testcase recordSelect1
 Executing binary!
 Running testcase division01
@@ -790,6 +781,7 @@ Executing binary!
 Running testcase lhs1
 Executing binary!
 Running testcase Select1
+Executing binary!
 Running testcase lhs3
 Executing binary!
 Running testcase lhs4
