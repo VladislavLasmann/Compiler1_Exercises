@@ -1,0 +1,9 @@
+function void main (){
+var int a;
+var int c;
+val int d = 5;
+a = 10;
+
+c =  a>d ? a : d;
+printInt(c);
+}

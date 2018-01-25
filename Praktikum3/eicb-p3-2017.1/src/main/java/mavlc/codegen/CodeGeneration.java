@@ -380,15 +380,57 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitForEachLoop(mavlc.ast.nodes.statement.ForEachLoop, java.lang.Function)
+     *
+     * Task 3.4.2
 	 */
 	@Override
 	public Instruction visitForEachLoop(ForEachLoop forEachLoop, Integer arg1) {
-		//TODO Task 3.4.2
-		throw new UnsupportedOperationException();
+        // get the size of the struct
+        int size = forEachLoop.getStructExpr().getType().wordSize();
+
+        // put the struct on the stack
+        forEachLoop.getStructExpr().accept(this, null);
+        
+        // for each element of the struct emit loop body
+        for (int i = 0; i < size; i++) {
+            // get the needed element on top of the stack
+            assembler.loadAddress(Register.ST, (size * -1) + i);
+            assembler.loadFromStackAddress(1); // will always be one word
+
+            // get the address of the iterator and load it on the stack
+            int iterator  = forEachLoop.getIteratorDeclaration().getLocalBaseOffset();
+            assembler.loadAddress(Register.LB, iterator);
+
+            // save the element in the iterator variable
+            assembler.storeToStackAddress(1);
+        
+            // run the body
+            forEachLoop.getLoopBody().accept(this, null);
+
+            // if the iterator is var we need to save i to the original struct
+            if (forEachLoop.getIteratorDeclaration().isVariable()) {
+                // so we load i again on the stack
+                assembler.loadValue(Register.LB, 1, iterator);
+                
+                // we cast the Expression in a IdentifierReference
+                IdentifierReference LHI = (IdentifierReference) forEachLoop.getStructExpr();
+                
+                // now we can save the value of the iterator at the origin
+                assembler.loadAddress(
+                        Register.LB,
+                        LHI.getDeclaration().getLocalBaseOffset()
+                        + i
+                    );
+                assembler.storeToStackAddress(1);
+            }
+        }
+
+        // clean up stack
+        assembler.emitPop(0, size);
+
+        return null;
     }
 	
- 
- 
 	/* (non-Javadoc)
 	 * @see mavlc.ast.visitor.ASTNodeBaseVisitor#visitIfStatement(mavlc.ast.nodes.statement.IfStatement, java.lang.Function)
 	 */
@@ -1444,9 +1486,12 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 		assembler.loadLocalValue(wordSize, offset);
 		return null;
 	}
+
+    /*
+     * Task 3.4.3
+     */
 	@Override
 	public Instruction visitSelectExpression(SelectExpression exp, Integer arg1){
-		//TODO Task 3.4.3
 		// evaluate condition and push it on stack
 		exp.getCondition().accept(this, null);
 
