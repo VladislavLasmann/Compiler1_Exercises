@@ -552,8 +552,9 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
 	@Override
     // Task 3.4.1
 	public Instruction visitSwitchStatement(SwitchStatement switchCaseStatement, Integer arg1) {
-        // we need this instruction to be outside of the for scope
-        Instruction jumpOverDefault = null;
+        // we need a bool to see if a case was run
+        int wasCaseRunning = assembler.getNextOffset();
+        assembler.loadBooleanValue(false);
 
         // do for each case
         for (Case aCase : switchCaseStatement.getCases()) {
@@ -572,22 +573,28 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
             //puts the case on the stack
             aCase.accept(this, null); 
 
-            // if a case was running we need to jump over the default part
-            jumpOverDefault = assembler.emitJump(-1);
+            // if a case was running we change the bool to true
+            assembler.loadBooleanValue(true);
+            assembler.loadIntegerValue(wasCaseRunning);
+            assembler.storeToStackAddress(1);
             
             // backpatch the jump
             assembler.backPatchJump(jumpOverCase, assembler.getNextInstructionAddress());
         }
 
+        // now we load the bool and see if we need to jump
+        assembler.loadValue(Register.LB, 1, wasCaseRunning);
+        Instruction jumpOverDefault = assembler.emitConditionalJump(true, -1);
+
         // lets run the default part
         for (Default theDefault : switchCaseStatement.getDefaultCases()) {
             // run the default
             theDefault.accept(this, null);
-
-            // now we backpatch the jump if a case was running
-            assembler.backPatchJump(jumpOverDefault, assembler.getNextInstructionAddress());
         }
         
+        // now we backpatch the jump if a case was running
+        assembler.backPatchJump(jumpOverDefault, assembler.getNextInstructionAddress());
+
         return null;
 	}
 

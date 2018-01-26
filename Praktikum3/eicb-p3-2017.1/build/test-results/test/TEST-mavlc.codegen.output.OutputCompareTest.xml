@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mavlc.codegen.output.OutputCompareTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2018-01-26T13:27:42" hostname="seedOS" time="0.206">
+<testsuite name="mavlc.codegen.output.OutputCompareTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2018-01-26T21:14:57" hostname="seedOS" time="0.33">
   <properties/>
-  <testcase name="testExample[foreach2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.112"/>
-  <testcase name="testExample[foreach1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.008"/>
-  <testcase name="testExample[Switchcase2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.011"/>
-  <testcase name="testExample[Switchcase1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.007"/>
-  <testcase name="testExample[recordSelect1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.003"/>
-  <testcase name="testExample[division01]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
-  <testcase name="testExample[lhs2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.005"/>
-  <testcase name="testExample[lhs1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.003"/>
-  <testcase name="testExample[Select1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
-  <testcase name="testExample[foreach3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.007"/>
-  <testcase name="testExample[Switchcase3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
-  <testcase name="testExample[lhs3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.009"/>
-  <testcase name="testExample[lhs4]" classname="mavlc.codegen.output.OutputCompareTest" time="0.014"/>
-  <testcase name="testExample[lhs5]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
-  <testcase name="testExample[Select2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.007"/>
-  <system-out><![CDATA[[src/test/testcases/executables/P3/public/_4_2/foreach2.mavl, src/test/testcases/executables/P3/public/_4_2/foreach1.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl, src/test/testcases/executables/P3/public/_3/recordSelect1.mavl, src/test/testcases/executables/P3/public/_1/division01.mavl, src/test/testcases/executables/P3/public/_2/lhs2.mavl, src/test/testcases/executables/P3/public/_2/lhs1.mavl, src/test/testcases/executables/P3/public/_4_3/Select1.mavl, src/test/testcases/executables/P3/onwTests/_4_2/foreach3.mavl, src/test/testcases/executables/P3/onwTests/_4_1/Switchcase3.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs3.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs4.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs5.mavl, src/test/testcases/executables/P3/onwTests/_4_3/Select2.mavl]
+  <testcase name="testExample[foreach2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.193"/>
+  <testcase name="testExample[foreach1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.012"/>
+  <testcase name="testExample[Switchcase2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.004"/>
+  <testcase name="testExample[Switchcase1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.011"/>
+  <testcase name="testExample[Switchcase3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.006"/>
+  <testcase name="testExample[recordSelect1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.009"/>
+  <testcase name="testExample[division01]" classname="mavlc.codegen.output.OutputCompareTest" time="0.005"/>
+  <testcase name="testExample[lhs2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.012"/>
+  <testcase name="testExample[lhs1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.002"/>
+  <testcase name="testExample[Select1]" classname="mavlc.codegen.output.OutputCompareTest" time="0.003"/>
+  <testcase name="testExample[foreach3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.009"/>
+  <testcase name="testExample[Switchcase3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.006"/>
+  <testcase name="testExample[lhs3]" classname="mavlc.codegen.output.OutputCompareTest" time="0.007"/>
+  <testcase name="testExample[lhs4]" classname="mavlc.codegen.output.OutputCompareTest" time="0.025"/>
+  <testcase name="testExample[lhs5]" classname="mavlc.codegen.output.OutputCompareTest" time="0.011"/>
+  <testcase name="testExample[Select2]" classname="mavlc.codegen.output.OutputCompareTest" time="0.01"/>
+  <system-out><![CDATA[[src/test/testcases/executables/P3/public/_4_2/foreach2.mavl, src/test/testcases/executables/P3/public/_4_2/foreach1.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl, src/test/testcases/executables/P3/public/_4_1/Switchcase3.mavl, src/test/testcases/executables/P3/public/_3/recordSelect1.mavl, src/test/testcases/executables/P3/public/_1/division01.mavl, src/test/testcases/executables/P3/public/_2/lhs2.mavl, src/test/testcases/executables/P3/public/_2/lhs1.mavl, src/test/testcases/executables/P3/public/_4_3/Select1.mavl, src/test/testcases/executables/P3/onwTests/_4_2/foreach3.mavl, src/test/testcases/executables/P3/onwTests/_4_1/Switchcase3.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs3.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs4.mavl, src/test/testcases/executables/P3/onwTests/_2/lhs5.mavl, src/test/testcases/executables/P3/onwTests/_4_3/Select2.mavl]
 src/test/testcases/executables/P3/public/_4_2/foreach2.mavl
 src/test/testcases/executables/P3/public/_4_2/foreach2.txt
 Compiling file src/test/testcases/executables/P3/public/_4_2/foreach2.mavl
@@ -214,22 +215,27 @@ Compiling file src/test/testcases/executables/P3/public/_4_1/Switchcase2.mavl
 
 # function VOID main()
 0001:  PUSH        1
-0002:  LOADL       16
-0003:  LOADL       20
-0004:  sub
-0005:  LOADL       -4
-0006:  eq
-0007:  JUMPIF(0)   12[CB]
-0008:  LOADL       27
-0009:  LOADA       2[LB]
-000A:  STOREI(1)   
-000B:  JUMP        15[CB]
-000C:  LOADL       10
-000D:  LOADA       2[LB]
+0002:  LOADL       0
+0003:  LOADL       16
+0004:  LOADL       20
+0005:  sub
+0006:  LOADL       -4
+0007:  eq
+0008:  JUMPIF(0)   15[CB]
+0009:  LOADL       27
+000A:  LOADA       2[LB]
+000B:  STOREI(1)   
+000C:  LOADL       1
+000D:  LOADL       3
 000E:  STOREI(1)   
-000F:  LOAD  (1)   2[LB]
-0010:  CALL  (CB)  32756[CB]	printInt
-0011:  HALT  
+000F:  LOAD  (1)   3[LB]
+0010:  JUMPIF(1)   20[CB]
+0011:  LOADL       10
+0012:  LOADA       2[LB]
+0013:  STOREI(1)   
+0014:  LOAD  (1)   2[LB]
+0015:  CALL  (CB)  32756[CB]	printInt
+0016:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -243,28 +249,77 @@ Compiling file src/test/testcases/executables/P3/public/_4_1/Switchcase1.mavl
 # function VOID main()
 0001:  LOADL       4
 0002:  PUSH        1
-0003:  LOAD  (1)   2[LB]
-0004:  LOADL       5
-0005:  eq
-0006:  JUMPIF(0)   11[CB]
-0007:  LOADL       7
-0008:  LOADA       3[LB]
-0009:  STOREI(1)   
-000A:  JUMP        -1[CB]
-000B:  LOAD  (1)   2[LB]
+0003:  LOADL       0
+0004:  LOAD  (1)   2[LB]
+0005:  LOADL       5
+0006:  eq
+0007:  JUMPIF(0)   14[CB]
+0008:  LOADL       7
+0009:  LOADA       3[LB]
+000A:  STOREI(1)   
+000B:  LOADL       1
 000C:  LOADL       4
-000D:  eq
-000E:  JUMPIF(0)   19[CB]
-000F:  LOADL       27
-0010:  LOADA       3[LB]
-0011:  STOREI(1)   
-0012:  JUMP        22[CB]
-0013:  LOADL       10
-0014:  LOADA       3[LB]
-0015:  STOREI(1)   
-0016:  LOAD  (1)   3[LB]
-0017:  CALL  (CB)  32756[CB]	printInt
-0018:  HALT  
+000D:  STOREI(1)   
+000E:  LOAD  (1)   2[LB]
+000F:  LOADL       4
+0010:  eq
+0011:  JUMPIF(0)   24[CB]
+0012:  LOADL       27
+0013:  LOADA       3[LB]
+0014:  STOREI(1)   
+0015:  LOADL       1
+0016:  LOADL       4
+0017:  STOREI(1)   
+0018:  LOAD  (1)   4[LB]
+0019:  JUMPIF(1)   29[CB]
+001A:  LOADL       10
+001B:  LOADA       3[LB]
+001C:  STOREI(1)   
+001D:  LOAD  (1)   3[LB]
+001E:  CALL  (CB)  32756[CB]	printInt
+001F:  HALT  
+Done.
+********** TAM Interpreter (Java Version 2.1esa3) **********
+InputFile: build/test-output/a.tam
+OutputFile: build/test-output/output.txt
+src/test/testcases/executables/P3/public/_4_1/Switchcase3.mavl
+src/test/testcases/executables/P3/public/_4_1/Switchcase3.txt
+Compiling file src/test/testcases/executables/P3/public/_4_1/Switchcase3.mavl
+.text
+0000:  CALL  (CB)  1[CB]	main
+
+# function VOID main()
+0001:  LOADL       5
+0002:  PUSH        1
+0003:  LOADL       0
+0004:  LOAD  (1)   2[LB]
+0005:  LOADL       5
+0006:  eq
+0007:  JUMPIF(0)   14[CB]
+0008:  LOADL       7
+0009:  LOADA       3[LB]
+000A:  STOREI(1)   
+000B:  LOADL       1
+000C:  LOADL       4
+000D:  STOREI(1)   
+000E:  LOAD  (1)   2[LB]
+000F:  LOADL       4
+0010:  eq
+0011:  JUMPIF(0)   24[CB]
+0012:  LOADL       27
+0013:  LOADA       3[LB]
+0014:  STOREI(1)   
+0015:  LOADL       1
+0016:  LOADL       4
+0017:  STOREI(1)   
+0018:  LOAD  (1)   4[LB]
+0019:  JUMPIF(1)   29[CB]
+001A:  LOADL       10
+001B:  LOADA       3[LB]
+001C:  STOREI(1)   
+001D:  LOAD  (1)   3[LB]
+001E:  CALL  (CB)  32756[CB]	printInt
+001F:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -495,28 +550,35 @@ Compiling file src/test/testcases/executables/P3/onwTests/_4_1/Switchcase3.mavl
 # function VOID main()
 0001:  LOADL       9
 0002:  PUSH        1
-0003:  LOAD  (1)   2[LB]
-0004:  LOADL       5
-0005:  eq
-0006:  JUMPIF(0)   11[CB]
-0007:  LOADL       7
-0008:  LOADA       3[LB]
-0009:  STOREI(1)   
-000A:  JUMP        -1[CB]
-000B:  LOAD  (1)   2[LB]
+0003:  LOADL       0
+0004:  LOAD  (1)   2[LB]
+0005:  LOADL       5
+0006:  eq
+0007:  JUMPIF(0)   14[CB]
+0008:  LOADL       7
+0009:  LOADA       3[LB]
+000A:  STOREI(1)   
+000B:  LOADL       1
 000C:  LOADL       4
-000D:  eq
-000E:  JUMPIF(0)   19[CB]
-000F:  LOADL       27
-0010:  LOADA       3[LB]
-0011:  STOREI(1)   
-0012:  JUMP        22[CB]
-0013:  LOADL       10
-0014:  LOADA       3[LB]
-0015:  STOREI(1)   
-0016:  LOAD  (1)   3[LB]
-0017:  CALL  (CB)  32756[CB]	printInt
-0018:  HALT  
+000D:  STOREI(1)   
+000E:  LOAD  (1)   2[LB]
+000F:  LOADL       4
+0010:  eq
+0011:  JUMPIF(0)   24[CB]
+0012:  LOADL       27
+0013:  LOADA       3[LB]
+0014:  STOREI(1)   
+0015:  LOADL       1
+0016:  LOADL       4
+0017:  STOREI(1)   
+0018:  LOAD  (1)   4[LB]
+0019:  JUMPIF(1)   29[CB]
+001A:  LOADL       10
+001B:  LOADA       3[LB]
+001C:  STOREI(1)   
+001D:  LOAD  (1)   3[LB]
+001E:  CALL  (CB)  32756[CB]	printInt
+001F:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -837,6 +899,8 @@ Executing binary!
 Running testcase Switchcase2
 Executing binary!
 Running testcase Switchcase1
+Executing binary!
+Running testcase Switchcase3
 Executing binary!
 Running testcase recordSelect1
 Executing binary!
