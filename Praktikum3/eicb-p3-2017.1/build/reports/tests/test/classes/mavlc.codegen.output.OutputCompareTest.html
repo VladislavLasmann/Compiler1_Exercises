@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.189s</div>
+<div class="counter">0.202s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,27 +82,27 @@
 </thead>
 <tr>
 <td class="success">testExample[Select1]</td>
-<td>0.002s</td>
+<td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[Select2]</td>
-<td>0.001s</td>
+<td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[Switchcase1]</td>
-<td>0.004s</td>
+<td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[Switchcase2]</td>
-<td>0.004s</td>
+<td>0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[Switchcase3]</td>
-<td>0.002s</td>
+<td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -112,42 +112,42 @@
 </tr>
 <tr>
 <td class="success">testExample[foreach1]</td>
-<td>0.009s</td>
+<td>0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[foreach2]</td>
-<td>0.117s</td>
+<td>0.112s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[foreach3]</td>
-<td>0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testExample[lhs1]</td>
 <td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testExample[lhs1]</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testExample[lhs2]</td>
-<td>0.012s</td>
+<td>0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[lhs3]</td>
-<td>0.006s</td>
+<td>0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[lhs4]</td>
-<td>0.010s</td>
+<td>0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testExample[lhs5]</td>
-<td>0.003s</td>
+<td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -173,137 +173,104 @@ Compiling file src/test/testcases/executables/P3/public/_4_2/foreach2.mavl
 0003:  LOADL       0
 0004:  LOADA       6[LB]
 0005:  STOREI(1)   
-0006:  LOAD  (4)   2[LB]
-0007:  LOADA       -4[ST]
-0008:  LOADI (1)   
-0009:  LOADA       0[LB]
-000A:  STOREI(1)   
-000B:  LOAD  (1)   6[LB]
-000C:  LOADA       0[LB]
-000D:  STOREI(1)   
-000E:  LOAD  (1)   6[LB]
-000F:  LOADL       1
-0010:  add
-0011:  LOADA       6[LB]
-0012:  STOREI(1)   
-0013:  POP   (0)   0
-0014:  LOAD  (1)   0[LB]
-0015:  LOADA       2[LB]
-0016:  STOREI(1)   
-0017:  LOADA       -3[ST]
-0018:  LOADI (1)   
-0019:  LOADA       0[LB]
-001A:  STOREI(1)   
-001B:  LOAD  (1)   6[LB]
-001C:  LOADA       0[LB]
-001D:  STOREI(1)   
-001E:  LOAD  (1)   6[LB]
-001F:  LOADL       1
-0020:  add
-0021:  LOADA       6[LB]
-0022:  STOREI(1)   
-0023:  POP   (0)   0
-0024:  LOAD  (1)   0[LB]
-0025:  LOADA       3[LB]
-0026:  STOREI(1)   
-0027:  LOADA       -2[ST]
-0028:  LOADI (1)   
-0029:  LOADA       0[LB]
-002A:  STOREI(1)   
-002B:  LOAD  (1)   6[LB]
-002C:  LOADA       0[LB]
-002D:  STOREI(1)   
-002E:  LOAD  (1)   6[LB]
-002F:  LOADL       1
-0030:  add
-0031:  LOADA       6[LB]
-0032:  STOREI(1)   
-0033:  POP   (0)   0
-0034:  LOAD  (1)   0[LB]
-0035:  LOADA       4[LB]
-0036:  STOREI(1)   
-0037:  LOADA       -1[ST]
-0038:  LOADI (1)   
-0039:  LOADA       0[LB]
-003A:  STOREI(1)   
-003B:  LOAD  (1)   6[LB]
-003C:  LOADA       0[LB]
-003D:  STOREI(1)   
-003E:  LOAD  (1)   6[LB]
-003F:  LOADL       1
-0040:  add
-0041:  LOADA       6[LB]
-0042:  STOREI(1)   
-0043:  POP   (0)   0
-0044:  LOAD  (1)   0[LB]
-0045:  LOADA       5[LB]
-0046:  STOREI(1)   
-0047:  POP   (0)   4
-0048:  LOAD  (4)   2[LB]
-0049:  LOADA       -4[ST]
-004A:  LOADL       0
-004B:  LOADL       2
-004C:  mult
-004D:  add
-004E:  LOADI (2)   
-004F:  POP   (2)   4
-0050:  LOADA       -2[ST]
-0051:  LOADL       0
-0052:  LOADL       1
-0053:  mult
-0054:  add
-0055:  LOADI (1)   
-0056:  POP   (1)   2
-0057:  CALL  (CB)  32756[CB]	printInt
-0058:  LOAD  (4)   2[LB]
-0059:  LOADA       -4[ST]
-005A:  LOADL       0
-005B:  LOADL       2
-005C:  mult
-005D:  add
-005E:  LOADI (2)   
-005F:  POP   (2)   4
-0060:  LOADA       -2[ST]
+0006:  LOADL       0
+0007:  LOAD  (4)   2[LB]
+0008:  LOAD  (1)   7[LB]
+0009:  LOADL       4
+000A:  lt
+000B:  JUMPIF(0)   38[CB]
+000C:  LOADA       -4[ST]
+000D:  LOAD  (1)   7[LB]
+000E:  add
+000F:  LOADI (1)   
+0010:  LOADA       0[LB]
+0011:  STOREI(1)   
+0012:  LOAD  (1)   6[LB]
+0013:  LOADA       0[LB]
+0014:  STOREI(1)   
+0015:  LOAD  (1)   6[LB]
+0016:  LOADL       1
+0017:  add
+0018:  LOADA       6[LB]
+0019:  STOREI(1)   
+001A:  POP   (0)   0
+001B:  LOAD  (1)   0[LB]
+001C:  LOADA       2[LB]
+001D:  LOAD  (1)   7[LB]
+001E:  add
+001F:  STOREI(1)   
+0020:  LOAD  (1)   7[LB]
+0021:  LOADL       1
+0022:  add
+0023:  LOADA       7[LB]
+0024:  STOREI(1)   
+0025:  JUMP        8[CB]
+0026:  POP   (0)   4
+0027:  LOAD  (4)   2[LB]
+0028:  LOADA       -4[ST]
+0029:  LOADL       0
+002A:  LOADL       2
+002B:  mult
+002C:  add
+002D:  LOADI (2)   
+002E:  POP   (2)   4
+002F:  LOADA       -2[ST]
+0030:  LOADL       0
+0031:  LOADL       1
+0032:  mult
+0033:  add
+0034:  LOADI (1)   
+0035:  POP   (1)   2
+0036:  CALL  (CB)  32756[CB]	printInt
+0037:  LOAD  (4)   2[LB]
+0038:  LOADA       -4[ST]
+0039:  LOADL       0
+003A:  LOADL       2
+003B:  mult
+003C:  add
+003D:  LOADI (2)   
+003E:  POP   (2)   4
+003F:  LOADA       -2[ST]
+0040:  LOADL       1
+0041:  LOADL       1
+0042:  mult
+0043:  add
+0044:  LOADI (1)   
+0045:  POP   (1)   2
+0046:  CALL  (CB)  32756[CB]	printInt
+0047:  LOAD  (4)   2[LB]
+0048:  LOADA       -4[ST]
+0049:  LOADL       1
+004A:  LOADL       2
+004B:  mult
+004C:  add
+004D:  LOADI (2)   
+004E:  POP   (2)   4
+004F:  LOADA       -2[ST]
+0050:  LOADL       0
+0051:  LOADL       1
+0052:  mult
+0053:  add
+0054:  LOADI (1)   
+0055:  POP   (1)   2
+0056:  CALL  (CB)  32756[CB]	printInt
+0057:  LOAD  (4)   2[LB]
+0058:  LOADA       -4[ST]
+0059:  LOADL       1
+005A:  LOADL       2
+005B:  mult
+005C:  add
+005D:  LOADI (2)   
+005E:  POP   (2)   4
+005F:  LOADA       -2[ST]
+0060:  LOADL       1
 0061:  LOADL       1
-0062:  LOADL       1
-0063:  mult
-0064:  add
-0065:  LOADI (1)   
-0066:  POP   (1)   2
-0067:  CALL  (CB)  32756[CB]	printInt
-0068:  LOAD  (4)   2[LB]
-0069:  LOADA       -4[ST]
-006A:  LOADL       1
-006B:  LOADL       2
-006C:  mult
-006D:  add
-006E:  LOADI (2)   
-006F:  POP   (2)   4
-0070:  LOADA       -2[ST]
-0071:  LOADL       0
-0072:  LOADL       1
-0073:  mult
-0074:  add
-0075:  LOADI (1)   
-0076:  POP   (1)   2
-0077:  CALL  (CB)  32756[CB]	printInt
-0078:  LOAD  (4)   2[LB]
-0079:  LOADA       -4[ST]
-007A:  LOADL       1
-007B:  LOADL       2
-007C:  mult
-007D:  add
-007E:  LOADI (2)   
-007F:  POP   (2)   4
-0080:  LOADA       -2[ST]
-0081:  LOADL       1
-0082:  LOADL       1
-0083:  mult
-0084:  add
-0085:  LOADI (1)   
-0086:  POP   (1)   2
-0087:  CALL  (CB)  32756[CB]	printInt
-0088:  HALT  
+0062:  mult
+0063:  add
+0064:  LOADI (1)   
+0065:  POP   (1)   2
+0066:  CALL  (CB)  32756[CB]	printInt
+0067:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -323,69 +290,62 @@ Compiling file src/test/testcases/executables/P3/public/_4_2/foreach1.mavl
 0006:  LOADL       3
 0007:  LOADA       2[LB]
 0008:  STOREI(3)   
-0009:  LOAD  (3)   2[LB]
-000A:  LOADA       -3[ST]
-000B:  LOADI (1)   
-000C:  LOADA       0[LB]
-000D:  STOREI(1)   
-000E:  LOADL       3
-000F:  LOADA       0[LB]
-0010:  STOREI(1)   
-0011:  POP   (0)   0
-0012:  LOAD  (1)   0[LB]
-0013:  LOADA       2[LB]
+0009:  LOADL       0
+000A:  LOAD  (3)   2[LB]
+000B:  LOAD  (1)   5[LB]
+000C:  LOADL       3
+000D:  lt
+000E:  JUMPIF(0)   36[CB]
+000F:  LOADA       -3[ST]
+0010:  LOAD  (1)   5[LB]
+0011:  add
+0012:  LOADI (1)   
+0013:  LOADA       0[LB]
 0014:  STOREI(1)   
-0015:  LOADA       -2[ST]
-0016:  LOADI (1)   
-0017:  LOADA       0[LB]
-0018:  STOREI(1)   
-0019:  LOADL       3
-001A:  LOADA       0[LB]
-001B:  STOREI(1)   
-001C:  POP   (0)   0
-001D:  LOAD  (1)   0[LB]
-001E:  LOADA       3[LB]
-001F:  STOREI(1)   
-0020:  LOADA       -1[ST]
-0021:  LOADI (1)   
-0022:  LOADA       0[LB]
-0023:  STOREI(1)   
-0024:  LOADL       3
-0025:  LOADA       0[LB]
-0026:  STOREI(1)   
-0027:  POP   (0)   0
-0028:  LOAD  (1)   0[LB]
-0029:  LOADA       4[LB]
-002A:  STOREI(1)   
-002B:  POP   (0)   3
-002C:  LOAD  (3)   2[LB]
-002D:  LOADA       -3[ST]
-002E:  LOADL       0
-002F:  LOADL       1
-0030:  mult
-0031:  add
-0032:  LOADI (1)   
-0033:  POP   (1)   3
-0034:  CALL  (CB)  32756[CB]	printInt
-0035:  LOAD  (3)   2[LB]
-0036:  LOADA       -3[ST]
-0037:  LOADL       1
-0038:  LOADL       1
-0039:  mult
-003A:  add
-003B:  LOADI (1)   
-003C:  POP   (1)   3
-003D:  CALL  (CB)  32756[CB]	printInt
-003E:  LOAD  (3)   2[LB]
-003F:  LOADA       -3[ST]
-0040:  LOADL       2
-0041:  LOADL       1
-0042:  mult
-0043:  add
-0044:  LOADI (1)   
-0045:  POP   (1)   3
-0046:  CALL  (CB)  32756[CB]	printInt
-0047:  HALT  
+0015:  LOADL       3
+0016:  LOADA       0[LB]
+0017:  STOREI(1)   
+0018:  POP   (0)   0
+0019:  LOAD  (1)   0[LB]
+001A:  LOADA       2[LB]
+001B:  LOAD  (1)   5[LB]
+001C:  add
+001D:  STOREI(1)   
+001E:  LOAD  (1)   5[LB]
+001F:  LOADL       1
+0020:  add
+0021:  LOADA       5[LB]
+0022:  STOREI(1)   
+0023:  JUMP        11[CB]
+0024:  POP   (0)   3
+0025:  LOAD  (3)   2[LB]
+0026:  LOADA       -3[ST]
+0027:  LOADL       0
+0028:  LOADL       1
+0029:  mult
+002A:  add
+002B:  LOADI (1)   
+002C:  POP   (1)   3
+002D:  CALL  (CB)  32756[CB]	printInt
+002E:  LOAD  (3)   2[LB]
+002F:  LOADA       -3[ST]
+0030:  LOADL       1
+0031:  LOADL       1
+0032:  mult
+0033:  add
+0034:  LOADI (1)   
+0035:  POP   (1)   3
+0036:  CALL  (CB)  32756[CB]	printInt
+0037:  LOAD  (3)   2[LB]
+0038:  LOADA       -3[ST]
+0039:  LOADL       2
+003A:  LOADL       1
+003B:  mult
+003C:  add
+003D:  LOADI (1)   
+003E:  POP   (1)   3
+003F:  CALL  (CB)  32756[CB]	printInt
+0040:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -622,51 +582,50 @@ Compiling file src/test/testcases/executables/P3/onwTests/_4_2/foreach3.mavl
 0006:  LOADL       3
 0007:  LOADA       2[LB]
 0008:  STOREI(3)   
-0009:  LOAD  (3)   2[LB]
-000A:  LOADL       2
-000B:  LOADL       0
-000C:  LOAD  (1)   -1[ST]
-000D:  LOADA       -6[ST]
-000E:  add
-000F:  LOADI (1)   
-0010:  LOAD  (1)   -3[ST]
-0011:  add
-0012:  LOAD  (1)   -2[ST]
-0013:  LOADA       -7[ST]
-0014:  add
-0015:  STOREI(1)   
-0016:  LOAD  (1)   -1[ST]
-0017:  LOADL       1
-0018:  add
-0019:  STORE (1)   -2[ST]
-001A:  LOAD  (1)   -1[ST]
-001B:  LOADL       3
-001C:  le
-001D:  JUMPIF(1)   12[CB]
-001E:  POP   (0)   2
-001F:  LOADA       -3[ST]
-0020:  LOADI (1)   
-0021:  LOADA       0[LB]
-0022:  STOREI(1)   
-0023:  LOAD  (1)   0[LB]
-0024:  CALL  (CB)  32756[CB]	printInt
-0025:  POP   (0)   0
-0026:  LOADA       -2[ST]
+0009:  LOADL       0
+000A:  LOAD  (3)   2[LB]
+000B:  LOADL       2
+000C:  LOADL       0
+000D:  LOAD  (1)   -1[ST]
+000E:  LOADA       -6[ST]
+000F:  add
+0010:  LOADI (1)   
+0011:  LOAD  (1)   -3[ST]
+0012:  add
+0013:  LOAD  (1)   -2[ST]
+0014:  LOADA       -7[ST]
+0015:  add
+0016:  STOREI(1)   
+0017:  LOAD  (1)   -1[ST]
+0018:  LOADL       1
+0019:  add
+001A:  STORE (1)   -2[ST]
+001B:  LOAD  (1)   -1[ST]
+001C:  LOADL       3
+001D:  le
+001E:  JUMPIF(1)   13[CB]
+001F:  POP   (0)   2
+0020:  LOAD  (1)   5[LB]
+0021:  LOADL       3
+0022:  lt
+0023:  JUMPIF(0)   51[CB]
+0024:  LOADA       -3[ST]
+0025:  LOAD  (1)   5[LB]
+0026:  add
 0027:  LOADI (1)   
 0028:  LOADA       0[LB]
 0029:  STOREI(1)   
 002A:  LOAD  (1)   0[LB]
 002B:  CALL  (CB)  32756[CB]	printInt
 002C:  POP   (0)   0
-002D:  LOADA       -1[ST]
-002E:  LOADI (1)   
-002F:  LOADA       0[LB]
-0030:  STOREI(1)   
-0031:  LOAD  (1)   0[LB]
-0032:  CALL  (CB)  32756[CB]	printInt
-0033:  POP   (0)   0
-0034:  POP   (0)   3
-0035:  HALT  
+002D:  LOAD  (1)   5[LB]
+002E:  LOADL       1
+002F:  add
+0030:  LOADA       5[LB]
+0031:  STOREI(1)   
+0032:  JUMP        32[CB]
+0033:  POP   (0)   3
+0034:  HALT  
 Done.
 ********** TAM Interpreter (Java Version 2.1esa3) **********
 InputFile: build/test-output/a.tam
@@ -1061,7 +1020,7 @@ Executing binary!
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.1</a> at Jan 25, 2018 10:09:22 PM</p>
+<a href="http://www.gradle.org">Gradle 4.1</a> at Jan 26, 2018 2:27:42 PM</p>
 </div>
 </div>
 </body>

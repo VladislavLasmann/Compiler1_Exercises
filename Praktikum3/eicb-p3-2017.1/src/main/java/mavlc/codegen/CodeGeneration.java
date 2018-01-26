@@ -388,42 +388,68 @@ public class CodeGeneration extends ASTNodeBaseVisitor<Instruction, Integer> {
         // get the size of the struct
         int size = forEachLoop.getStructExpr().getType().wordSize();
 
+        // we put a counter variable on the stack
+        int counterOffset = assembler.getNextOffset();
+        assembler.loadIntegerValue(0);
+        
         // put the struct on the stack
         forEachLoop.getStructExpr().accept(this, null);
         
-        // for each element of the struct emit loop body
-        for (int i = 0; i < size; i++) {
-            // get the needed element on top of the stack
-            assembler.loadAddress(Register.ST, (size * -1) + i);
-            assembler.loadFromStackAddress(1); // will always be one word
+        // get the address of the beginning of the loop
+        int loopBegin = assembler.getNextInstructionAddress();
+         
+        // now we need to load the counter and see if it is smaler than size
+        assembler.loadValue(Register.LB, 1,  counterOffset);
+        assembler.loadIntegerValue(size);
+        assembler.emitIntegerComparison(Comparison.LESS);
+        Instruction jump2End = assembler.emitConditionalJump(false, -1); //backpatch later
 
-            // get the address of the iterator and load it on the stack
-            int iterator  = forEachLoop.getIteratorDeclaration().getLocalBaseOffset();
-            assembler.loadAddress(Register.LB, iterator);
+        // get the needed element on top of the stack
+        assembler.loadAddress(Register.ST, size * -1);
+        assembler.loadValue(Register.LB, 1, counterOffset);
+        assembler.emitIntegerAddition();
+        assembler.loadFromStackAddress(1); // will always be one word
 
-            // save the element in the iterator variable
-            assembler.storeToStackAddress(1);
+        // get the address of the iterator and load it on the stack
+        int iterator  = forEachLoop.getIteratorDeclaration().getLocalBaseOffset();
+        assembler.loadAddress(Register.LB, iterator);
+
+        // save the element in the iterator variable
+        assembler.storeToStackAddress(1);
         
-            // run the body
-            forEachLoop.getLoopBody().accept(this, null);
+        // run the body
+        forEachLoop.getLoopBody().accept(this, null);
 
-            // if the iterator is var we need to save i to the original struct
-            if (forEachLoop.getIteratorDeclaration().isVariable()) {
-                // so we load i again on the stack
-                assembler.loadValue(Register.LB, 1, iterator);
+        // if the iterator is var we need to save i to the original struct
+        if (forEachLoop.getIteratorDeclaration().isVariable()) {
+            // so we load i again on the stack
+            assembler.loadValue(Register.LB, 1, iterator);
                 
-                // we cast the Expression in a IdentifierReference
-                IdentifierReference LHI = (IdentifierReference) forEachLoop.getStructExpr();
+            // we cast the Expression in a IdentifierReference
+            IdentifierReference LHI = (IdentifierReference) forEachLoop.getStructExpr();
                 
-                // now we can save the value of the iterator at the origin
-                assembler.loadAddress(
-                        Register.LB,
-                        LHI.getDeclaration().getLocalBaseOffset()
-                        + i
-                    );
-                assembler.storeToStackAddress(1);
-            }
+            // now we can save the value of the iterator at the origin
+            assembler.loadAddress(
+                Register.LB,
+                LHI.getDeclaration().getLocalBaseOffset()
+                );
+            assembler.loadValue(Register.LB, 1, counterOffset);
+            assembler.emitIntegerAddition();
+
+            assembler.storeToStackAddress(1);
         }
+        
+        // now we need to increment the counter variable
+        assembler.loadValue(Register.LB, 1, counterOffset);
+        assembler.loadIntegerValue(1);
+        assembler.emitIntegerAddition();
+        assembler.loadAddress(Register.LB, counterOffset);
+        assembler.storeToStackAddress(1);
+
+        // jump to begin of loop
+        assembler.emitJump(loopBegin);
+
+        assembler.backPatchJump(jump2End, assembler.getNextInstructionAddress());
 
         // clean up stack
         assembler.emitPop(0, size);
